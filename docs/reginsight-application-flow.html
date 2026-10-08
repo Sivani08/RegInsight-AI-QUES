@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RegInsight AI — Application and Human-Review Flow</title>
+<style>
+  @page { size: A4; margin: 17mm 16mm 18mm; }
+  * { box-sizing: border-box; }
+  body { color: #18243b; font: 10pt/1.48 "Segoe UI", Arial, sans-serif; margin: 0; }
+  h1, h2, h3 { color: #102750; line-height: 1.18; }
+  h1 { font-size: 29pt; margin: 0 0 9mm; }
+  h2 { border-bottom: 2px solid #d9e4f4; font-size: 18pt; margin: 0 0 5mm; padding-bottom: 2mm; }
+  h3 { font-size: 12pt; margin: 5mm 0 2mm; }
+  p { margin: 2mm 0; }
+  ul, ol { margin: 2mm 0 3mm; padding-left: 6mm; }
+  li { margin: 1mm 0; }
+  code, .mono { font: 8.5pt Consolas, "Courier New", monospace; }
+  code { background: #f0f4fa; border-radius: 2px; padding: 0.3mm 1mm; }
+  .cover { min-height: 250mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always; }
+  .eyebrow { color: #2670bb; font-size: 9pt; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; }
+  .subtitle { color: #49617f; font-size: 15pt; max-width: 155mm; }
+  .callout { background: #eff5ff; border-left: 4px solid #2670bb; margin: 4mm 0; padding: 3mm 4mm; }
+  .warning { background: #fff6e5; border-left: 4px solid #d68a00; margin: 4mm 0; padding: 3mm 4mm; }
+  .ok { background: #edf8f1; border-left: 4px solid #298451; margin: 4mm 0; padding: 3mm 4mm; }
+  .flow { background: #f5f8fc; border: 1px solid #dce5f0; border-radius: 3px; font: 8.6pt/1.55 Consolas, monospace; margin: 4mm 0; padding: 4mm; white-space: pre-wrap; }
+  table { border-collapse: collapse; font-size: 8.7pt; margin: 3mm 0 5mm; width: 100%; }
+  th { background: #17365f; color: white; text-align: left; }
+  td, th { border: 1px solid #cfd8e5; padding: 2mm; vertical-align: top; }
+  tr:nth-child(even) td { background: #f7f9fc; }
+  .step { border-left: 3px solid #9db7d8; margin: 0 0 3mm 2mm; padding: 0 0 1mm 4mm; }
+  .step strong { color: #17365f; }
+  .small { color: #50627a; font-size: 8.5pt; }
+  .page-break { page-break-before: always; }
+  .no-break { break-inside: avoid; }
+  .footer { border-top: 1px solid #dce5f0; color: #65748a; font-size: 8pt; margin-top: 7mm; padding-top: 2mm; }
+</style>
+</head>
+<body>
+<section class="cover">
+  <div class="eyebrow">RegInsight AI · source-verified guide</div>
+  <h1>Application Flow<br>from Inspection Evidence<br>to Human Review</h1>
+  <p class="subtitle">A practical map of how the running application receives a question, routes and retrieves evidence, creates and evaluates an assessment, persists each stage, and reaches an authenticated reviewer.</p>
+  <div class="callout">
+    <strong>Scope:</strong> This guide follows the explicit AI assessment workflow in the Evidence workspace. The existing chatbot remains a separate path and is not silently routed through this workflow.
+  </div>
+  <p class="small">Prepared from the current project source: FastAPI, React, PostgreSQL/pgvector, a PostgreSQL job queue, LangGraph checkpoints, and local Ollama model calls.</p>
+  <p class="small">Local application URL: http://127.0.0.1:8018</p>
+</section>
+
+<section>
+  <h2>1. Whole-application picture</h2>
+  <p>The web application has two related but distinct review/analysis capabilities. The normal website serves dashboards, inspection and evidence browsing, analytics, chatbot/agent features, and human review of observation classifications. The AI assessment workflow is an explicit user-started path embedded under the selected observation in Evidence.</p>
+  <div class="flow">Windows launcher
+  Start-RegInsight.ps1
+       │
+       ├── Docker Compose: PostgreSQL + pgvector
+       ├── migrate/import: schema + supplied dataset
+       ├── app: FastAPI + built React frontend (:8018)
+       └── worker: durable background-job consumer
+
+Browser → React Evidence → POST /api/workflows
+       → PostgreSQL workflow + queued job
+       → worker → WorkflowService → LangGraph stage graph
+       → retrieve evidence / existing analytics services
+       → specialist generation → independent judge evaluation
+       → PostgreSQL human-review gate
+       → authenticated reviewer decision → resume worker
+       → final response (or revision/rejection)</div>
+  <h3>Startup and runtime roles</h3>
+  <table>
+    <tr><th>Role</th><th>What it does</th><th>Source location</th></tr>
+    <tr><td>Launcher / Compose</td><td>Builds app images, starts PostgreSQL, runs database migrations and imports prepared data, then starts API and worker services.</td><td>Start-RegInsight.ps1; docker-compose.yml</td></tr>
+    <tr><td>FastAPI app</td><td>Serves JSON APIs and compiled frontend; initializes the existing intelligence/chatbot services and workflow service.</td><td>backend/api/main.py — create_app(), lifespan</td></tr>
+    <tr><td>Workflow worker</td><td>Claims durable jobs from PostgreSQL, runs workflows, renews leases, retries selected transient errors.</td><td>backend/workflows/worker.py — main(), run_once()</td></tr>
+    <tr><td>PostgreSQL</td><td>Canonical runtime database, workflow/event/review/job persistence, pgvector embeddings and full-text retrieval.</td><td>docker-compose.yml; backend/database; backend/rag/repository.py</td></tr>
+    <tr><td>Ollama</td><td>Local embedding, specialist generation, and judge model endpoint. AI-model outage can disable workflow creation while deterministic analytics remain.</td><td>backend/rag/embeddings.py; backend/libraries/structured_llm.py</td></tr>
+  </table>
+  <div class="warning"><strong>Important:</strong> The local database password in <code>.env</code> is a secret. Keep it out of screenshots, chat, source control, and this document. The project ignores <code>.env</code>.</div>
+</section>
+
+<section class="page-break">
+  <h2>2. Entry point: selected observation to queued workflow</h2>
+  <div class="step"><strong>1 — Select the source record.</strong> In the Evidence workspace, the selected observation supplies its original text, observation ID, and intelligence run ID. <span class="mono">frontend/src/reginsight/Evidence.jsx</span> renders <span class="mono">WorkflowReview</span>.</div>
+  <div class="step"><strong>2 — Start an assessment.</strong> The user edits the question if needed and presses “Start AI assessment.” <span class="mono">frontend/src/reginsight/WorkflowReview.jsx:start()</span> sends the question, observation_id, run_id, and <span class="mono">require_review: true</span> through the shared request helper.</div>
+  <div class="step"><strong>3 — Validate/authenticate the API request.</strong> Security middleware authenticates the signed-in session, checks host/origin and request bounds, and assigns a request ID. The route validates <span class="mono">WorkflowRequest</span>; this workflow requires an authenticated API user.</div>
+  <div class="step"><strong>4 — Persist before processing.</strong> <span class="mono">POST /api/workflows</span> calls <span class="mono">WorkflowService.create()</span>. It creates IDs and a <span class="mono">RECEIVED</span> state; repository inserts the workflow/event, and the same database transaction enqueues a uniquely keyed start job. The API responds <span class="mono">202 Accepted</span>.</div>
+  <div class="step"><strong>5 — Background execution.</strong> The browser periodically refreshes workflow status. Meanwhile <span class="mono">worker.main()</span> polls; <span class="mono">jobs.claim()</span> atomically leases a job using PostgreSQL locking. A heartbeat extends the lease while work runs.</div>
+  <div class="callout"><strong>Durability:</strong> The user-facing API does not keep the browser request open for model generation. Job queue, workflow state, event sequence, and graph checkpoint are persisted, so the worker can resume a thread instead of losing the whole workflow on a short-lived request.</div>
+</section>
+
+<section>
+  <h2>3. Worker, graph, routing, and evidence path</h2>
+  <table>
+    <tr><th>Graph stage</th><th>Called code / action</th><th>State effect and next step</th></tr>
+    <tr><td>Start → route</td><td><span class="mono">WorkflowService.determine_route()</span> → <span class="mono">routing.route()</span>, using the ordered policy decision table.</td><td>Writes analysis and selected specialist, risk, tool/RAG requirements, review requirement. Unsupported domain completes with a clear abstention.</td></tr>
+    <tr><td>retrieve</td><td><span class="mono">WorkflowService.retrieve_evidence()</span>; optional selected-observation resolution and ingestion; optional existing analytics query.</td><td>Stores retrieval trace/history and tool result D1. No useful evidence and no analytics result ends with a no-evidence response.</td></tr>
+    <tr><td>generate</td><td><span class="mono">WorkflowService.generate_draft()</span> invokes selected specialist(s) in sequence, bounded by the policy iteration limit.</td><td>Stores agent output and model-call metadata; specialist must cite available chunks/tool result and may not introduce unsupported numbers.</td></tr>
+    <tr><td>evaluate</td><td><span class="mono">WorkflowService.evaluate_draft()</span> invokes <span class="mono">EvaluationService.evaluate()</span> and a separate structured judge call.</td><td>Appends a versioned artifact. Failed/weak score requests bounded revision or fails; passing assessment either enters review gate or finalizes if review is not required.</td></tr>
+    <tr><td>review interrupt</td><td>Graph node calls LangGraph <span class="mono">interrupt()</span>, with workflow ID, artifact version, and revision.</td><td>Execution pauses at the durable checkpoint. Workflow remains <span class="mono">AWAITING_HUMAN_REVIEW</span>; nothing is released as final.</td></tr>
+    <tr><td>apply review → finalize</td><td>Resumed graph verifies the review decision was persisted; approved workflows call <span class="mono">finalize()</span>.</td><td>Only approved current artifact can become <span class="mono">COMPLETED</span>. Rejection/revision loops back to generation when allowed.</td></tr>
+  </table>
+  <h3>Retrieval and analytics details</h3>
+  <ul>
+    <li>For a selected observation, the service resolves the matching record using the observation intelligence snapshot, then indexes its <em>original</em> observation text with provenance such as run, inspection, source file, sheet, and row.</li>
+    <li><span class="mono">RetrievalService</span> embeds the query locally and searches one PostgreSQL corpus with vector cosine and PostgreSQL full-text ranking; hybrid mode fuses ranks. A documented keyword fallback is used for embedding/network or vector data failures.</li>
+    <li>Retrieval trace records candidates, selected chunk IDs, filters, status, model/version and thresholds. Similarity is a cosine score, not a calibrated probability.</li>
+    <li>Questions asking for counts/rates/trends invoke the existing dashboard analytics service; model receives labeled deterministic D1 result, not permission to invent SQL or numerical answers.</li>
+    <li>Specialists: <span class="mono">EvidenceAgent</span>, <span class="mono">InspectionAssessmentAgent</span>, and <span class="mono">DataAnalyticsAgent</span>. Combined analytics + observation work is sequential and bounded; no autonomous recursive agent delegation.</li>
+  </ul>
+</section>
+
+<section class="page-break">
+  <h2>4. Generation, evaluation, and human gate</h2>
+  <h3>Specialist generation</h3>
+  <p><span class="mono">backend/agents/specialists.py</span> loads the generation prompt and calls <span class="mono">StructuredLLM.generate()</span>. The client restricts generation to a local model name, bounds prompt size, uses a single-call concurrency gate, requests schema-constrained JSON, and validates the resulting Pydantic output. The specialist checks citation IDs and rejects unsupported numerical claims.</p>
+  <h3>Separate judge evaluation</h3>
+  <p><span class="mono">backend/workflows/evaluation.py</span> makes a distinct judge-model call using the rubric prompt. Eight dimensions are scored: relevance, groundedness, factual consistency, completeness, domain correctness, safety, evidence coverage, and clarity. The system calculates the mean score and applies configured pass/revision thresholds plus hard minimum groundedness and safety checks. Same-model generator/judge is disclosed because errors may be correlated.</p>
+  <h3>Why the human gate is triggered</h3>
+  <ul>
+    <li>Risk level is HIGH or CRITICAL (mandatory policy floor).</li>
+    <li>The user explicitly asks for review; the Evidence panel sets this for selected-observation assessments.</li>
+    <li>Retrieval is a WEAK_HIT, or this is already a human-review revision.</li>
+  </ul>
+  <p>On a passing judge result with review required, the artifact is versioned and marked <span class="mono">PENDING</span>; workflow status becomes <span class="mono">AWAITING_HUMAN_REVIEW</span>. The graph pauses at its durable interrupt. A draft or passing score alone is not a final response.</p>
+  <h3>Authenticated review and continuation</h3>
+  <ol>
+    <li>Reviewer obtains pending work from <span class="mono">GET /api/workflows/reviews/pending</span>, or opens the selected workflow.</li>
+    <li>UI displays the draft, evaluation, citations, retrieved evidence, limitations, routing/risk, and prior review history.</li>
+    <li>Reviewer chooses approve, modify, or reject and provides rationale. API role must be reviewer/admin; the service uses the authenticated principal as authoritative reviewer identity.</li>
+    <li>Request includes the current workflow revision, artifact version, and idempotency key. Server checks role, state, revision, artifact version, and duplicate-key consistency to prevent stale or replayed decisions.</li>
+    <li>Decision and event are saved transactionally; a resume job is queued. Approve/modify marks the artifact approved. Reject can cause a bounded new generation when iterations remain.</li>
+    <li>Worker resumes the LangGraph checkpoint with the persisted review ID. The graph verifies it exists; approval proceeds to finalization. Final response is either the approved artifact or reviewer-modified text.</li>
+  </ol>
+  <div class="warning"><strong>Modification behavior:</strong> Reviewer replacement text gets deterministic checks for unsupported numbers and prohibited conclusions. The current implementation does not call the LLM judge again after a reviewer modification; the authorized reviewer is the approving gate.</div>
+  <div class="ok"><strong>Release rule:</strong> <span class="mono">finalize()</span> refuses to publish unless evaluation passed and any required human decision is approved for the current artifact.</div>
+</section>
+
+<section>
+  <h2>5. Debugging: follow one workflow end to end</h2>
+  <h3>A. Confirm runtime health (PowerShell)</h3>
+  <div class="flow">Set-Location "C:\Users\nitis\OneDrive\Desktop\RegInsight-AI"
+docker compose ps
+Invoke-RestMethod http://127.0.0.1:8018/api/health</div>
+  <p>Expect app and worker running, database healthy, and API health to report PostgreSQL plus a loaded dataset. If startup/import is in progress, inspect migration logs; a clean launch still has to load the prepared data.</p>
+  <h3>B. Follow background execution</h3>
+  <div class="flow">docker compose logs -f worker
+docker compose logs -f app
+docker compose logs --tail=100 migrate
+docker compose top worker</div>
+  <p>Worker logs include structured job failures and <span class="mono">workflow_node</span> messages with workflow ID, request ID, node/event name, and revision. App security middleware logs HTTP request ID, route, status, user ID, and elapsed time. Do not print <span class="mono">.env</span> or credentials to logs/chat.</p>
+  <h3>C. Inspect from the application</h3>
+  <p>While a workflow is open, the Evidence panel refreshes every 2.5 seconds. “Open complete operational trace” links to <span class="mono">GET /api/workflows/{id}/trace</span>, which returns route/risk, retrieval trace/history, D1 tools, agent outputs, artifacts and judge results, human decisions, current status, final response, and ordered events.</p>
+  <table>
+    <tr><th>Endpoint / observation</th><th>Use it to answer</th></tr>
+    <tr><td><span class="mono">GET /api/workflows/{id}</span></td><td>Current complete workflow state and status.</td></tr>
+    <tr><td><span class="mono">GET /api/workflows/{id}/trace</span></td><td>Where it routed, what evidence/tools/agents ran, artifacts, review and event sequence.</td></tr>
+    <tr><td><span class="mono">GET /api/workflows/{id}/retrieval</span></td><td>Retrieved chunks, selected context, hit status and retrieval metadata.</td></tr>
+    <tr><td><span class="mono">GET /api/workflows/{id}/evaluation</span></td><td>Judge decision, dimensions, issues, rationale, and thresholds for each artifact version.</td></tr>
+    <tr><td><span class="mono">GET /api/workflows/reviews/pending</span></td><td>Review queue visible to the authenticated user/role.</td></tr>
+  </table>
+  <p class="small">API access requires a signed-in session. Use the UI or authenticated browser session for these endpoints; do not put access keys in a URL or share them in a report.</p>
+</section>
+
+<section class="page-break">
+  <h2>6. State transitions and where to look</h2>
+  <div class="flow">RECEIVED
+  → ROUTED → RETRIEVING → GENERATING → EVALUATING
+       │                         │             ├─ score below pass → REVISION_REQUIRED → GENERATING
+       │                         │             ├─ retries exhausted → FAILED
+       │                         │             └─ pass + human gate → AWAITING_HUMAN_REVIEW (graph interrupt)
+       │                         │                    ├─ APPROVE / MODIFY → APPROVED → COMPLETED
+       │                         │                    └─ REJECT → revision or FAILED
+       ├─ unsupported-domain abstention → COMPLETED
+       └─ evidence miss (no tools) → COMPLETED with no-evidence response</div>
+  <table>
+    <tr><th>What to inspect</th><th>Persistent source</th><th>Implementation</th></tr>
+    <tr><td>Current workflow, revisions and artifacts</td><td><span class="mono">workflow_runs</span> JSON payload</td><td><span class="mono">backend/workflows/repository.py</span></td></tr>
+    <tr><td>Ordered stage and decision trail</td><td><span class="mono">workflow_events</span></td><td><span class="mono">WorkflowService.checkpoint()</span> / repository events()</td></tr>
+    <tr><td>Queued, leased, retrying or failed job</td><td><span class="mono">background_jobs</span></td><td><span class="mono">backend/workflows/jobs.py</span>; worker.py</td></tr>
+    <tr><td>Graph stage pause/resume</td><td>LangGraph PostgreSQL checkpointer tables</td><td><span class="mono">backend/workflows/graph.py</span>; <span class="mono">WorkflowService.run()</span></td></tr>
+    <tr><td>Reviewer/action/version/rationale</td><td><span class="mono">review_decisions</span> and event history</td><td><span class="mono">WorkflowService.review()</span></td></tr>
+    <tr><td>Chunks/vectors/full-text index</td><td><span class="mono">retrieval_documents</span>, <span class="mono">retrieval_chunks</span>, <span class="mono">embedding_metadata</span></td><td><span class="mono">backend/rag/repository.py</span></td></tr>
+  </table>
+  <h3>Common debugging interpretation</h3>
+  <ul>
+    <li><strong>Still RECEIVED / no worker progress:</strong> check worker container, queue job status/lease, and worker logs.</li>
+    <li><strong>ROUTED or retrieval stuck:</strong> check reference index, observation selection/run ID, local embedding service, and PostgreSQL connectivity.</li>
+    <li><strong>GENERATING/EVALUATING delayed:</strong> local Ollama may be loading a model; calls are sequential, schema-bounded, and have a configured timeout.</li>
+    <li><strong>REVISION_REQUIRED:</strong> inspect the latest judge issues and iteration count; correction attempts are capped by policy.</li>
+    <li><strong>AWAITING_HUMAN_REVIEW:</strong> this is a deliberate pause, not a hung workflow. Reviewer/admin must decide on the exact artifact version.</li>
+    <li><strong>FAILED:</strong> inspect workflow error, last event and background job error. Transient network/timeout/database operational failures are retried within job limits; other exceptions are surfaced as failures.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>7. Do not confuse the two human-review paths</h2>
+  <table>
+    <tr><th>AI assessment workflow</th><th>Observation classification review</th></tr>
+    <tr><td>Starts from “AI assessment and workflow review” under a selected Evidence observation. Creates a new workflow and versioned narrative artifact.</td><td>Existing “Expert review” form reviews an observation's classification/theme/severity snapshot.</td></tr>
+    <tr><td>API: <span class="mono">/api/workflows</span>. PostgreSQL workflow, graph checkpoint, event, queue, and review decision records.</td><td>API: <span class="mono">/api/workspace/reviews</span>. Append-only observation decision/revision history.</td></tr>
+    <tr><td>Authenticated reviewer/admin role is enforced server-side; final narrative remains blocked until approved if gate required.</td><td>Reviewer name is self-reported in the current UI; this is not an authenticated electronic signature. Original classification snapshot is preserved.</td></tr>
+    <tr><td>Approve/modify/reject controls workflow continuation, artifact approval, and final response.</td><td>Approve/modify/reject records a label/interpretation decision; it does not approve an AI workflow artifact.</td></tr>
+  </table>
+  <div class="callout"><strong>Chatbot boundary:</strong> The pre-existing chatbot and investigator are separate application features. The explicit workflow pipeline is not implicitly called for every chat message.</div>
+</section>
+
+<section>
+  <h2>8. Source map: exact call sites</h2>
+  <table>
+    <tr><th>Project file</th><th>Entry point / responsibility</th></tr>
+    <tr><td><span class="mono">frontend/src/reginsight/Evidence.jsx</span></td><td>Selected observation view; embeds workflow panel.</td></tr>
+    <tr><td><span class="mono">frontend/src/reginsight/WorkflowReview.jsx</span></td><td>Starts request, polls state, renders trace/evaluation, submits review actions.</td></tr>
+    <tr><td><span class="mono">backend/api/main.py</span></td><td>Application lifespan; registers workflow router; initializes runtime service.</td></tr>
+    <tr><td><span class="mono">backend/api/security.py</span>; <span class="mono">identity.py</span></td><td>Session authentication, request boundaries, reviewer/admin principal.</td></tr>
+    <tr><td><span class="mono">backend/api/workflows.py</span></td><td>HTTP entry routes: create/read/trace/retrieval/evaluation/pending/review/resume.</td></tr>
+    <tr><td><span class="mono">backend/workflows/factory.py</span></td><td>Wires policy, local embeddings, retrieval, structured LLM, analytics, repository.</td></tr>
+    <tr><td><span class="mono">backend/workflows/worker.py</span>; <span class="mono">jobs.py</span></td><td>Worker polling, job execution, lease/retry/heartbeat behavior.</td></tr>
+    <tr><td><span class="mono">backend/workflows/graph.py</span></td><td>LangGraph nodes, conditional transitions, durable human interrupt/resume.</td></tr>
+    <tr><td><span class="mono">backend/workflows/service.py</span></td><td>Business flow: route, retrieve, generate, evaluate, review, finalize, run/resume.</td></tr>
+    <tr><td><span class="mono">backend/workflows/routing.py</span>; <span class="mono">policy.py</span></td><td>Ordered routing rules, risk/review policy, thresholds and bounded iterations.</td></tr>
+    <tr><td><span class="mono">backend/rag/service.py</span>; <span class="mono">repository.py</span>; <span class="mono">chunking.py</span></td><td>Document chunking, local embedding, hybrid retrieval and full evidence trace.</td></tr>
+    <tr><td><span class="mono">backend/agents/specialists.py</span>; <span class="mono">backend/libraries/structured_llm.py</span></td><td>Bounded agent prompts, structured local model calls and citation/numeric checks.</td></tr>
+    <tr><td><span class="mono">backend/workflows/evaluation.py</span></td><td>Independent judge call, score calculation, hard safety/groundedness gates.</td></tr>
+    <tr><td><span class="mono">backend/workflows/repository.py</span>; database migrations</td><td>Atomic workflow revisions, concurrency checks, event and pending-review persistence.</td></tr>
+  </table>
+  <p><strong>Quick mental model:</strong> React submits; FastAPI authenticates and records; PostgreSQL queues; worker executes; graph checkpoints; routing decides; retrieval/analytics supply evidence; specialists draft; judge evaluates; policy pauses for a human where required; authenticated review persists a decision; worker resumes; finalization enforces the approval gate.</p>
+  <p class="footer">This guide documents current source behavior, not regulatory certification. Scores and local model outputs are decision support only. Always inspect source evidence and have a qualified human reviewer make regulatory decisions.</p>
+</section>
+</body>
+</html>
