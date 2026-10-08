@@ -1,0 +1,22 @@
+/* Reference lock: supplied Agilisium artwork, existing pale surfaces and teal type.
+   Preserve the complete wordmark/tagline; RegInsight remains the product label.
+   Credits use the existing footer treatment with an accessible profile link. */
+.rx-brand{flex-direction:column;align-items:flex-start;gap:3px;letter-spacing:0}
+.primary-logo{display:block;width:220px;height:auto;aspect-ratio:2000/551;object-fit:contain}
+.rx-brand .product-label{font-size:14px;font-weight:700;line-height:1.4;letter-spacing:.03em;color:var(--rx-teal)}
+.rx-nav{height:112px}
+.app-header{height:100px;gap:36px}
+.rx-footer .rx-brand{display:inline-flex}
+.ri-logo{aspect-ratio:2000/551;overflow:visible}
+.ri-logo img{position:static;transform:none;width:100%;height:auto;object-fit:contain}
+.developer-credit{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;padding:20px 24px;background:#f4f8f9;border-top:1px solid #dce5e8;color:#526f7a;font:600 15px/1.6 'Segoe UI',system-ui,sans-serif}
+.developer-credit a{color:#245f72;font-weight:750;text-underline-offset:4px;padding:4px 0}
+.developer-credit a:hover{color:#163d49}
+.developer-credit a:focus-visible{outline:2px solid #245f72;outline-offset:4px;border-radius:2px}
+@media(max-width:760px){
+  .primary-logo{width:166px}
+  .rx-nav{height:96px;gap:12px}
+  .app-header{height:auto;gap:10px}
+  .rx-brand .product-label{font-size:12px}
+  .developer-credit{font-size:14px;padding:16px}
+}

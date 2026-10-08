@@ -1,0 +1,843 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\observations\\latest\\categories.csv",
+      "relative": "data\\observations\\latest\\categories.csv",
+      "bytes": 200,
+      "role": "derived artifact"
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\observations\\latest\\recurrence.csv",
+      "relative": "data\\observations\\latest\\recurrence.csv",
+      "bytes": 1478,
+      "role": "derived artifact"
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\observations\\latest\\run-report.json",
+      "relative": "data\\observations\\latest\\run-report.json",
+      "bytes": 7435,
+      "role": "derived artifact"
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\observations\\latest\\severities.csv",
+      "relative": "data\\observations\\latest\\severities.csv",
+      "bytes": 87,
+      "role": "derived artifact"
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\observations\\latest\\tagged-observations.csv",
+      "relative": "data\\observations\\latest\\tagged-observations.csv",
+      "bytes": 49041,
+      "role": "derived artifact"
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\observations\\latest\\tagged-observations.json",
+      "relative": "data\\observations\\latest\\tagged-observations.json",
+      "bytes": 104439,
+      "role": "derived artifact"
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\processed\\duplicates.parquet",
+      "relative": "data\\processed\\duplicates.parquet",
+      "bytes": 8312,
+      "role": "derived artifact",
+      "rows": 1,
+      "columns": [
+        "inspection_id",
+        "fei_number",
+        "company_name",
+        "site_name",
+        "inspection_date",
+        "country",
+        "product_type",
+        "inspection_type",
+        "classification",
+        "citation_flag",
+        "observation_count",
+        "project_area",
+        "observation_text",
+        "fiscal_year",
+        "source_row",
+        "source_record",
+        "company_key",
+        "raw_classification",
+        "raw_date",
+        "raw_count",
+        "citation_indicator",
+        "rejection_reason",
+        "duplicate_rank"
+      ]
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\processed\\inspections.parquet",
+      "relative": "data\\processed\\inspections.parquet",
+      "bytes": 25831,
+      "role": "primary synthetic inspections",
+      "rows": 211,
+      "columns": [
+        "site_key",
+        "inspection_id",
+        "fei_number",
+        "company_name",
+        "site_name",
+        "inspection_date",
+        "country",
+        "product_type",
+        "inspection_type",
+        "classification",
+        "citation_flag",
+        "observation_count",
+        "project_area",
+        "observation_text",
+        "fiscal_year",
+        "source_row",
+        "source_record",
+        "company_key",
+        "raw_classification",
+        "raw_date",
+        "raw_count",
+        "citation_indicator",
+        "rejection_reason",
+        "duplicate_rank",
+        "inspection_year",
+        "inspection_month",
+        "inspection_recency",
+        "OAI_indicator",
+        "VAI_indicator",
+        "site_inspection_count",
+        "inspection_rank"
+      ]
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\processed\\quality.json",
+      "relative": "data\\processed\\quality.json",
+      "bytes": 991,
+      "role": "derived artifact"
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\processed\\rejected.parquet",
+      "relative": "data\\processed\\rejected.parquet",
+      "bytes": 8215,
+      "role": "derived artifact",
+      "rows": 1,
+      "columns": [
+        "inspection_id",
+        "fei_number",
+        "company_name",
+        "site_name",
+        "inspection_date",
+        "country",
+        "product_type",
+        "inspection_type",
+        "classification",
+        "citation_flag",
+        "observation_count",
+        "project_area",
+        "observation_text",
+        "fiscal_year",
+        "source_row",
+        "source_record",
+        "company_key",
+        "raw_classification",
+        "raw_date",
+        "raw_count",
+        "citation_indicator",
+        "rejection_reason",
+        "duplicate_rank"
+      ]
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\real\\annual_benchmarks.json",
+      "relative": "data\\real\\annual_benchmarks.json",
+      "bytes": 1859966,
+      "role": "derived artifact"
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\real\\annual_benchmarks.parquet",
+      "relative": "data\\real\\annual_benchmarks.parquet",
+      "bytes": 290089,
+      "role": "primary annual templates",
+      "rows": 4696,
+      "columns": [
+        "year",
+        "sheet",
+        "source_row",
+        "program",
+        "cite_id",
+        "reference",
+        "short",
+        "long",
+        "frequency"
+      ]
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\real\\canonical_inspections.parquet",
+      "relative": "data\\real\\canonical_inspections.parquet",
+      "bytes": 158797439,
+      "role": "primary real inspection and citation source",
+      "rows": 274886,
+      "columns": [
+        "inspection_id",
+        "fei_number",
+        "company_name",
+        "inspection_date",
+        "classification",
+        "payload_json"
+      ]
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\real\\quality.json",
+      "relative": "data\\real\\quality.json",
+      "bytes": 3932,
+      "role": "derived artifact"
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\real\\source_evaluation.json",
+      "relative": "data\\real\\source_evaluation.json",
+      "bytes": 13110,
+      "role": "derived artifact"
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\sample\\synthetic_inspections.csv",
+      "relative": "data\\sample\\synthetic_inspections.csv",
+      "bytes": 44221,
+      "role": "derived artifact"
+    },
+    {
+      "path": "C:\\Users\\nitis\\Documents\\Codex\\2026-09-20\\files-mentioned-by-the-user-regulatory\\work\\source\\regulatory-inspection-assistant\\data\\sample\\synthetic_inspections.NOTICE.txt",
+      "relative": "data\\sample\\synthetic_inspections.NOTICE.txt",
+      "bytes": 89,
+      "role": "derived artifact"
+    },
+    {
+      "path": "C:\\Users\\nitis\\OneDrive\\Desktop\\e00adefd-b9ce-414f-ae04-21c950fb5f27.xlsx",
+      "sha256": "22d4a8adf25537561970ccf06ab14e4248042945bb7f8af11313a0711ca09b76",
+      "role": "source workbook",
+      "available": true,
+      "sheets": [
+        {
+          "sheet": "Sheet1",
+          "nonblank_rows_after_first_row": 280130,
+          "columns": [
+            "Inspection ID",
+            "FEI Number",
+            "Legal Name",
+            "Inspection End Date",
+            "Program Area",
+            "Act/CFR Number",
+            "Short Description",
+            "Long Description"
+          ],
+          "missing": {
+            "Long Description": 7
+          },
+          "distinct_inspection_ids": 76162,
+          "repeated_inspection_id_rows": 203968,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        }
+      ],
+      "covered_by_verified_prepared_import": true,
+      "audit": {
+        "file": "e00adefd-b9ce-414f-ae04-21c950fb5f27.xlsx",
+        "kind": "citations",
+        "rows": 280130,
+        "sha256": "22d4a8adf25537561970ccf06ab14e4248042945bb7f8af11313a0711ca09b76"
+      }
+    },
+    {
+      "path": "C:\\Users\\nitis\\OneDrive\\Desktop\\e4832250-43dc-4c0c-982b-b31f87205869.xlsx",
+      "sha256": "df545516fa0227de0c047d90b527d75c0749f4b7f0e787ce5ad15c793e8803f9",
+      "role": "source workbook",
+      "available": true,
+      "sheets": [
+        {
+          "sheet": "Sheet1",
+          "nonblank_rows_after_first_row": 341046,
+          "columns": [
+            "FEI Number",
+            "Legal Name",
+            "City",
+            "State",
+            "Zip",
+            "Country/Area",
+            "Fiscal Year",
+            "Inspection ID",
+            "Posted Citations",
+            "Inspection End Date",
+            "Classification",
+            "Project Area",
+            "Product Type",
+            "Additional Details",
+            "FMD-145 Date"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": 274886,
+          "repeated_inspection_id_rows": 66160,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        }
+      ],
+      "covered_by_verified_prepared_import": false
+    },
+    {
+      "path": "C:\\Users\\nitis\\OneDrive\\Desktop\\inspection_observations_fiscal_year_2025_0.xlsx",
+      "sha256": "8d3a824502ad3ce9189826115b4bcb19e0a26cc0b422a64fdf1f5c52f06fe86f",
+      "role": "source workbook",
+      "available": true,
+      "sheets": [
+        {
+          "sheet": "Summary",
+          "nonblank_rows_after_first_row": 14,
+          "columns": [
+            "Number of 483 issued from the System*",
+            "column_2",
+            "column_3"
+          ],
+          "missing": {
+            "column_2": 2,
+            "column_3": 14
+          },
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Biologics",
+          "nonblank_rows_after_first_row": 62,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Bioresearch Monitoring",
+          "nonblank_rows_after_first_row": 91,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Devices",
+          "nonblank_rows_after_first_row": 185,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Drugs",
+          "nonblank_rows_after_first_row": 316,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Foods",
+          "nonblank_rows_after_first_row": 687,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {
+            "Long Description": 1
+          },
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Human Tissue",
+          "nonblank_rows_after_first_row": 99,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Parts 1240 & 1250",
+          "nonblank_rows_after_first_row": 34,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Radiological Health",
+          "nonblank_rows_after_first_row": 16,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Veterinary Medicine",
+          "nonblank_rows_after_first_row": 116,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        }
+      ],
+      "covered_by_verified_prepared_import": true,
+      "audit": {
+        "file": "inspection_observations_fiscal_year_2025_0.xlsx",
+        "kind": "annual_frequency",
+        "year": 2025,
+        "rows": 1606,
+        "sheet_counts": {
+          "Biologics": 62,
+          "Bioresearch Monitoring": 91,
+          "Devices": 185,
+          "Drugs": 316,
+          "Foods": 687,
+          "Human Tissue": 99,
+          "Parts 1240 & 1250": 34,
+          "Radiological Health": 16,
+          "Veterinary Medicine": 116
+        },
+        "sha256": "8d3a824502ad3ce9189826115b4bcb19e0a26cc0b422a64fdf1f5c52f06fe86f"
+      }
+    },
+    {
+      "path": "C:\\Users\\nitis\\OneDrive\\Desktop\\Inspection_Observations_FY23_0.xlsx",
+      "sha256": "4be5cf0c6d62218efaaea158a59155ac74690726e4649e6a43ed6fe92e382150",
+      "role": "source workbook",
+      "available": true,
+      "sheets": [
+        {
+          "sheet": "Summary",
+          "nonblank_rows_after_first_row": 15,
+          "columns": [
+            "column_1",
+            "column_2",
+            "column_3",
+            "column_4",
+            "column_5",
+            "column_6",
+            "column_7",
+            "column_8",
+            "column_9"
+          ],
+          "missing": {
+            "column_1": 15,
+            "column_3": 14,
+            "column_4": 14,
+            "column_5": 3,
+            "column_6": 3,
+            "column_7": 15,
+            "column_8": 15,
+            "column_9": 15,
+            "column_2": 14
+          },
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Biologics",
+          "nonblank_rows_after_first_row": 39,
+          "columns": [
+            "Citation Program Area",
+            "Cite Id",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Bioresearch Monitoring",
+          "nonblank_rows_after_first_row": 78,
+          "columns": [
+            "Citation Program Area",
+            "Cite Id",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Devices",
+          "nonblank_rows_after_first_row": 179,
+          "columns": [
+            "Citation Program Area",
+            "Cite Id",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Drugs",
+          "nonblank_rows_after_first_row": 328,
+          "columns": [
+            "Citation Program Area",
+            "Cite Id",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Foods",
+          "nonblank_rows_after_first_row": 688,
+          "columns": [
+            "Citation Program Area",
+            "Cite Id",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {
+            "Long Description": 1
+          },
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Human Tissue",
+          "nonblank_rows_after_first_row": 78,
+          "columns": [
+            "Citation Program Area",
+            "Cite Id",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Parts 1240 & 1250",
+          "nonblank_rows_after_first_row": 23,
+          "columns": [
+            "Citation Program Area",
+            "Cite Id",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Rad Health",
+          "nonblank_rows_after_first_row": 20,
+          "columns": [
+            "Citation Program Area",
+            "Cite Id",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Vet Med",
+          "nonblank_rows_after_first_row": 113,
+          "columns": [
+            "Citation Program Area",
+            "Cite Id",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        }
+      ],
+      "covered_by_verified_prepared_import": false
+    },
+    {
+      "path": "C:\\Users\\nitis\\OneDrive\\Desktop\\inspection_observations_fy24.xlsx",
+      "sha256": "9f7daee81b7a4865127884cc8f16c410b8f151c905a2944529610c298073fe5d",
+      "role": "source workbook",
+      "available": true,
+      "sheets": [
+        {
+          "sheet": "Summary",
+          "nonblank_rows_after_first_row": 14,
+          "columns": [
+            "Number of 483 issued from the System*",
+            "column_2",
+            "column_3"
+          ],
+          "missing": {
+            "column_2": 2,
+            "column_3": 14
+          },
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Biologics",
+          "nonblank_rows_after_first_row": 48,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Bioresearch Monitoring",
+          "nonblank_rows_after_first_row": 81,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Devices",
+          "nonblank_rows_after_first_row": 174,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Drugs",
+          "nonblank_rows_after_first_row": 287,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Foods",
+          "nonblank_rows_after_first_row": 722,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Human Tissue",
+          "nonblank_rows_after_first_row": 84,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Parts 1240 & 1250",
+          "nonblank_rows_after_first_row": 22,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Rad Health",
+          "nonblank_rows_after_first_row": 17,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        },
+        {
+          "sheet": "Vet Med",
+          "nonblank_rows_after_first_row": 109,
+          "columns": [
+            "Citation Program Area",
+            "Cite ID",
+            "Reference Number",
+            "Short Description",
+            "Long Description",
+            "Frequency"
+          ],
+          "missing": {},
+          "distinct_inspection_ids": null,
+          "repeated_inspection_id_rows": null,
+          "note": "Summary sheets are inventoried as layout rows, not observation counts."
+        }
+      ],
+      "covered_by_verified_prepared_import": true,
+      "audit": {
+        "file": "inspection_observations_fy24.xlsx",
+        "kind": "annual_frequency",
+        "year": 2024,
+        "rows": 1544,
+        "sheet_counts": {
+          "Biologics": 48,
+          "Bioresearch Monitoring": 81,
+          "Devices": 174,
+          "Drugs": 287,
+          "Foods": 722,
+          "Human Tissue": 84,
+          "Parts 1240 & 1250": 22,
+          "Rad Health": 17,
+          "Vet Med": 109
+        },
+        "sha256": "9f7daee81b7a4865127884cc8f16c410b8f151c905a2944529610c298073fe5d"
+      }
+    }
+  ],
+  "note": "Prepared mirrors and generated exports are inventoried but not re-ingested as additional observations. Originals are matched by SHA-256 to the audited real import. Summary frequencies remain annual-template data."
+}

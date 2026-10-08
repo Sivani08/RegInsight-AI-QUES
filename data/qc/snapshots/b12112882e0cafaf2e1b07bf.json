@@ -1,0 +1,2597 @@
+{
+  "kind": "demo",
+  "records": [
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2025-09",
+      "metric": "aged_queries",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2025-09",
+      "metric": "deviations",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2025-09",
+      "metric": "etmf_missing",
+      "numerator": 5,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2025-10",
+      "metric": "aged_queries",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2025-10",
+      "metric": "deviations",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2025-10",
+      "metric": "etmf_missing",
+      "numerator": 5,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2025-11",
+      "metric": "aged_queries",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2025-11",
+      "metric": "deviations",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2025-11",
+      "metric": "etmf_missing",
+      "numerator": 5,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2025-12",
+      "metric": "aged_queries",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2025-12",
+      "metric": "deviations",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2025-12",
+      "metric": "etmf_missing",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-01",
+      "metric": "aged_queries",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-01",
+      "metric": "deviations",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-01",
+      "metric": "etmf_missing",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-02",
+      "metric": "aged_queries",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-02",
+      "metric": "deviations",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-02",
+      "metric": "etmf_missing",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-03",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-03",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-03",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-04",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-04",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-04",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-05",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-05",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-05",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-06",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-06",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-06",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-07",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-07",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-07",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-08",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-08",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-01",
+      "month": "2026-08",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2025-09",
+      "metric": "aged_queries",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2025-09",
+      "metric": "deviations",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2025-09",
+      "metric": "etmf_missing",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2025-10",
+      "metric": "aged_queries",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2025-10",
+      "metric": "deviations",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2025-10",
+      "metric": "etmf_missing",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2025-11",
+      "metric": "aged_queries",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2025-11",
+      "metric": "deviations",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2025-11",
+      "metric": "etmf_missing",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2025-12",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2025-12",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2025-12",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-01",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-01",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-01",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-02",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-02",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-02",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-03",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-03",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-03",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-04",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-04",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-04",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-05",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-05",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-05",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-06",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-06",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-06",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-07",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-07",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-07",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-08",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-08",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-02",
+      "month": "2026-08",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2025-09",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2025-09",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2025-09",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2025-10",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2025-10",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2025-10",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2025-11",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2025-11",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2025-11",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2025-12",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2025-12",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2025-12",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-01",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-01",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-01",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-02",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-02",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-02",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-03",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-03",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-03",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-04",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-04",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-04",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-05",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-05",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-05",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-06",
+      "metric": "aged_queries",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-06",
+      "metric": "deviations",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-06",
+      "metric": "etmf_missing",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-07",
+      "metric": "aged_queries",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-07",
+      "metric": "deviations",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-07",
+      "metric": "etmf_missing",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-08",
+      "metric": "aged_queries",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-08",
+      "metric": "deviations",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "CARD-112",
+      "site": "CARD-112-SITE-03",
+      "month": "2026-08",
+      "metric": "etmf_missing",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2025-09",
+      "metric": "aged_queries",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2025-09",
+      "metric": "deviations",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2025-09",
+      "metric": "etmf_missing",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2025-10",
+      "metric": "aged_queries",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2025-10",
+      "metric": "deviations",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2025-10",
+      "metric": "etmf_missing",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2025-11",
+      "metric": "aged_queries",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2025-11",
+      "metric": "deviations",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2025-11",
+      "metric": "etmf_missing",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2025-12",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2025-12",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2025-12",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-01",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-01",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-01",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-02",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-02",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-02",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-03",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-03",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-03",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-04",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-04",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-04",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-05",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-05",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-05",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-06",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-06",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-06",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-07",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-07",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-07",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-08",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-08",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-01",
+      "month": "2026-08",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2025-09",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2025-09",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2025-09",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2025-10",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2025-10",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2025-10",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2025-11",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2025-11",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2025-11",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2025-12",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2025-12",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2025-12",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-01",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-01",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-01",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-02",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-02",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-02",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-03",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-03",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-03",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-04",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-04",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-04",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-05",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-05",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-05",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-06",
+      "metric": "aged_queries",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-06",
+      "metric": "deviations",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-06",
+      "metric": "etmf_missing",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-07",
+      "metric": "aged_queries",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-07",
+      "metric": "deviations",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-07",
+      "metric": "etmf_missing",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-08",
+      "metric": "aged_queries",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-08",
+      "metric": "deviations",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-02",
+      "month": "2026-08",
+      "metric": "etmf_missing",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2025-09",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2025-09",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2025-09",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2025-10",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2025-10",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2025-10",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2025-11",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2025-11",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2025-11",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2025-12",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2025-12",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2025-12",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-01",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-01",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-01",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-02",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-02",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-02",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-03",
+      "metric": "aged_queries",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-03",
+      "metric": "deviations",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-03",
+      "metric": "etmf_missing",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-04",
+      "metric": "aged_queries",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-04",
+      "metric": "deviations",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-04",
+      "metric": "etmf_missing",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-05",
+      "metric": "aged_queries",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-05",
+      "metric": "deviations",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-05",
+      "metric": "etmf_missing",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-06",
+      "metric": "aged_queries",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-06",
+      "metric": "deviations",
+      "numerator": 13,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-06",
+      "metric": "etmf_missing",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-07",
+      "metric": "aged_queries",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-07",
+      "metric": "deviations",
+      "numerator": 13,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-07",
+      "metric": "etmf_missing",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-08",
+      "metric": "aged_queries",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-08",
+      "metric": "deviations",
+      "numerator": 13,
+      "denominator": 100
+    },
+    {
+      "study": "NEURO-045",
+      "site": "NEURO-045-SITE-03",
+      "month": "2026-08",
+      "metric": "etmf_missing",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2025-09",
+      "metric": "aged_queries",
+      "numerator": 5,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2025-09",
+      "metric": "deviations",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2025-09",
+      "metric": "etmf_missing",
+      "numerator": 4,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2025-10",
+      "metric": "aged_queries",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2025-10",
+      "metric": "deviations",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2025-10",
+      "metric": "etmf_missing",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2025-11",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2025-11",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2025-11",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2025-12",
+      "metric": "aged_queries",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2025-12",
+      "metric": "deviations",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2025-12",
+      "metric": "etmf_missing",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-01",
+      "metric": "aged_queries",
+      "numerator": 13,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-01",
+      "metric": "deviations",
+      "numerator": 14,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-01",
+      "metric": "etmf_missing",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-02",
+      "metric": "aged_queries",
+      "numerator": 15,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-02",
+      "metric": "deviations",
+      "numerator": 16,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-02",
+      "metric": "etmf_missing",
+      "numerator": 14,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-03",
+      "metric": "aged_queries",
+      "numerator": 17,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-03",
+      "metric": "deviations",
+      "numerator": 18,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-03",
+      "metric": "etmf_missing",
+      "numerator": 16,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-04",
+      "metric": "aged_queries",
+      "numerator": 19,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-04",
+      "metric": "deviations",
+      "numerator": 20,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-04",
+      "metric": "etmf_missing",
+      "numerator": 18,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-05",
+      "metric": "aged_queries",
+      "numerator": 21,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-05",
+      "metric": "deviations",
+      "numerator": 22,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-05",
+      "metric": "etmf_missing",
+      "numerator": 20,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-06",
+      "metric": "aged_queries",
+      "numerator": 23,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-06",
+      "metric": "deviations",
+      "numerator": 24,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-06",
+      "metric": "etmf_missing",
+      "numerator": 22,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-07",
+      "metric": "aged_queries",
+      "numerator": 25,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-07",
+      "metric": "deviations",
+      "numerator": 26,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-07",
+      "metric": "etmf_missing",
+      "numerator": 24,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-08",
+      "metric": "aged_queries",
+      "numerator": 27,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-08",
+      "metric": "deviations",
+      "numerator": 28,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-01",
+      "month": "2026-08",
+      "metric": "etmf_missing",
+      "numerator": 26,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2025-09",
+      "metric": "aged_queries",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2025-09",
+      "metric": "deviations",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2025-09",
+      "metric": "etmf_missing",
+      "numerator": 5,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2025-10",
+      "metric": "aged_queries",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2025-10",
+      "metric": "deviations",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2025-10",
+      "metric": "etmf_missing",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2025-11",
+      "metric": "aged_queries",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2025-11",
+      "metric": "deviations",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2025-11",
+      "metric": "etmf_missing",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2025-12",
+      "metric": "aged_queries",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2025-12",
+      "metric": "deviations",
+      "numerator": 13,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2025-12",
+      "metric": "etmf_missing",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-01",
+      "metric": "aged_queries",
+      "numerator": 14,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-01",
+      "metric": "deviations",
+      "numerator": 15,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-01",
+      "metric": "etmf_missing",
+      "numerator": 13,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-02",
+      "metric": "aged_queries",
+      "numerator": 16,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-02",
+      "metric": "deviations",
+      "numerator": 17,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-02",
+      "metric": "etmf_missing",
+      "numerator": 15,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-03",
+      "metric": "aged_queries",
+      "numerator": 18,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-03",
+      "metric": "deviations",
+      "numerator": 19,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-03",
+      "metric": "etmf_missing",
+      "numerator": 17,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-04",
+      "metric": "aged_queries",
+      "numerator": 20,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-04",
+      "metric": "deviations",
+      "numerator": 21,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-04",
+      "metric": "etmf_missing",
+      "numerator": 19,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-05",
+      "metric": "aged_queries",
+      "numerator": 22,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-05",
+      "metric": "deviations",
+      "numerator": 23,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-05",
+      "metric": "etmf_missing",
+      "numerator": 21,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-06",
+      "metric": "aged_queries",
+      "numerator": 24,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-06",
+      "metric": "deviations",
+      "numerator": 25,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-06",
+      "metric": "etmf_missing",
+      "numerator": 23,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-07",
+      "metric": "aged_queries",
+      "numerator": 26,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-07",
+      "metric": "deviations",
+      "numerator": 27,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-07",
+      "metric": "etmf_missing",
+      "numerator": 25,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-08",
+      "metric": "aged_queries",
+      "numerator": 28,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-08",
+      "metric": "deviations",
+      "numerator": 29,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-02",
+      "month": "2026-08",
+      "metric": "etmf_missing",
+      "numerator": 27,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2025-09",
+      "metric": "aged_queries",
+      "numerator": 7,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2025-09",
+      "metric": "deviations",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2025-09",
+      "metric": "etmf_missing",
+      "numerator": 6,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2025-10",
+      "metric": "aged_queries",
+      "numerator": 9,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2025-10",
+      "metric": "deviations",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2025-10",
+      "metric": "etmf_missing",
+      "numerator": 8,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2025-11",
+      "metric": "aged_queries",
+      "numerator": 11,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2025-11",
+      "metric": "deviations",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2025-11",
+      "metric": "etmf_missing",
+      "numerator": 10,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2025-12",
+      "metric": "aged_queries",
+      "numerator": 13,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2025-12",
+      "metric": "deviations",
+      "numerator": 14,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2025-12",
+      "metric": "etmf_missing",
+      "numerator": 12,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-01",
+      "metric": "aged_queries",
+      "numerator": 15,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-01",
+      "metric": "deviations",
+      "numerator": 16,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-01",
+      "metric": "etmf_missing",
+      "numerator": 14,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-02",
+      "metric": "aged_queries",
+      "numerator": 17,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-02",
+      "metric": "deviations",
+      "numerator": 18,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-02",
+      "metric": "etmf_missing",
+      "numerator": 16,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-03",
+      "metric": "aged_queries",
+      "numerator": 19,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-03",
+      "metric": "deviations",
+      "numerator": 20,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-03",
+      "metric": "etmf_missing",
+      "numerator": 18,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-04",
+      "metric": "aged_queries",
+      "numerator": 21,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-04",
+      "metric": "deviations",
+      "numerator": 22,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-04",
+      "metric": "etmf_missing",
+      "numerator": 20,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-05",
+      "metric": "aged_queries",
+      "numerator": 23,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-05",
+      "metric": "deviations",
+      "numerator": 24,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-05",
+      "metric": "etmf_missing",
+      "numerator": 22,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-06",
+      "metric": "aged_queries",
+      "numerator": 25,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-06",
+      "metric": "deviations",
+      "numerator": 26,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-06",
+      "metric": "etmf_missing",
+      "numerator": 24,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-07",
+      "metric": "aged_queries",
+      "numerator": 27,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-07",
+      "metric": "deviations",
+      "numerator": 28,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-07",
+      "metric": "etmf_missing",
+      "numerator": 26,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-08",
+      "metric": "aged_queries",
+      "numerator": 29,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-08",
+      "metric": "deviations",
+      "numerator": 30,
+      "denominator": 100
+    },
+    {
+      "study": "ONCO-301",
+      "site": "ONCO-301-SITE-03",
+      "month": "2026-08",
+      "metric": "etmf_missing",
+      "numerator": 28,
+      "denominator": 100
+    }
+  ]
+}

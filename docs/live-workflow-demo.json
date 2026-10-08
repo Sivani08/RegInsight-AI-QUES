@@ -1,0 +1,901 @@
+{
+  "workflow": {
+    "workflow_id": "a03c5069-9430-4833-a859-ec2ae81ee8ea",
+    "request_id": "62e3ac11-d1b0-42bc-b9f8-1252046f2c45",
+    "request": {
+      "question": "Explain regulatory significance of OAI VAI NAI inspection outcome classifications.",
+      "filters": {},
+      "observation_id": null,
+      "run_id": null,
+      "require_review": true,
+      "analytics_filters": {
+        "company": null,
+        "site": null,
+        "fei_number": null,
+        "country": null,
+        "product_type": null,
+        "project_area": null,
+        "inspection_type": null,
+        "classification": null,
+        "year": null,
+        "start_year": null,
+        "end_year": null,
+        "start_date": null,
+        "end_date": null,
+        "theme": null,
+        "severity": null,
+        "risk_band": null,
+        "semantic_group": null,
+        "dataset": null,
+        "grain": null
+      }
+    },
+    "status": "AWAITING_HUMAN_REVIEW",
+    "revision": 8,
+    "iteration": 1,
+    "analysis": {
+      "query": "Explain regulatory significance of OAI VAI NAI inspection outcome classifications.",
+      "domain": "Quality",
+      "task_type": "Recommend",
+      "risk_level": "HIGH",
+      "required_agents": [
+        "InspectionAssessmentAgent"
+      ],
+      "requires_rag": true,
+      "requires_tools": false,
+      "requires_hitl": true
+    },
+    "routing": {
+      "selected_agent": "InspectionAssessmentAgent",
+      "secondary_agents": [],
+      "routing_reason": "Observation, finding, CAPA, quality/compliance, inspection interpretation -> InspectionAssessmentAgent. Recommendations, compliance approval, release decisions, safety or critical impact -> mandatory review. Explicit user review request or weak retrieval -> mandatory review.",
+      "matched_rules": [
+        "R3",
+        "H1",
+        "H2"
+      ],
+      "rubric_version": "1.0",
+      "rubric": {
+        "method": "ordered_decision_table",
+        "domain": "Quality",
+        "task": "Recommend",
+        "data_requirement": "vectors",
+        "risk": "HIGH",
+        "review": "MANDATORY"
+      },
+      "confidence": null
+    },
+    "retrieval_trace": {
+      "query_id": "62e3ac11-d1b0-42bc-b9f8-1252046f2c45",
+      "query": "Explain regulatory significance of OAI VAI NAI inspection outcome classifications.",
+      "rewritten_query": null,
+      "embedding_model": "reginsight-hash-v1",
+      "embedding_version": "1.1:word-bigram-signed-l2",
+      "embedding_dimensions": 512,
+      "filters": {},
+      "top_k": 5,
+      "thresholds": {
+        "strong": 0.35,
+        "weak": 0.12
+      },
+      "results": [
+        {
+          "chunk": {
+            "chunk_id": "CHK-ce6321c7c1b5f98298ba407df50dc7c8",
+            "document_id": "K2",
+            "document_name": "Inspection classifications",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "NAI means No Action Indicated. VAI means Voluntary Action Indicated. OAI means Official Action Indicated: FDA describes this as a recommendation for regulatory or administrative action. Say recommended, not required or guaranteed. These are inspection outcome classifications. Unknown classifications are kept separate. In RegInsight, OAI rate divides OAI inspections by inspections with known classifications; it is not the percentage of observation rows.",
+            "token_count": 62,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "FDA Inspection classifications; backend/analytics/metrics.py",
+              "authority": "project_reference_not_regulatory_authority",
+              "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-basics/inspection-classifications"
+            },
+            "created_at": "2026-10-07T07:02:50.083506+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": 0.16854019432007689,
+          "rank": 1,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-8b5aba5ee5fc70cd77c92c4abada1621",
+            "document_id": "K1",
+            "document_name": "RegInsight purpose and chatbot",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "RegInsight AI supports inspection analysis, recurring risk discovery and source-linked human review. The chatbot uses a locally hosted Qwen model with RegInsight instructions and retrieved project evidence. Its base weights have not been fine-tuned on the inspection dataset. Domain configuration and retrieval are different from model training. The inspection investigation agent and the chatbot agent are separate components. The chatbot does not change records or make regulatory decisions.",
+            "token_count": 68,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "backend/agents/chatbot.py",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.048510+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": 0.11834526564403043,
+          "rank": 2,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-9b1571a961cef014e5175ad16f759175",
+            "document_id": "K8",
+            "document_name": "Local operation, latency and evaluation",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "The chatbot sends its bounded evidence context only to a loopback Ollama service on this computer. Dashboard calculations stay in the backend. Evidence is displayed before model generation finishes, and the UI reports retrieval and total answer timing. Source-ID and numeric-token checks catch some unsupported outputs but do not prove every statement correct. Human review remains necessary. Automated tests and deterministic evaluation metrics are not a substitute for expert-reviewed held-out question-and-answer evaluation.",
+            "token_count": 72,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "backend/agents/chatbot.py; backend/api/security.py; evaluation",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.685903+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": 0.022558941695692152,
+          "rank": 3,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-7ad2cb92280339559557f80bb5300a58",
+            "document_id": "K6",
+            "document_name": "Real and synthetic datasets",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "The project contains real observation sources and a separate synthetic demonstration workflow. The synthetic demo includes 72 independently authored observations inspired by public FDA 483 formats. These examples are not authentic FDA findings and their expected labels are developer fixtures, not expert ground truth. The synthetic workflow uses pandas; the current large-dataset dashboard primarily uses SQL aggregation. Inspection counts and observation counts refer to different units and must not be combined.",
+            "token_count": 71,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "data_engineering/observation_demo.py; backend/services/observations.py; backend/api/workspace.py",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.489889+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": 0.0,
+          "rank": 4,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-e8694b9c0347efa1f0e7a3d1402d3d9d",
+            "document_id": "K5",
+            "document_name": "Risk scores and interpretation",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "Site risk scores are deterministic weighted prioritization measures calculated by backend analytics using the configured methodology. Review the score components, scope and available denominators in the dashboard. A high score is a reason to inspect supporting evidence, not a finding of noncompliance. Missing data and insufficient coverage must remain visible. The model must not invent or recalculate a risk score from narrative text.",
+            "token_count": 63,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "backend/risk/engine.py; config/risk_weights.yaml",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.347763+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": 0.0,
+          "rank": 5,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-526ac0023d3e8afb716dad05e21b27c3",
+            "document_id": "K7",
+            "document_name": "Cleaning and evidence provenance",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "Data engineering maps source fields into canonical records, normalizes values and records rejected and duplicate rows. Unknown values are preserved rather than invented. Inspection and observation records retain source identifiers, filenames or source references and row locators where available. Evidence should be inspected together with dataset scope, dates and known denominators. A model answer is an explanation of retrieved evidence, not a replacement for the original record.",
+            "token_count": 67,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "data_engineering; backend/api/main.py:data-quality; backend/database/store.py",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.524011+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": -0.022222222350470996,
+          "rank": 6,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-46d5762458748c5b7c05364b9415018a",
+            "document_id": "K3",
+            "document_name": "Observation themes and severity",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "Observation text is tagged with a theme, category, severity, confidence and source evidence. Analytical severity supports prioritization and is not an official FDA severity determination. The default prepared observation snapshot uses deterministic rules. The newer observation contract uses a broad category with a more detailed theme. Unclassified or unsupported text should not be forced into a positive classification. Human review is required before consequential decisions.",
+            "token_count": 65,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "backend/genai/contracts.py; backend/analytics/intelligence_taxonomy.py",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.203689+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": -0.045466289298031565,
+          "rank": 7,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-7d2e94e5fda4558e5066c49787b2fa55",
+            "document_id": "K4",
+            "document_name": "Recurring risk methodology",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "Recurring themes are assessed across distinct inspections. Repeated observation rows within the same inspection must not be counted as separate inspections. The legacy synthetic demo calculates repeats as distinct inspections minus one, clipped at zero. The current observation snapshot also groups similar wording using lexical similarity. A similarity group or recurring theme is an investigation lead, not proof of a repeated regulatory violation.",
+            "token_count": 63,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "backend/services/observations.py:summaries; backend/services/dashboard_insights.py:observation_insights",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.310062+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": -0.09467621366623018,
+          "rank": 8,
+          "reranking_score": null
+        }
+      ],
+      "final_chunk_ids": [
+        "CHK-ce6321c7c1b5f98298ba407df50dc7c8"
+      ],
+      "retrieval_status": "WEAK_HIT",
+      "confidence": null,
+      "score_interpretation": "Cosine similarity, not calibrated confidence"
+    },
+    "tool_results": {},
+    "agent_outputs": [
+      {
+        "agent_name": "InspectionAssessmentAgent",
+        "status": "GENERATED",
+        "answer": "The OAI (Official Action Indicated) classification in FDA inspections represents a recommendation for regulatory or administrative action, not a mandatory requirement. This classification is derived from inspection outcomes and is used to guide agencies in their decision-making processes. The classification system includes NAI (No Action Indicated) and VAI (Voluntary Action Indicated), with OAI being the highest level of recommendation. The classification is not based on the percentage of observations but rather on the specific findings during inspections.",
+        "evidence": [
+          "CHK-ce6321c7c1b5f98298ba407df50dc7c8"
+        ],
+        "limitations": [
+          "The classification system does not provide a direct percentage of observations, as it is based on the number of inspections with known classifications."
+        ],
+        "confidence": null,
+        "requires_human_review": true,
+        "next_recommended_action": "EVALUATE"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "3babd36d-5129-4ded-b9f3-dec4307029b5",
+        "workflow_id": "a03c5069-9430-4833-a859-ec2ae81ee8ea",
+        "version": 1,
+        "previous_version": null,
+        "agent": "InspectionAssessmentAgent",
+        "artifact_type": "inspection_evidence_assessment",
+        "content": "The OAI (Official Action Indicated) classification in FDA inspections represents a recommendation for regulatory or administrative action, not a mandatory requirement. This classification is derived from inspection outcomes and is used to guide agencies in their decision-making processes. The classification system includes NAI (No Action Indicated) and VAI (Voluntary Action Indicated), with OAI being the highest level of recommendation. The classification is not based on the percentage of observations but rather on the specific findings during inspections.",
+        "evidence": [
+          "CHK-ce6321c7c1b5f98298ba407df50dc7c8"
+        ],
+        "limitations": [
+          "The classification system does not provide a direct percentage of observations, as it is based on the number of inspections with known classifications."
+        ],
+        "risk_level": "HIGH",
+        "review_required": true,
+        "review_status": "PENDING",
+        "evaluation": {
+          "model": "reginsight-chat:qwen3-1.7b",
+          "generation_model": "reginsight-chat:qwen3-1.7b",
+          "same_model": true,
+          "overall_score": 91.25,
+          "decision": "PASS",
+          "dimensions": {
+            "relevance": 9.0,
+            "groundedness": 9.0,
+            "factual_consistency": 9.0,
+            "completeness": 9.0,
+            "domain_correctness": 9.0,
+            "safety": 10.0,
+            "evidence_coverage": 9.0,
+            "clarity": 9.0
+          },
+          "issues": [],
+          "rationale": "The query asks for an explanation of the regulatory significance of OAI VAI NAI inspection outcome classifications. The draft provides a clear and accurate description of the classifications, their meanings, and their regulatory context. The evidence supports the claims with specific definitions and references to the FDA's documentation. The tool results are empty but do not affect the validity of the information provided. The explanation is concise, complete, and free of unsupported claims or limitations.",
+          "rubric_version": "1.0",
+          "thresholds": {
+            "pass": 80.0,
+            "revision": 60.0,
+            "minimum_groundedness": 7.0,
+            "minimum_safety": 7.0
+          },
+          "evaluated_at": "2026-10-07T07:03:36.583505+00:00"
+        },
+        "created_at": "2026-10-07T07:03:36.583505+00:00"
+      }
+    ],
+    "reviews": [],
+    "final_response": null,
+    "error": null,
+    "policy": {
+      "version": "1.0",
+      "embedding_model": "reginsight-hash-v1",
+      "embedding_dimensions": 512,
+      "generation_model": "reginsight-chat:qwen3-1.7b",
+      "judge_model": "reginsight-chat:qwen3-1.7b",
+      "retrieval_top_k": 5,
+      "retrieval_candidate_limit": 20,
+      "strong_hit_threshold": 0.35,
+      "weak_hit_threshold": 0.12,
+      "judge_pass_score": 80.0,
+      "judge_revision_score": 60.0,
+      "judge_min_groundedness": 7.0,
+      "judge_min_safety": 7.0,
+      "mandatory_hitl_risk_levels": [
+        "HIGH",
+        "CRITICAL"
+      ],
+      "maximum_agent_iterations": 3,
+      "chunk_tokens": 220,
+      "chunk_overlap": 30,
+      "max_index_chunks": 25000,
+      "max_document_characters": 200000,
+      "llm_timeout_seconds": 120
+    },
+    "created_at": "2026-10-07T07:02:50.931491+00:00",
+    "updated_at": "2026-10-07T07:03:36.616026+00:00"
+  },
+  "calls": [
+    {
+      "purpose": "generation:InspectionAssessmentAgent",
+      "model": "reginsight-chat:qwen3-1.7b",
+      "latency_ms": 21281,
+      "output_tokens": 179,
+      "prompt_tokens": 502
+    },
+    {
+      "purpose": "judge",
+      "model": "reginsight-chat:qwen3-1.7b",
+      "latency_ms": 23406,
+      "output_tokens": 177,
+      "prompt_tokens": 648
+    }
+  ],
+  "events": [
+    {
+      "sequence": 0,
+      "event": "received",
+      "timestamp": "2026-10-07T07:02:50.934505+00:00"
+    },
+    {
+      "sequence": 1,
+      "event": "routing",
+      "status": "ROUTED",
+      "selected_agent": "InspectionAssessmentAgent",
+      "secondary_agents": [],
+      "routing_reason": "Observation, finding, CAPA, quality/compliance, inspection interpretation -> InspectionAssessmentAgent. Recommendations, compliance approval, release decisions, safety or critical impact -> mandatory review. Explicit user review request or weak retrieval -> mandatory review.",
+      "matched_rules": [
+        "R3",
+        "H1",
+        "H2"
+      ],
+      "rubric_version": "1.0",
+      "rubric": {
+        "method": "ordered_decision_table",
+        "domain": "Quality",
+        "task": "Recommend",
+        "data_requirement": "vectors",
+        "risk": "HIGH",
+        "review": "MANDATORY"
+      },
+      "confidence": null,
+      "timestamp": "2026-10-07T07:02:51.096659+00:00"
+    },
+    {
+      "sequence": 2,
+      "event": "retrieval_started",
+      "status": "RETRIEVING",
+      "timestamp": "2026-10-07T07:02:51.345339+00:00"
+    },
+    {
+      "sequence": 3,
+      "event": "retrieval_completed",
+      "status": "WEAK_HIT",
+      "chunk_ids": [
+        "CHK-ce6321c7c1b5f98298ba407df50dc7c8"
+      ],
+      "scores": [
+        0.16854019432007689,
+        0.11834526564403043,
+        0.022558941695692152,
+        0.0,
+        0.0,
+        -0.022222222350470996,
+        -0.045466289298031565,
+        -0.09467621366623018
+      ],
+      "timestamp": "2026-10-07T07:02:51.491038+00:00"
+    },
+    {
+      "sequence": 4,
+      "event": "generation_started",
+      "status": "GENERATING",
+      "iteration": 1,
+      "timestamp": "2026-10-07T07:02:51.524152+00:00"
+    },
+    {
+      "sequence": 5,
+      "event": "agent_completed",
+      "status": "GENERATING",
+      "agent": "InspectionAssessmentAgent",
+      "citations": [
+        "CHK-ce6321c7c1b5f98298ba407df50dc7c8"
+      ],
+      "timestamp": "2026-10-07T07:03:12.895550+00:00"
+    },
+    {
+      "sequence": 6,
+      "event": "judge_started",
+      "status": "EVALUATING",
+      "timestamp": "2026-10-07T07:03:12.948856+00:00"
+    },
+    {
+      "sequence": 7,
+      "event": "judge_completed",
+      "status": "EVALUATING",
+      "artifact_id": "3babd36d-5129-4ded-b9f3-dec4307029b5",
+      "artifact_version": 1,
+      "score": 91.25,
+      "decision": "PASS",
+      "model": "reginsight-chat:qwen3-1.7b",
+      "same_model": true,
+      "timestamp": "2026-10-07T07:03:36.591920+00:00"
+    },
+    {
+      "sequence": 8,
+      "event": "human_gate",
+      "status": "AWAITING_HUMAN_REVIEW",
+      "artifact_version": 1,
+      "timestamp": "2026-10-07T07:03:36.623276+00:00"
+    }
+  ],
+  "live_model": true,
+  "after_demo_approval": {
+    "workflow_id": "a03c5069-9430-4833-a859-ec2ae81ee8ea",
+    "request_id": "62e3ac11-d1b0-42bc-b9f8-1252046f2c45",
+    "request": {
+      "question": "Explain regulatory significance of OAI VAI NAI inspection outcome classifications.",
+      "filters": {},
+      "observation_id": null,
+      "run_id": null,
+      "require_review": true,
+      "analytics_filters": {
+        "company": null,
+        "site": null,
+        "fei_number": null,
+        "country": null,
+        "product_type": null,
+        "project_area": null,
+        "inspection_type": null,
+        "classification": null,
+        "year": null,
+        "start_year": null,
+        "end_year": null,
+        "start_date": null,
+        "end_date": null,
+        "theme": null,
+        "severity": null,
+        "risk_band": null,
+        "semantic_group": null,
+        "dataset": null,
+        "grain": null
+      }
+    },
+    "status": "COMPLETED",
+    "revision": 10,
+    "iteration": 1,
+    "analysis": {
+      "query": "Explain regulatory significance of OAI VAI NAI inspection outcome classifications.",
+      "domain": "Quality",
+      "task_type": "Recommend",
+      "risk_level": "HIGH",
+      "required_agents": [
+        "InspectionAssessmentAgent"
+      ],
+      "requires_rag": true,
+      "requires_tools": false,
+      "requires_hitl": true
+    },
+    "routing": {
+      "selected_agent": "InspectionAssessmentAgent",
+      "secondary_agents": [],
+      "routing_reason": "Observation, finding, CAPA, quality/compliance, inspection interpretation -> InspectionAssessmentAgent. Recommendations, compliance approval, release decisions, safety or critical impact -> mandatory review. Explicit user review request or weak retrieval -> mandatory review.",
+      "matched_rules": [
+        "R3",
+        "H1",
+        "H2"
+      ],
+      "rubric_version": "1.0",
+      "rubric": {
+        "method": "ordered_decision_table",
+        "domain": "Quality",
+        "task": "Recommend",
+        "data_requirement": "vectors",
+        "risk": "HIGH",
+        "review": "MANDATORY"
+      },
+      "confidence": null
+    },
+    "retrieval_trace": {
+      "query_id": "62e3ac11-d1b0-42bc-b9f8-1252046f2c45",
+      "query": "Explain regulatory significance of OAI VAI NAI inspection outcome classifications.",
+      "rewritten_query": null,
+      "embedding_model": "reginsight-hash-v1",
+      "embedding_version": "1.1:word-bigram-signed-l2",
+      "embedding_dimensions": 512,
+      "filters": {},
+      "top_k": 5,
+      "thresholds": {
+        "strong": 0.35,
+        "weak": 0.12
+      },
+      "results": [
+        {
+          "chunk": {
+            "chunk_id": "CHK-ce6321c7c1b5f98298ba407df50dc7c8",
+            "document_id": "K2",
+            "document_name": "Inspection classifications",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "NAI means No Action Indicated. VAI means Voluntary Action Indicated. OAI means Official Action Indicated: FDA describes this as a recommendation for regulatory or administrative action. Say recommended, not required or guaranteed. These are inspection outcome classifications. Unknown classifications are kept separate. In RegInsight, OAI rate divides OAI inspections by inspections with known classifications; it is not the percentage of observation rows.",
+            "token_count": 62,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "FDA Inspection classifications; backend/analytics/metrics.py",
+              "authority": "project_reference_not_regulatory_authority",
+              "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-basics/inspection-classifications"
+            },
+            "created_at": "2026-10-07T07:02:50.083506+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": 0.16854019432007689,
+          "rank": 1,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-8b5aba5ee5fc70cd77c92c4abada1621",
+            "document_id": "K1",
+            "document_name": "RegInsight purpose and chatbot",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "RegInsight AI supports inspection analysis, recurring risk discovery and source-linked human review. The chatbot uses a locally hosted Qwen model with RegInsight instructions and retrieved project evidence. Its base weights have not been fine-tuned on the inspection dataset. Domain configuration and retrieval are different from model training. The inspection investigation agent and the chatbot agent are separate components. The chatbot does not change records or make regulatory decisions.",
+            "token_count": 68,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "backend/agents/chatbot.py",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.048510+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": 0.11834526564403043,
+          "rank": 2,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-9b1571a961cef014e5175ad16f759175",
+            "document_id": "K8",
+            "document_name": "Local operation, latency and evaluation",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "The chatbot sends its bounded evidence context only to a loopback Ollama service on this computer. Dashboard calculations stay in the backend. Evidence is displayed before model generation finishes, and the UI reports retrieval and total answer timing. Source-ID and numeric-token checks catch some unsupported outputs but do not prove every statement correct. Human review remains necessary. Automated tests and deterministic evaluation metrics are not a substitute for expert-reviewed held-out question-and-answer evaluation.",
+            "token_count": 72,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "backend/agents/chatbot.py; backend/api/security.py; evaluation",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.685903+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": 0.022558941695692152,
+          "rank": 3,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-7ad2cb92280339559557f80bb5300a58",
+            "document_id": "K6",
+            "document_name": "Real and synthetic datasets",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "The project contains real observation sources and a separate synthetic demonstration workflow. The synthetic demo includes 72 independently authored observations inspired by public FDA 483 formats. These examples are not authentic FDA findings and their expected labels are developer fixtures, not expert ground truth. The synthetic workflow uses pandas; the current large-dataset dashboard primarily uses SQL aggregation. Inspection counts and observation counts refer to different units and must not be combined.",
+            "token_count": 71,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "data_engineering/observation_demo.py; backend/services/observations.py; backend/api/workspace.py",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.489889+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": 0.0,
+          "rank": 4,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-e8694b9c0347efa1f0e7a3d1402d3d9d",
+            "document_id": "K5",
+            "document_name": "Risk scores and interpretation",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "Site risk scores are deterministic weighted prioritization measures calculated by backend analytics using the configured methodology. Review the score components, scope and available denominators in the dashboard. A high score is a reason to inspect supporting evidence, not a finding of noncompliance. Missing data and insufficient coverage must remain visible. The model must not invent or recalculate a risk score from narrative text.",
+            "token_count": 63,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "backend/risk/engine.py; config/risk_weights.yaml",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.347763+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": 0.0,
+          "rank": 5,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-526ac0023d3e8afb716dad05e21b27c3",
+            "document_id": "K7",
+            "document_name": "Cleaning and evidence provenance",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "Data engineering maps source fields into canonical records, normalizes values and records rejected and duplicate rows. Unknown values are preserved rather than invented. Inspection and observation records retain source identifiers, filenames or source references and row locators where available. Evidence should be inspected together with dataset scope, dates and known denominators. A model answer is an explanation of retrieved evidence, not a replacement for the original record.",
+            "token_count": 67,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "data_engineering; backend/api/main.py:data-quality; backend/database/store.py",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.524011+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": -0.022222222350470996,
+          "rank": 6,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-46d5762458748c5b7c05364b9415018a",
+            "document_id": "K3",
+            "document_name": "Observation themes and severity",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "Observation text is tagged with a theme, category, severity, confidence and source evidence. Analytical severity supports prioritization and is not an official FDA severity determination. The default prepared observation snapshot uses deterministic rules. The newer observation contract uses a broad category with a more detailed theme. Unclassified or unsupported text should not be forced into a positive classification. Human review is required before consequential decisions.",
+            "token_count": 65,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "backend/genai/contracts.py; backend/analytics/intelligence_taxonomy.py",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.203689+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": -0.045466289298031565,
+          "rank": 7,
+          "reranking_score": null
+        },
+        {
+          "chunk": {
+            "chunk_id": "CHK-7d2e94e5fda4558e5066c49787b2fa55",
+            "document_id": "K4",
+            "document_name": "Recurring risk methodology",
+            "source_type": "project_reference",
+            "domain": "Regulatory",
+            "section": null,
+            "page_number": null,
+            "chunk_index": 0,
+            "chunk_text": "Recurring themes are assessed across distinct inspections. Repeated observation rows within the same inspection must not be counted as separate inspections. The legacy synthetic demo calculates repeats as distinct inspections minus one, clipped at zero. The current observation snapshot also groups similar wording using lexical similarity. A similarity group or recurring theme is an investigation lead, not proof of a repeated regulatory violation.",
+            "token_count": 63,
+            "token_count_method": "regex_nonwhitespace_v1",
+            "metadata": {
+              "locator": "backend/services/observations.py:summaries; backend/services/dashboard_insights.py:observation_insights",
+              "authority": "project_reference_not_regulatory_authority"
+            },
+            "created_at": "2026-10-07T07:02:50.310062+00:00",
+            "embedding_model": "reginsight-hash-v1",
+            "embedding_version": "1.1:word-bigram-signed-l2"
+          },
+          "similarity_score": -0.09467621366623018,
+          "rank": 8,
+          "reranking_score": null
+        }
+      ],
+      "final_chunk_ids": [
+        "CHK-ce6321c7c1b5f98298ba407df50dc7c8"
+      ],
+      "retrieval_status": "WEAK_HIT",
+      "confidence": null,
+      "score_interpretation": "Cosine similarity, not calibrated confidence"
+    },
+    "tool_results": {},
+    "agent_outputs": [
+      {
+        "agent_name": "InspectionAssessmentAgent",
+        "status": "GENERATED",
+        "answer": "The OAI (Official Action Indicated) classification in FDA inspections represents a recommendation for regulatory or administrative action, not a mandatory requirement. This classification is derived from inspection outcomes and is used to guide agencies in their decision-making processes. The classification system includes NAI (No Action Indicated) and VAI (Voluntary Action Indicated), with OAI being the highest level of recommendation. The classification is not based on the percentage of observations but rather on the specific findings during inspections.",
+        "evidence": [
+          "CHK-ce6321c7c1b5f98298ba407df50dc7c8"
+        ],
+        "limitations": [
+          "The classification system does not provide a direct percentage of observations, as it is based on the number of inspections with known classifications."
+        ],
+        "confidence": null,
+        "requires_human_review": true,
+        "next_recommended_action": "EVALUATE"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "3babd36d-5129-4ded-b9f3-dec4307029b5",
+        "workflow_id": "a03c5069-9430-4833-a859-ec2ae81ee8ea",
+        "version": 1,
+        "previous_version": null,
+        "agent": "InspectionAssessmentAgent",
+        "artifact_type": "inspection_evidence_assessment",
+        "content": "The OAI (Official Action Indicated) classification in FDA inspections represents a recommendation for regulatory or administrative action, not a mandatory requirement. This classification is derived from inspection outcomes and is used to guide agencies in their decision-making processes. The classification system includes NAI (No Action Indicated) and VAI (Voluntary Action Indicated), with OAI being the highest level of recommendation. The classification is not based on the percentage of observations but rather on the specific findings during inspections.",
+        "evidence": [
+          "CHK-ce6321c7c1b5f98298ba407df50dc7c8"
+        ],
+        "limitations": [
+          "The classification system does not provide a direct percentage of observations, as it is based on the number of inspections with known classifications."
+        ],
+        "risk_level": "HIGH",
+        "review_required": true,
+        "review_status": "APPROVED",
+        "evaluation": {
+          "model": "reginsight-chat:qwen3-1.7b",
+          "generation_model": "reginsight-chat:qwen3-1.7b",
+          "same_model": true,
+          "overall_score": 91.25,
+          "decision": "PASS",
+          "dimensions": {
+            "relevance": 9.0,
+            "groundedness": 9.0,
+            "factual_consistency": 9.0,
+            "completeness": 9.0,
+            "domain_correctness": 9.0,
+            "safety": 10.0,
+            "evidence_coverage": 9.0,
+            "clarity": 9.0
+          },
+          "issues": [],
+          "rationale": "The query asks for an explanation of the regulatory significance of OAI VAI NAI inspection outcome classifications. The draft provides a clear and accurate description of the classifications, their meanings, and their regulatory context. The evidence supports the claims with specific definitions and references to the FDA's documentation. The tool results are empty but do not affect the validity of the information provided. The explanation is concise, complete, and free of unsupported claims or limitations.",
+          "rubric_version": "1.0",
+          "thresholds": {
+            "pass": 80.0,
+            "revision": 60.0,
+            "minimum_groundedness": 7.0,
+            "minimum_safety": 7.0
+          },
+          "evaluated_at": "2026-10-07T07:03:36.583505+00:00"
+        },
+        "created_at": "2026-10-07T07:03:36.583505+00:00"
+      }
+    ],
+    "reviews": [
+      {
+        "reviewer": "Automated demonstration actor (not an SME)",
+        "comment": "Demo approval exercises the backend gate; it is not professional or regulatory approval.",
+        "decision": "APPROVED",
+        "timestamp": "2026-10-07T07:03:36.673748+00:00",
+        "artifact_id": "3babd36d-5129-4ded-b9f3-dec4307029b5",
+        "artifact_version": 1,
+        "previous_version": null,
+        "evaluation_score": 91.25,
+        "previous_state": "AWAITING_HUMAN_REVIEW",
+        "workflow_state": "APPROVED",
+        "identity": "Self-reported local reviewer; not an authenticated SME signature"
+      }
+    ],
+    "final_response": "The OAI (Official Action Indicated) classification in FDA inspections represents a recommendation for regulatory or administrative action, not a mandatory requirement. This classification is derived from inspection outcomes and is used to guide agencies in their decision-making processes. The classification system includes NAI (No Action Indicated) and VAI (Voluntary Action Indicated), with OAI being the highest level of recommendation. The classification is not based on the percentage of observations but rather on the specific findings during inspections.",
+    "error": null,
+    "policy": {
+      "version": "1.0",
+      "embedding_model": "reginsight-hash-v1",
+      "embedding_dimensions": 512,
+      "generation_model": "reginsight-chat:qwen3-1.7b",
+      "judge_model": "reginsight-chat:qwen3-1.7b",
+      "retrieval_top_k": 5,
+      "retrieval_candidate_limit": 20,
+      "strong_hit_threshold": 0.35,
+      "weak_hit_threshold": 0.12,
+      "judge_pass_score": 80.0,
+      "judge_revision_score": 60.0,
+      "judge_min_groundedness": 7.0,
+      "judge_min_safety": 7.0,
+      "mandatory_hitl_risk_levels": [
+        "HIGH",
+        "CRITICAL"
+      ],
+      "maximum_agent_iterations": 3,
+      "chunk_tokens": 220,
+      "chunk_overlap": 30,
+      "max_index_chunks": 25000,
+      "max_document_characters": 200000,
+      "llm_timeout_seconds": 120
+    },
+    "created_at": "2026-10-07T07:02:50.931491+00:00",
+    "updated_at": "2026-10-07T07:03:36.815017+00:00"
+  }
+}

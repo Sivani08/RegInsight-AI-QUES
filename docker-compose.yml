@@ -1,0 +1,59 @@
+x-application: &application
+  build: .
+  environment: &environment
+    DATABASE_URL: postgresql+psycopg://reginsight:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/reginsight
+    REDIS_ENABLED: 'false'
+    AI_ENABLE_REMOTE: 'false'
+    CHAT_OLLAMA_URL: http://host.docker.internal:11434
+    OLLAMA_BASE_URL: http://host.docker.internal:11434
+    OLLAMA_ALLOWED_HOSTS: host.docker.internal
+    EMBEDDING_MODEL: nomic-embed-text:latest
+    RETRIEVAL_MODE: hybrid
+    LANGSMITH_TRACING: 'false'
+  extra_hosts:
+    - 'host.docker.internal:host-gateway'
+
+services:
+  db:
+    image: pgvector/pgvector:0.8.1-pg17
+    environment:
+      POSTGRES_DB: reginsight
+      POSTGRES_USER: reginsight
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    ports:
+      - '127.0.0.1:${REGINSIGHT_DB_PORT:-5432}:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL','pg_isready -U reginsight -d reginsight']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+  migrate:
+    <<: *application
+    command: ['sh','-c','python scripts/migrate.py && python scripts/import_real_to_postgres.py && python scripts/prepare_workspace.py']
+    volumes:
+      - ./data/real:/app/data/real:ro
+      - ./data/intelligence/latest:/app/data/intelligence/latest:ro
+    depends_on:
+      db:
+        condition: service_healthy
+  app:
+    <<: *application
+    ports:
+      - '127.0.0.1:${REGINSIGHT_PORT:-8018}:8000'
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    restart: unless-stopped
+  worker:
+    <<: *application
+    command: ['python','-m','backend.workflows.worker']
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "data_label": "USER-SUPPLIED INSPECTION AND CITATION EXPORTS",
+  "total_source_rows": 341046,
+  "valid_inspections": 274886,
+  "company": "Lupin Limited",
+  "risk_score": 42.49,
+  "risk_band": "MODERATE",
+  "evidence_records": 42,
+  "analysis_id": "c795235f-d93b-4abc-9f8a-94bbafa19551",
+  "tool_count": 6,
+  "frontend_assets": "served successfully",
+  "browser_click_test": "not executed",
+  "database": "SQLite",
+  "recurrence_scope": "Lupin Limited",
+  "paid_provider_live_test": "not executed"
+}

@@ -1,0 +1,56 @@
+{
+  "dashboard": {
+    "ms": [
+      229.65,
+      76.68,
+      68.03
+    ],
+    "median_ms": 76.68,
+    "bytes": 171070
+  },
+  "year_dashboard": {
+    "ms": [
+      1623.07,
+      43.8,
+      53.74
+    ],
+    "median_ms": 53.74,
+    "bytes": 173778
+  },
+  "ranked_copilot": {
+    "ms": [
+      138.44,
+      30.81,
+      27.25
+    ],
+    "median_ms": 30.81,
+    "bytes": 12327
+  },
+  "observation_summary": {
+    "ms": [
+      60.18,
+      22.35,
+      22.98
+    ],
+    "median_ms": 22.98,
+    "bytes": 2778
+  },
+  "observation_page": {
+    "ms": [
+      312.68,
+      43.27,
+      24.25
+    ],
+    "median_ms": 43.27,
+    "bytes": 14450
+  },
+  "observation_search": {
+    "ms": [
+      6193.45,
+      27.67,
+      39.9
+    ],
+    "median_ms": 39.9,
+    "bytes": 15949
+  }
+}

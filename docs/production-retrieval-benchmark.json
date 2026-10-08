@@ -1,0 +1,708 @@
+{
+  "scope": "12 development queries, curated project references; not held-out or SME-labelled; latency is local and corpus-specific.",
+  "model": "nomic-embed-text:latest",
+  "model_digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+  "dimensions": 768,
+  "corpus_chunks": 8,
+  "repeats": 3,
+  "summaries": [
+    {
+      "mode": "keyword",
+      "recall_at_5": 0.2222,
+      "precision_at_5": 0.2222,
+      "reciprocal_rank": 0.2222,
+      "median_search_ms": 2.75
+    },
+    {
+      "mode": "vector",
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "median_search_ms": 6.15
+    },
+    {
+      "mode": "hybrid",
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "median_search_ms": 7.51
+    }
+  ],
+  "cases": [
+    {
+      "case": "definition",
+      "mode": "keyword",
+      "expected_documents": [
+        "K2"
+      ],
+      "documents": [
+        "K2"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 19.37,
+      "query_embedding_ms": 0,
+      "top_cosine": 0.0,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "definition",
+      "mode": "vector",
+      "expected_documents": [
+        "K2"
+      ],
+      "documents": [
+        "K2",
+        "K1",
+        "K4",
+        "K3",
+        "K5"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 11.28,
+      "query_embedding_ms": 87.97,
+      "top_cosine": 0.6919970009339559,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "definition",
+      "mode": "hybrid",
+      "expected_documents": [
+        "K2"
+      ],
+      "documents": [
+        "K2",
+        "K1",
+        "K4",
+        "K3",
+        "K5"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 8.03,
+      "query_embedding_ms": 87.97,
+      "top_cosine": 0.6919970009339559,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "classification",
+      "mode": "keyword",
+      "expected_documents": [
+        "K2"
+      ],
+      "documents": [],
+      "recall_at_5": 0.0,
+      "precision_at_5": 0,
+      "reciprocal_rank": 0,
+      "search_median_ms": 2.84,
+      "query_embedding_ms": 0,
+      "top_cosine": 0,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "classification",
+      "mode": "vector",
+      "expected_documents": [
+        "K2"
+      ],
+      "documents": [
+        "K2",
+        "K4",
+        "K3",
+        "K6",
+        "K1"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 6.09,
+      "query_embedding_ms": 77.87,
+      "top_cosine": 0.7700277111026336,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "classification",
+      "mode": "hybrid",
+      "expected_documents": [
+        "K2"
+      ],
+      "documents": [
+        "K2",
+        "K4",
+        "K3",
+        "K6",
+        "K1"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 8.04,
+      "query_embedding_ms": 77.87,
+      "top_cosine": 0.7700277111026336,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "review",
+      "mode": "keyword",
+      "expected_documents": [
+        "K2"
+      ],
+      "documents": [],
+      "recall_at_5": 0.0,
+      "precision_at_5": 0,
+      "reciprocal_rank": 0,
+      "search_median_ms": 2.76,
+      "query_embedding_ms": 0,
+      "top_cosine": 0,
+      "expected_behavior": "mandatory_review"
+    },
+    {
+      "case": "review",
+      "mode": "vector",
+      "expected_documents": [
+        "K2"
+      ],
+      "documents": [
+        "K2",
+        "K3",
+        "K1",
+        "K4",
+        "K6"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 6.18,
+      "query_embedding_ms": 96.77,
+      "top_cosine": 0.7283919891447022,
+      "expected_behavior": "mandatory_review"
+    },
+    {
+      "case": "review",
+      "mode": "hybrid",
+      "expected_documents": [
+        "K2"
+      ],
+      "documents": [
+        "K2",
+        "K3",
+        "K1",
+        "K4",
+        "K6"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 7.2,
+      "query_embedding_ms": 96.77,
+      "top_cosine": 0.7283919891447022,
+      "expected_behavior": "mandatory_review"
+    },
+    {
+      "case": "training",
+      "mode": "keyword",
+      "expected_documents": [
+        "K1"
+      ],
+      "documents": [
+        "K1"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 1.0,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 3.36,
+      "query_embedding_ms": 0,
+      "top_cosine": 0.0,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "training",
+      "mode": "vector",
+      "expected_documents": [
+        "K1"
+      ],
+      "documents": [
+        "K1",
+        "K8",
+        "K7",
+        "K6",
+        "K3"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 6.09,
+      "query_embedding_ms": 86.38,
+      "top_cosine": 0.7257373016098038,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "training",
+      "mode": "hybrid",
+      "expected_documents": [
+        "K1"
+      ],
+      "documents": [
+        "K1",
+        "K8",
+        "K7",
+        "K6",
+        "K3"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 7.54,
+      "query_embedding_ms": 86.38,
+      "top_cosine": 0.7257373016098038,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "recurrence",
+      "mode": "keyword",
+      "expected_documents": [
+        "K4"
+      ],
+      "documents": [],
+      "recall_at_5": 0.0,
+      "precision_at_5": 0,
+      "reciprocal_rank": 0,
+      "search_median_ms": 3.04,
+      "query_embedding_ms": 0,
+      "top_cosine": 0,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "recurrence",
+      "mode": "vector",
+      "expected_documents": [
+        "K4"
+      ],
+      "documents": [
+        "K4",
+        "K3",
+        "K7",
+        "K6",
+        "K1"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 6.48,
+      "query_embedding_ms": 78.26,
+      "top_cosine": 0.8626689396699156,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "recurrence",
+      "mode": "hybrid",
+      "expected_documents": [
+        "K4"
+      ],
+      "documents": [
+        "K4",
+        "K3",
+        "K7",
+        "K6",
+        "K1"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 7.23,
+      "query_embedding_ms": 78.26,
+      "top_cosine": 0.8626689396699156,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "severity",
+      "mode": "keyword",
+      "expected_documents": [
+        "K3"
+      ],
+      "documents": [],
+      "recall_at_5": 0.0,
+      "precision_at_5": 0,
+      "reciprocal_rank": 0,
+      "search_median_ms": 2.41,
+      "query_embedding_ms": 0,
+      "top_cosine": 0,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "severity",
+      "mode": "vector",
+      "expected_documents": [
+        "K3"
+      ],
+      "documents": [
+        "K3",
+        "K5",
+        "K4",
+        "K6",
+        "K7"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 6.34,
+      "query_embedding_ms": 64.81,
+      "top_cosine": 0.7364019469735738,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "severity",
+      "mode": "hybrid",
+      "expected_documents": [
+        "K3"
+      ],
+      "documents": [
+        "K3",
+        "K5",
+        "K4",
+        "K6",
+        "K7"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 7.01,
+      "query_embedding_ms": 64.81,
+      "top_cosine": 0.7364019469735738,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "counts",
+      "mode": "keyword",
+      "expected_documents": [],
+      "documents": [],
+      "recall_at_5": null,
+      "precision_at_5": null,
+      "reciprocal_rank": null,
+      "search_median_ms": 2.4,
+      "query_embedding_ms": 0,
+      "top_cosine": 0,
+      "expected_behavior": "sql"
+    },
+    {
+      "case": "counts",
+      "mode": "vector",
+      "expected_documents": [],
+      "documents": [
+        "K4",
+        "K6",
+        "K3",
+        "K7",
+        "K2"
+      ],
+      "recall_at_5": null,
+      "precision_at_5": null,
+      "reciprocal_rank": null,
+      "search_median_ms": 6.01,
+      "query_embedding_ms": 78.9,
+      "top_cosine": 0.612544281017196,
+      "expected_behavior": "sql"
+    },
+    {
+      "case": "counts",
+      "mode": "hybrid",
+      "expected_documents": [],
+      "documents": [
+        "K4",
+        "K6",
+        "K3",
+        "K7",
+        "K2"
+      ],
+      "recall_at_5": null,
+      "precision_at_5": null,
+      "reciprocal_rank": null,
+      "search_median_ms": 7.49,
+      "query_embedding_ms": 78.9,
+      "top_cosine": 0.612544281017196,
+      "expected_behavior": "sql"
+    },
+    {
+      "case": "risk",
+      "mode": "keyword",
+      "expected_documents": [
+        "K5"
+      ],
+      "documents": [],
+      "recall_at_5": 0.0,
+      "precision_at_5": 0,
+      "reciprocal_rank": 0,
+      "search_median_ms": 2.17,
+      "query_embedding_ms": 0,
+      "top_cosine": 0,
+      "expected_behavior": "sql"
+    },
+    {
+      "case": "risk",
+      "mode": "vector",
+      "expected_documents": [
+        "K5"
+      ],
+      "documents": [
+        "K5",
+        "K4",
+        "K3",
+        "K2",
+        "K7"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 5.52,
+      "query_embedding_ms": 102.1,
+      "top_cosine": 0.7072046784399699,
+      "expected_behavior": "sql"
+    },
+    {
+      "case": "risk",
+      "mode": "hybrid",
+      "expected_documents": [
+        "K5"
+      ],
+      "documents": [
+        "K5",
+        "K4",
+        "K3",
+        "K2",
+        "K7"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 7.0,
+      "query_embedding_ms": 102.1,
+      "top_cosine": 0.7072046784399699,
+      "expected_behavior": "sql"
+    },
+    {
+      "case": "data",
+      "mode": "keyword",
+      "expected_documents": [
+        "K6"
+      ],
+      "documents": [],
+      "recall_at_5": 0.0,
+      "precision_at_5": 0,
+      "reciprocal_rank": 0,
+      "search_median_ms": 2.77,
+      "query_embedding_ms": 0,
+      "top_cosine": 0,
+      "expected_behavior": "sql"
+    },
+    {
+      "case": "data",
+      "mode": "vector",
+      "expected_documents": [
+        "K6"
+      ],
+      "documents": [
+        "K6",
+        "K7",
+        "K1",
+        "K4",
+        "K3"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 6.0,
+      "query_embedding_ms": 102.75,
+      "top_cosine": 0.6798569392817311,
+      "expected_behavior": "sql"
+    },
+    {
+      "case": "data",
+      "mode": "hybrid",
+      "expected_documents": [
+        "K6"
+      ],
+      "documents": [
+        "K6",
+        "K7",
+        "K1",
+        "K4",
+        "K3"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 7.72,
+      "query_embedding_ms": 102.75,
+      "top_cosine": 0.6798569392817311,
+      "expected_behavior": "sql"
+    },
+    {
+      "case": "provenance",
+      "mode": "keyword",
+      "expected_documents": [
+        "K7"
+      ],
+      "documents": [],
+      "recall_at_5": 0.0,
+      "precision_at_5": 0,
+      "reciprocal_rank": 0,
+      "search_median_ms": 2.75,
+      "query_embedding_ms": 0,
+      "top_cosine": 0,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "provenance",
+      "mode": "vector",
+      "expected_documents": [
+        "K7"
+      ],
+      "documents": [
+        "K7",
+        "K4",
+        "K6",
+        "K8",
+        "K3"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 6.43,
+      "query_embedding_ms": 98.6,
+      "top_cosine": 0.707471910787113,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "provenance",
+      "mode": "hybrid",
+      "expected_documents": [
+        "K7"
+      ],
+      "documents": [
+        "K7",
+        "K4",
+        "K6",
+        "K8",
+        "K3"
+      ],
+      "recall_at_5": 1.0,
+      "precision_at_5": 0.2,
+      "reciprocal_rank": 1.0,
+      "search_median_ms": 7.53,
+      "query_embedding_ms": 98.6,
+      "top_cosine": 0.707471910787113,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "case": "unrelated",
+      "mode": "keyword",
+      "expected_documents": [],
+      "documents": [],
+      "recall_at_5": null,
+      "precision_at_5": null,
+      "reciprocal_rank": null,
+      "search_median_ms": 2.52,
+      "query_embedding_ms": 0,
+      "top_cosine": 0,
+      "expected_behavior": "miss"
+    },
+    {
+      "case": "unrelated",
+      "mode": "vector",
+      "expected_documents": [],
+      "documents": [
+        "K3",
+        "K4",
+        "K2",
+        "K6",
+        "K1"
+      ],
+      "recall_at_5": null,
+      "precision_at_5": null,
+      "reciprocal_rank": null,
+      "search_median_ms": 6.24,
+      "query_embedding_ms": 77.5,
+      "top_cosine": 0.4256686568260193,
+      "expected_behavior": "miss"
+    },
+    {
+      "case": "unrelated",
+      "mode": "hybrid",
+      "expected_documents": [],
+      "documents": [
+        "K3",
+        "K4",
+        "K2",
+        "K6",
+        "K1"
+      ],
+      "recall_at_5": null,
+      "precision_at_5": null,
+      "reciprocal_rank": null,
+      "search_median_ms": 7.29,
+      "query_embedding_ms": 77.5,
+      "top_cosine": 0.4256686568260193,
+      "expected_behavior": "miss"
+    },
+    {
+      "case": "unsupported",
+      "mode": "keyword",
+      "expected_documents": [],
+      "documents": [],
+      "recall_at_5": null,
+      "precision_at_5": null,
+      "reciprocal_rank": null,
+      "search_median_ms": 2.75,
+      "query_embedding_ms": 0,
+      "top_cosine": 0,
+      "expected_behavior": "abstain"
+    },
+    {
+      "case": "unsupported",
+      "mode": "vector",
+      "expected_documents": [],
+      "documents": [
+        "K3",
+        "K6",
+        "K5",
+        "K2",
+        "K8"
+      ],
+      "recall_at_5": null,
+      "precision_at_5": null,
+      "reciprocal_rank": null,
+      "search_median_ms": 6.12,
+      "query_embedding_ms": 75.68,
+      "top_cosine": 0.521606263922902,
+      "expected_behavior": "abstain"
+    },
+    {
+      "case": "unsupported",
+      "mode": "hybrid",
+      "expected_documents": [],
+      "documents": [
+        "K3",
+        "K6",
+        "K5",
+        "K2",
+        "K8"
+      ],
+      "recall_at_5": null,
+      "precision_at_5": null,
+      "reciprocal_rank": null,
+      "search_median_ms": 8.0,
+      "query_embedding_ms": 75.68,
+      "top_cosine": 0.521606263922902,
+      "expected_behavior": "abstain"
+    }
+  ],
+  "limitations": [
+    "No human acceptance or hallucination claim",
+    "Exact pgvector search; no large-corpus load test",
+    "Query embedding measured once per query; search timings exclude embedding"
+  ]
+}

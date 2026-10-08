@@ -1,0 +1,4 @@
+-r requirements-app.txt
+# Full data-engineering and test environment; desktop startup only needs requirements-app.txt.
+pytest>=8,<10
+pyspark>=4.0,<4.1

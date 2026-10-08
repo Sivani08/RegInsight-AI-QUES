@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "scope": "Small development smoke set; not a held-out domain benchmark. Sources are curated project references.",
+  "cases": [
+    {"id":"definition","query":"What does OAI mean?","expected_agent":"EvidenceAgent","expected_sources":["K2"],"risk_level":"LOW","expected_behavior":"retrieve"},
+    {"id":"classification","query":"Explain OAI NAI VAI inspection classifications","expected_agent":"InspectionAssessmentAgent","expected_sources":["K2"],"risk_level":"MEDIUM","expected_behavior":"retrieve"},
+    {"id":"review","query":"Recommend a compliance response for OAI inspection classifications","expected_agent":"InspectionAssessmentAgent","expected_sources":["K2"],"risk_level":"HIGH","expected_behavior":"mandatory_review"},
+    {"id":"training","query":"Is the chatbot model fine tuned or trained on our dataset?","expected_agent":"EvidenceAgent","expected_sources":["K1"],"risk_level":"LOW","expected_behavior":"retrieve"},
+    {"id":"recurrence","query":"Explain recurring themes distinct inspections repeated observation rows","expected_agent":"InspectionAssessmentAgent","expected_sources":["K4"],"risk_level":"MEDIUM","expected_behavior":"retrieve"},
+    {"id":"severity","query":"Explain observation themes severity classification confidence","expected_agent":"InspectionAssessmentAgent","expected_sources":["K3"],"risk_level":"MEDIUM","expected_behavior":"retrieve"},
+    {"id":"counts","query":"How many inspections were recorded in 2025?","expected_agent":"DataAnalyticsAgent","expected_sources":[],"risk_level":"MEDIUM","expected_behavior":"sql"},
+    {"id":"risk","query":"Compare risk scores and missing factors in inspections","expected_agent":"DataAnalyticsAgent","expected_sources":["K5"],"risk_level":"MEDIUM","expected_behavior":"sql"},
+    {"id":"data","query":"Compare real and synthetic dataset inspection records","expected_agent":"DataAnalyticsAgent","expected_sources":["K6"],"risk_level":"MEDIUM","expected_behavior":"sql"},
+    {"id":"provenance","query":"Explain cleaning evidence provenance source row rejected duplicates","expected_agent":"EvidenceAgent","expected_sources":["K7"],"risk_level":"LOW","expected_behavior":"retrieve"},
+    {"id":"unrelated","query":"Explain quasar gravitational lensing astronomy","expected_agent":"EvidenceAgent","expected_sources":[],"risk_level":"LOW","expected_behavior":"miss"},
+    {"id":"unsupported","query":"Recommend patient treatment dosage","expected_agent":"UnsupportedDomainAgent","expected_sources":[],"risk_level":"HIGH","expected_behavior":"abstain"}
+  ]
+}

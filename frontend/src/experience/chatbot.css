@@ -1,0 +1,22 @@
+/* Reference lock: existing teal workspace + Refero neutral work-tool typography.
+   User preference: stronger, larger chat text; preserve reading hierarchy. */
+.assistant-panel{position:sticky;top:78px;height:calc(100vh - 78px);min-width:0;background:#fff;border-left:1px solid #dce6ea;display:flex;flex-direction:column}
+.assistant-tabs{display:flex;padding:9px 12px;gap:8px;border-bottom:1px solid #dce6ea;flex:none;background:#f2f7f6}
+.assistant-tabs button{flex:1;border:1px solid transparent;border-radius:6px;background:transparent;padding:9px 8px;font:700 14px/1.3 'Segoe UI',sans-serif;color:#345461;cursor:pointer}
+.assistant-tabs button[aria-pressed=true]{background:#fff;border-color:#b6d4cc;color:#145c50;box-shadow:0 1px 3px #1e403410}
+.assistant-panel .copilot{position:static;inset:auto;height:auto;min-height:0;flex:1;width:100%;border:0;box-shadow:none}
+.copilot .answer,.copilot .user-question,.copilot-compose textarea{font-family:'Segoe UI',system-ui,sans-serif;font-size:17px;font-weight:650;line-height:1.7;color:#18333f}
+.copilot .user-question{font-weight:750}.copilot .answer h3{font-size:21px;font-weight:750;line-height:1.45}
+.copilot .answer-fact span,.copilot .answer summary{font-size:16px;font-weight:650}.copilot .answer details p,.copilot .answer-definitions{font-size:15px;line-height:1.65}.copilot .answer-definitions dd{font-weight:700}
+.copilot .answer-label{font-size:12px;font-weight:800;letter-spacing:.04em}.copilot h2{font-size:18px;font-weight:750}
+.chat-model-status{padding:12px 18px;background:#eff7f4;border-bottom:1px solid #dce6ea;color:#205a50;line-height:1.5;font-size:14px;flex:none}
+.chat-model-status small{display:block;font-size:12px;font-weight:600;overflow-wrap:anywhere;margin-top:3px}
+.chat-answer-text p{white-space:pre-wrap;font-size:17px!important;line-height:1.75!important;font-weight:650;color:#18333f;margin:14px 0}
+.chat-progress{font-size:15px;font-weight:650;color:#356f65;padding:12px 0}.chat-timing{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;font-size:12px;font-weight:700;color:#395d68}.chat-timing span{padding:4px 8px;border-radius:4px;background:#edf3f5}
+.reginsight-chat .chat-disclosure{font-size:12px!important;line-height:1.65!important;font-weight:500;color:#54707c!important;margin-top:13px}
+.chat-sources{margin-top:16px}.chat-source{margin-top:8px;border:1px solid #dae6e5;border-radius:7px;padding:10px!important;background:#f8fbfa}
+.chat-source summary{font-size:14px!important;font-weight:700!important;line-height:1.6}.chat-source-id{color:#146e5e}.chat-source p{font-size:14px!important;font-weight:550;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.7}.chat-source small,.chat-calculated small{display:block;overflow-wrap:anywhere;font-size:12px;color:#526d78}
+.chat-calculated{padding:12px;background:#f2f7fb;border-radius:7px}.chat-calculated>strong{display:block;font-size:17px;margin-top:12px}.chat-calculated p{font-weight:600}
+.reginsight-chat .copilot-welcome h3{font-size:27px;font-weight:750;line-height:1.3}.reginsight-chat .copilot-welcome p{font-size:16px;font-weight:600;line-height:1.7}.reginsight-chat .copilot-welcome button{font-size:15px!important;font-weight:700;line-height:1.5}
+.reginsight-chat .conversation{scrollbar-gutter:stable}.reginsight-chat .send-button{width:42px;height:42px}.reginsight-chat .send-button:disabled{opacity:.4}.assistant-panel button:focus-visible,.assistant-panel textarea:focus-visible{outline:3px solid #298676;outline-offset:2px}
+@media(max-width:760px){.assistant-panel{position:fixed;top:107px;bottom:0;left:0;right:0;height:auto;z-index:25;border-left:0;box-shadow:0 -5px 40px #20364120}.assistant-panel .copilot{position:static}.reginsight-chat .copilot-welcome h3{font-size:25px}.reginsight-chat>header{gap:5px}.reginsight-chat h2{font-size:17px}.reginsight-chat h2 small{font-size:11px}}

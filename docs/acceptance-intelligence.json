@@ -1,0 +1,91 @@
+[
+  {
+    "endpoint": "/api/health",
+    "seconds": 0.06,
+    "status": 200
+  },
+  {
+    "endpoint": "/",
+    "seconds": 0.12,
+    "status": 200
+  },
+  {
+    "endpoint": "/assets/index-BSMl6dqT.js",
+    "seconds": 0.02,
+    "status": 200
+  },
+  {
+    "endpoint": "/assets/vendor-Cuzp5Gnz.js",
+    "seconds": 0.0,
+    "status": 200
+  },
+  {
+    "endpoint": "/assets/charts-puYT2m_K.js",
+    "seconds": 0.02,
+    "status": 200
+  },
+  {
+    "endpoint": "/assets/index-CgdX0kKE.css",
+    "seconds": 0.0,
+    "status": 200
+  },
+  {
+    "endpoint": "/api/observations/tags",
+    "seconds": 51.91,
+    "status": 200
+  },
+  {
+    "endpoint": "/api/observations/similar/OBS-00002588363e92f74487898309f9f796",
+    "seconds": 0.58,
+    "status": 200
+  },
+  {
+    "endpoint": "/api/observations/themes",
+    "seconds": 1.11,
+    "status": 200
+  },
+  {
+    "endpoint": "/api/observations/themes",
+    "seconds": 12.08,
+    "status": 200
+  },
+  {
+    "endpoint": "/api/observations/report",
+    "seconds": 52.11,
+    "status": 200
+  },
+  {
+    "question": "What are the most recurring regulatory themes?",
+    "status": 200,
+    "seconds": 21.49,
+    "evidence": 21
+  },
+  {
+    "question": "Show High and Critical observations for this company.",
+    "status": 200,
+    "seconds": 5.5,
+    "evidence": 0
+  },
+  {
+    "question": "What themes increased between FY2023 and FY2025?",
+    "status": 200,
+    "seconds": 21.2,
+    "evidence": 0
+  },
+  {
+    "question": "Show evidence for the Data Integrity classification.",
+    "status": 200,
+    "seconds": 19.7,
+    "evidence": 0
+  },
+  {
+    "endpoint": "/api/dashboard",
+    "seconds": 0.06,
+    "status": 200
+  },
+  {
+    "endpoint": "/api/risk",
+    "seconds": 0.0,
+    "status": 200
+  }
+]

@@ -1,0 +1,538 @@
+{
+  "framework": "DeepEval",
+  "version": "4.2.6",
+  "mode": "offline deterministic custom metrics; no LLM judge",
+  "dataset_id": "e79e13f6e929428f3d05",
+  "cases": [
+    {
+      "name": "portfolio-first",
+      "passed": true,
+      "metrics": [
+        {
+          "name": "Numeric agreement",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Numeric agreement: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval precision",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval precision: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval recall",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval recall: 1.000; required 1.000."
+        },
+        {
+          "name": "Evidence grounding",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Evidence grounding: 1.000; required 1.000."
+        },
+        {
+          "name": "Scope correctness",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Scope correctness: 1.000; required 1.000."
+        },
+        {
+          "name": "Latency budget",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Latency budget: 1.000; required 1.000. Measured 114.46 ms; budget 5000 ms."
+        }
+      ]
+    },
+    {
+      "name": "portfolio-repeat",
+      "passed": true,
+      "metrics": [
+        {
+          "name": "Numeric agreement",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Numeric agreement: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval precision",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval precision: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval recall",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval recall: 1.000; required 1.000."
+        },
+        {
+          "name": "Evidence grounding",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Evidence grounding: 1.000; required 1.000."
+        },
+        {
+          "name": "Scope correctness",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Scope correctness: 1.000; required 1.000."
+        },
+        {
+          "name": "Latency budget",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Latency budget: 1.000; required 1.000. Measured 50.10 ms; budget 1000 ms."
+        }
+      ]
+    },
+    {
+      "name": "year-2025-first",
+      "passed": true,
+      "metrics": [
+        {
+          "name": "Numeric agreement",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Numeric agreement: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval precision",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval precision: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval recall",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval recall: 1.000; required 1.000."
+        },
+        {
+          "name": "Evidence grounding",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Evidence grounding: 1.000; required 1.000."
+        },
+        {
+          "name": "Scope correctness",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Scope correctness: 1.000; required 1.000."
+        },
+        {
+          "name": "Latency budget",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Latency budget: 1.000; required 1.000. Measured 1042.96 ms; budget 5000 ms."
+        }
+      ]
+    },
+    {
+      "name": "year-2025-repeat",
+      "passed": true,
+      "metrics": [
+        {
+          "name": "Numeric agreement",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Numeric agreement: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval precision",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval precision: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval recall",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval recall: 1.000; required 1.000."
+        },
+        {
+          "name": "Evidence grounding",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Evidence grounding: 1.000; required 1.000."
+        },
+        {
+          "name": "Scope correctness",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Scope correctness: 1.000; required 1.000."
+        },
+        {
+          "name": "Latency budget",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Latency budget: 1.000; required 1.000. Measured 26.60 ms; budget 1000 ms."
+        }
+      ]
+    },
+    {
+      "name": "oai-first",
+      "passed": true,
+      "metrics": [
+        {
+          "name": "Numeric agreement",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Numeric agreement: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval precision",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval precision: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval recall",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval recall: 1.000; required 1.000."
+        },
+        {
+          "name": "Evidence grounding",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Evidence grounding: 1.000; required 1.000."
+        },
+        {
+          "name": "Scope correctness",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Scope correctness: 1.000; required 1.000."
+        },
+        {
+          "name": "Latency budget",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Latency budget: 1.000; required 1.000. Measured 3242.69 ms; budget 5000 ms."
+        }
+      ]
+    },
+    {
+      "name": "oai-repeat",
+      "passed": true,
+      "metrics": [
+        {
+          "name": "Numeric agreement",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Numeric agreement: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval precision",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval precision: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval recall",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval recall: 1.000; required 1.000."
+        },
+        {
+          "name": "Evidence grounding",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Evidence grounding: 1.000; required 1.000."
+        },
+        {
+          "name": "Scope correctness",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Scope correctness: 1.000; required 1.000."
+        },
+        {
+          "name": "Latency budget",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Latency budget: 1.000; required 1.000. Measured 43.91 ms; budget 1000 ms."
+        }
+      ]
+    },
+    {
+      "name": "year-and-classification-first",
+      "passed": true,
+      "metrics": [
+        {
+          "name": "Numeric agreement",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Numeric agreement: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval precision",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval precision: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval recall",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval recall: 1.000; required 1.000."
+        },
+        {
+          "name": "Evidence grounding",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Evidence grounding: 1.000; required 1.000."
+        },
+        {
+          "name": "Scope correctness",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Scope correctness: 1.000; required 1.000."
+        },
+        {
+          "name": "Latency budget",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Latency budget: 1.000; required 1.000. Measured 135.71 ms; budget 5000 ms."
+        }
+      ]
+    },
+    {
+      "name": "year-and-classification-repeat",
+      "passed": true,
+      "metrics": [
+        {
+          "name": "Numeric agreement",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Numeric agreement: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval precision",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval precision: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval recall",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval recall: 1.000; required 1.000."
+        },
+        {
+          "name": "Evidence grounding",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Evidence grounding: 1.000; required 1.000."
+        },
+        {
+          "name": "Scope correctness",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Scope correctness: 1.000; required 1.000."
+        },
+        {
+          "name": "Latency budget",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Latency budget: 1.000; required 1.000. Measured 36.88 ms; budget 1000 ms."
+        }
+      ]
+    },
+    {
+      "name": "empty-first",
+      "passed": true,
+      "metrics": [
+        {
+          "name": "Numeric agreement",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Numeric agreement: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval precision",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval precision: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval recall",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval recall: 1.000; required 1.000."
+        },
+        {
+          "name": "Evidence grounding",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Evidence grounding: 1.000; required 1.000."
+        },
+        {
+          "name": "Scope correctness",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Scope correctness: 1.000; required 1.000."
+        },
+        {
+          "name": "Latency budget",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Latency budget: 1.000; required 1.000. Measured 104.97 ms; budget 5000 ms."
+        }
+      ]
+    },
+    {
+      "name": "empty-repeat",
+      "passed": true,
+      "metrics": [
+        {
+          "name": "Numeric agreement",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Numeric agreement: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval precision",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval precision: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval recall",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval recall: 1.000; required 1.000."
+        },
+        {
+          "name": "Evidence grounding",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Evidence grounding: 1.000; required 1.000."
+        },
+        {
+          "name": "Scope correctness",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Scope correctness: 1.000; required 1.000."
+        },
+        {
+          "name": "Latency budget",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Latency budget: 1.000; required 1.000. Measured 33.36 ms; budget 1000 ms."
+        }
+      ]
+    },
+    {
+      "name": "second-page-first",
+      "passed": true,
+      "metrics": [
+        {
+          "name": "Numeric agreement",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Numeric agreement: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval precision",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval precision: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval recall",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval recall: 1.000; required 1.000."
+        },
+        {
+          "name": "Evidence grounding",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Evidence grounding: 1.000; required 1.000."
+        },
+        {
+          "name": "Scope correctness",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Scope correctness: 1.000; required 1.000."
+        },
+        {
+          "name": "Latency budget",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Latency budget: 1.000; required 1.000. Measured 774.68 ms; budget 5000 ms."
+        }
+      ]
+    },
+    {
+      "name": "second-page-repeat",
+      "passed": true,
+      "metrics": [
+        {
+          "name": "Numeric agreement",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Numeric agreement: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval precision",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval precision: 1.000; required 1.000."
+        },
+        {
+          "name": "Retrieval recall",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Retrieval recall: 1.000; required 1.000."
+        },
+        {
+          "name": "Evidence grounding",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Evidence grounding: 1.000; required 1.000."
+        },
+        {
+          "name": "Scope correctness",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Scope correctness: 1.000; required 1.000."
+        },
+        {
+          "name": "Latency budget",
+          "score": 1.0,
+          "passed": true,
+          "reason": "Latency budget: 1.000; required 1.000. Measured 26.60 ms; budget 1000 ms."
+        }
+      ]
+    }
+  ],
+  "negative_controls": [
+    {
+      "metric": "Numeric agreement",
+      "rejected": true
+    },
+    {
+      "metric": "Retrieval precision",
+      "rejected": true
+    },
+    {
+      "metric": "Retrieval recall",
+      "rejected": true
+    },
+    {
+      "metric": "Evidence grounding",
+      "rejected": true
+    },
+    {
+      "metric": "Scope correctness",
+      "rejected": true
+    },
+    {
+      "metric": "Latency budget",
+      "rejected": true
+    }
+  ]
+}

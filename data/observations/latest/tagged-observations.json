@@ -1,0 +1,2822 @@
+[
+  {
+    "observation_id": "DEMO-0-2023-01",
+    "inspection_id": "DEMO-INS-0-2023",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2023-04-15",
+    "observation_number": 1,
+    "observation_text": "Audit trail controls failed; original records were deleted.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-01",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Critical",
+    "expected_themes": [
+      "Data Integrity"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Data Integrity"
+      ],
+      "theme": "Data Integrity",
+      "severity": "Critical",
+      "evidence_quotes": [
+        "Audit trail controls failed; original records were deleted."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit falsification, deleted original records, or contamination affecting released product."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2023-02",
+    "inspection_id": "DEMO-INS-0-2023",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2023-04-15",
+    "observation_number": 2,
+    "observation_text": "The laboratory failed to investigate repeated OOS results.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-02",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Laboratory controls",
+    "expected_severity": "High",
+    "expected_themes": [
+      "OOS Investigation",
+      "Laboratory Controls"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Laboratory controls",
+      "themes": [
+        "OOS Investigation",
+        "Laboratory Controls"
+      ],
+      "theme": "OOS Investigation",
+      "severity": "High",
+      "evidence_quotes": [
+        "The laboratory failed to investigate repeated OOS results."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2023-03",
+    "inspection_id": "DEMO-INS-0-2023",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2023-04-15",
+    "observation_number": 3,
+    "observation_text": "CAPA effectiveness was not verified.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-03",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Quality management",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "CAPA"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Quality management",
+      "themes": [
+        "CAPA"
+      ],
+      "theme": "CAPA",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "CAPA effectiveness was not verified."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2023-04",
+    "inspection_id": "DEMO-INS-0-2023",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2023-04-15",
+    "observation_number": 4,
+    "observation_text": "Documentation was incomplete for the batch records.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-04",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Documentation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Documentation"
+      ],
+      "theme": "Documentation",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Documentation was incomplete for the batch records."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2023-05",
+    "inspection_id": "DEMO-INS-0-2023",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2023-04-15",
+    "observation_number": 5,
+    "observation_text": "Equipment calibration verification was incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-05",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Laboratory controls",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Laboratory Controls",
+      "Equipment"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Laboratory controls",
+      "themes": [
+        "Laboratory Controls",
+        "Equipment"
+      ],
+      "theme": "Laboratory Controls",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Equipment calibration verification was incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2023-06",
+    "inspection_id": "DEMO-INS-0-2023",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2023-04-15",
+    "observation_number": 6,
+    "observation_text": "Process validation did not establish reproducible manufacturing controls.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-06",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Production and validation",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Manufacturing Controls",
+      "Validation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Production and validation",
+      "themes": [
+        "Manufacturing Controls",
+        "Validation"
+      ],
+      "theme": "Manufacturing Controls",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Process validation did not establish reproducible manufacturing controls."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2023-07",
+    "inspection_id": "DEMO-INS-0-2023",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2023-04-15",
+    "observation_number": 7,
+    "observation_text": "Training records were incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-07",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Personnel and training",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Training"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Personnel and training",
+      "themes": [
+        "Training"
+      ],
+      "theme": "Training",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Training records were incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2023-08",
+    "inspection_id": "DEMO-INS-0-2023",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2023-04-15",
+    "observation_number": 8,
+    "observation_text": "An isolated administrative documentation error had no product impact.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-08",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Low",
+    "expected_themes": [
+      "Documentation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Documentation"
+      ],
+      "theme": "Documentation",
+      "severity": "Low",
+      "evidence_quotes": [
+        "An isolated administrative documentation error had no product impact."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit isolated administrative issue with stated absence of product impact."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2023-09",
+    "inspection_id": "DEMO-INS-0-2023",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2023-04-15",
+    "observation_number": 9,
+    "observation_text": "No evidence of audit trail failures was observed.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-09",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Unclassified",
+    "expected_severity": "Insufficient evidence",
+    "expected_themes": [],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Unclassified",
+      "themes": [],
+      "theme": "Unclassified",
+      "severity": "Insufficient evidence",
+      "evidence_quotes": [],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "No supported deficiency, ambiguous or negated text, or too little context."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2023-10",
+    "inspection_id": "DEMO-INS-0-2023",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2023-04-15",
+    "observation_number": 10,
+    "observation_text": "The computer access control was disabled.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-10",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "High",
+    "expected_themes": [
+      "Computer Systems"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Computer Systems"
+      ],
+      "theme": "Computer Systems",
+      "severity": "High",
+      "evidence_quotes": [
+        "The computer access control was disabled."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2023-11",
+    "inspection_id": "DEMO-INS-0-2023",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2023-04-15",
+    "observation_number": 11,
+    "observation_text": "The quality unit failed to review repeated deviation reports.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-11",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Quality management",
+    "expected_severity": "High",
+    "expected_themes": [
+      "Quality Systems",
+      "Deviation Management"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Quality management",
+      "themes": [
+        "Quality Systems",
+        "Deviation Management"
+      ],
+      "theme": "Quality Systems",
+      "severity": "High",
+      "evidence_quotes": [
+        "The quality unit failed to review repeated deviation reports."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2023-12",
+    "inspection_id": "DEMO-INS-0-2023",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2023-04-15",
+    "observation_number": 12,
+    "observation_text": "Equipment maintenance was incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-12",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Facilities and equipment",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Equipment"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Facilities and equipment",
+      "themes": [
+        "Equipment"
+      ],
+      "theme": "Equipment",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Equipment maintenance was incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2024-01",
+    "inspection_id": "DEMO-INS-0-2024",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2024-04-15",
+    "observation_number": 1,
+    "observation_text": "Audit trail controls failed; original records were deleted.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-01",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Critical",
+    "expected_themes": [
+      "Data Integrity"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Data Integrity"
+      ],
+      "theme": "Data Integrity",
+      "severity": "Critical",
+      "evidence_quotes": [
+        "Audit trail controls failed; original records were deleted."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit falsification, deleted original records, or contamination affecting released product."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2024-02",
+    "inspection_id": "DEMO-INS-0-2024",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2024-04-15",
+    "observation_number": 2,
+    "observation_text": "The laboratory failed to investigate repeated OOS results.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-02",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Laboratory controls",
+    "expected_severity": "High",
+    "expected_themes": [
+      "OOS Investigation",
+      "Laboratory Controls"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Laboratory controls",
+      "themes": [
+        "OOS Investigation",
+        "Laboratory Controls"
+      ],
+      "theme": "OOS Investigation",
+      "severity": "High",
+      "evidence_quotes": [
+        "The laboratory failed to investigate repeated OOS results."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2024-03",
+    "inspection_id": "DEMO-INS-0-2024",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2024-04-15",
+    "observation_number": 3,
+    "observation_text": "CAPA effectiveness was not verified.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-03",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Quality management",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "CAPA"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Quality management",
+      "themes": [
+        "CAPA"
+      ],
+      "theme": "CAPA",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "CAPA effectiveness was not verified."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2024-04",
+    "inspection_id": "DEMO-INS-0-2024",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2024-04-15",
+    "observation_number": 4,
+    "observation_text": "Documentation was incomplete for the batch records.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-04",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Documentation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Documentation"
+      ],
+      "theme": "Documentation",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Documentation was incomplete for the batch records."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2024-05",
+    "inspection_id": "DEMO-INS-0-2024",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2024-04-15",
+    "observation_number": 5,
+    "observation_text": "Equipment calibration verification was incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-05",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Laboratory controls",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Laboratory Controls",
+      "Equipment"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Laboratory controls",
+      "themes": [
+        "Laboratory Controls",
+        "Equipment"
+      ],
+      "theme": "Laboratory Controls",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Equipment calibration verification was incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2024-06",
+    "inspection_id": "DEMO-INS-0-2024",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2024-04-15",
+    "observation_number": 6,
+    "observation_text": "Process validation did not establish reproducible manufacturing controls.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-06",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Production and validation",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Manufacturing Controls",
+      "Validation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Production and validation",
+      "themes": [
+        "Manufacturing Controls",
+        "Validation"
+      ],
+      "theme": "Manufacturing Controls",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Process validation did not establish reproducible manufacturing controls."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2024-07",
+    "inspection_id": "DEMO-INS-0-2024",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2024-04-15",
+    "observation_number": 7,
+    "observation_text": "Training records were incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-07",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Personnel and training",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Training"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Personnel and training",
+      "themes": [
+        "Training"
+      ],
+      "theme": "Training",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Training records were incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2024-08",
+    "inspection_id": "DEMO-INS-0-2024",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2024-04-15",
+    "observation_number": 8,
+    "observation_text": "An isolated administrative documentation error had no product impact.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-08",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Low",
+    "expected_themes": [
+      "Documentation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Documentation"
+      ],
+      "theme": "Documentation",
+      "severity": "Low",
+      "evidence_quotes": [
+        "An isolated administrative documentation error had no product impact."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit isolated administrative issue with stated absence of product impact."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2024-09",
+    "inspection_id": "DEMO-INS-0-2024",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2024-04-15",
+    "observation_number": 9,
+    "observation_text": "No evidence of audit trail failures was observed.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-09",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Unclassified",
+    "expected_severity": "Insufficient evidence",
+    "expected_themes": [],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Unclassified",
+      "themes": [],
+      "theme": "Unclassified",
+      "severity": "Insufficient evidence",
+      "evidence_quotes": [],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "No supported deficiency, ambiguous or negated text, or too little context."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2024-10",
+    "inspection_id": "DEMO-INS-0-2024",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2024-04-15",
+    "observation_number": 10,
+    "observation_text": "The computer access control was disabled.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-10",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "High",
+    "expected_themes": [
+      "Computer Systems"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Computer Systems"
+      ],
+      "theme": "Computer Systems",
+      "severity": "High",
+      "evidence_quotes": [
+        "The computer access control was disabled."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2024-11",
+    "inspection_id": "DEMO-INS-0-2024",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2024-04-15",
+    "observation_number": 11,
+    "observation_text": "The quality unit failed to review repeated deviation reports.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-11",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Quality management",
+    "expected_severity": "High",
+    "expected_themes": [
+      "Quality Systems",
+      "Deviation Management"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Quality management",
+      "themes": [
+        "Quality Systems",
+        "Deviation Management"
+      ],
+      "theme": "Quality Systems",
+      "severity": "High",
+      "evidence_quotes": [
+        "The quality unit failed to review repeated deviation reports."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2024-12",
+    "inspection_id": "DEMO-INS-0-2024",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2024-04-15",
+    "observation_number": 12,
+    "observation_text": "Equipment maintenance was incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-12",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Facilities and equipment",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Equipment"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Facilities and equipment",
+      "themes": [
+        "Equipment"
+      ],
+      "theme": "Equipment",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Equipment maintenance was incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2025-01",
+    "inspection_id": "DEMO-INS-0-2025",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2025-04-15",
+    "observation_number": 1,
+    "observation_text": "Audit trail controls failed; original records were deleted.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-01",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Critical",
+    "expected_themes": [
+      "Data Integrity"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Data Integrity"
+      ],
+      "theme": "Data Integrity",
+      "severity": "Critical",
+      "evidence_quotes": [
+        "Audit trail controls failed; original records were deleted."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit falsification, deleted original records, or contamination affecting released product."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2025-02",
+    "inspection_id": "DEMO-INS-0-2025",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2025-04-15",
+    "observation_number": 2,
+    "observation_text": "The laboratory failed to investigate repeated OOS results.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-02",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Laboratory controls",
+    "expected_severity": "High",
+    "expected_themes": [
+      "OOS Investigation",
+      "Laboratory Controls"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Laboratory controls",
+      "themes": [
+        "OOS Investigation",
+        "Laboratory Controls"
+      ],
+      "theme": "OOS Investigation",
+      "severity": "High",
+      "evidence_quotes": [
+        "The laboratory failed to investigate repeated OOS results."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2025-03",
+    "inspection_id": "DEMO-INS-0-2025",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2025-04-15",
+    "observation_number": 3,
+    "observation_text": "CAPA effectiveness was not verified.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-03",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Quality management",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "CAPA"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Quality management",
+      "themes": [
+        "CAPA"
+      ],
+      "theme": "CAPA",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "CAPA effectiveness was not verified."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2025-04",
+    "inspection_id": "DEMO-INS-0-2025",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2025-04-15",
+    "observation_number": 4,
+    "observation_text": "Documentation was incomplete for the batch records.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-04",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Documentation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Documentation"
+      ],
+      "theme": "Documentation",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Documentation was incomplete for the batch records."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2025-05",
+    "inspection_id": "DEMO-INS-0-2025",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2025-04-15",
+    "observation_number": 5,
+    "observation_text": "Equipment calibration verification was incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-05",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Laboratory controls",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Laboratory Controls",
+      "Equipment"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Laboratory controls",
+      "themes": [
+        "Laboratory Controls",
+        "Equipment"
+      ],
+      "theme": "Laboratory Controls",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Equipment calibration verification was incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2025-06",
+    "inspection_id": "DEMO-INS-0-2025",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2025-04-15",
+    "observation_number": 6,
+    "observation_text": "Process validation did not establish reproducible manufacturing controls.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-06",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Production and validation",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Manufacturing Controls",
+      "Validation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Production and validation",
+      "themes": [
+        "Manufacturing Controls",
+        "Validation"
+      ],
+      "theme": "Manufacturing Controls",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Process validation did not establish reproducible manufacturing controls."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2025-07",
+    "inspection_id": "DEMO-INS-0-2025",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2025-04-15",
+    "observation_number": 7,
+    "observation_text": "Training records were incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-07",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Personnel and training",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Training"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Personnel and training",
+      "themes": [
+        "Training"
+      ],
+      "theme": "Training",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Training records were incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2025-08",
+    "inspection_id": "DEMO-INS-0-2025",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2025-04-15",
+    "observation_number": 8,
+    "observation_text": "An isolated administrative documentation error had no product impact.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-08",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Low",
+    "expected_themes": [
+      "Documentation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Documentation"
+      ],
+      "theme": "Documentation",
+      "severity": "Low",
+      "evidence_quotes": [
+        "An isolated administrative documentation error had no product impact."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit isolated administrative issue with stated absence of product impact."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2025-09",
+    "inspection_id": "DEMO-INS-0-2025",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2025-04-15",
+    "observation_number": 9,
+    "observation_text": "No evidence of audit trail failures was observed.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-09",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Unclassified",
+    "expected_severity": "Insufficient evidence",
+    "expected_themes": [],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Unclassified",
+      "themes": [],
+      "theme": "Unclassified",
+      "severity": "Insufficient evidence",
+      "evidence_quotes": [],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "No supported deficiency, ambiguous or negated text, or too little context."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2025-10",
+    "inspection_id": "DEMO-INS-0-2025",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2025-04-15",
+    "observation_number": 10,
+    "observation_text": "The computer access control was disabled.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-10",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "High",
+    "expected_themes": [
+      "Computer Systems"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Computer Systems"
+      ],
+      "theme": "Computer Systems",
+      "severity": "High",
+      "evidence_quotes": [
+        "The computer access control was disabled."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2025-11",
+    "inspection_id": "DEMO-INS-0-2025",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2025-04-15",
+    "observation_number": 11,
+    "observation_text": "The quality unit failed to review repeated deviation reports.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-11",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Quality management",
+    "expected_severity": "High",
+    "expected_themes": [
+      "Quality Systems",
+      "Deviation Management"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Quality management",
+      "themes": [
+        "Quality Systems",
+        "Deviation Management"
+      ],
+      "theme": "Quality Systems",
+      "severity": "High",
+      "evidence_quotes": [
+        "The quality unit failed to review repeated deviation reports."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-0-2025-12",
+    "inspection_id": "DEMO-INS-0-2025",
+    "company_name": "Aster Demonstration",
+    "site_name": "Fictional site 1",
+    "inspection_date": "2025-04-15",
+    "observation_number": 12,
+    "observation_text": "Equipment maintenance was incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-12",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Facilities and equipment",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Equipment"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Facilities and equipment",
+      "themes": [
+        "Equipment"
+      ],
+      "theme": "Equipment",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Equipment maintenance was incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2023-01",
+    "inspection_id": "DEMO-INS-1-2023",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2023-04-15",
+    "observation_number": 1,
+    "observation_text": "Audit trail controls failed; original records were deleted.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-01",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Critical",
+    "expected_themes": [
+      "Data Integrity"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Data Integrity"
+      ],
+      "theme": "Data Integrity",
+      "severity": "Critical",
+      "evidence_quotes": [
+        "Audit trail controls failed; original records were deleted."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit falsification, deleted original records, or contamination affecting released product."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2023-02",
+    "inspection_id": "DEMO-INS-1-2023",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2023-04-15",
+    "observation_number": 2,
+    "observation_text": "The laboratory failed to investigate repeated OOS results.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-02",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Laboratory controls",
+    "expected_severity": "High",
+    "expected_themes": [
+      "OOS Investigation",
+      "Laboratory Controls"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Laboratory controls",
+      "themes": [
+        "OOS Investigation",
+        "Laboratory Controls"
+      ],
+      "theme": "OOS Investigation",
+      "severity": "High",
+      "evidence_quotes": [
+        "The laboratory failed to investigate repeated OOS results."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2023-03",
+    "inspection_id": "DEMO-INS-1-2023",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2023-04-15",
+    "observation_number": 3,
+    "observation_text": "CAPA effectiveness was not verified.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-03",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Quality management",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "CAPA"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Quality management",
+      "themes": [
+        "CAPA"
+      ],
+      "theme": "CAPA",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "CAPA effectiveness was not verified."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2023-04",
+    "inspection_id": "DEMO-INS-1-2023",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2023-04-15",
+    "observation_number": 4,
+    "observation_text": "Documentation was incomplete for the batch records.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-04",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Documentation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Documentation"
+      ],
+      "theme": "Documentation",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Documentation was incomplete for the batch records."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2023-05",
+    "inspection_id": "DEMO-INS-1-2023",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2023-04-15",
+    "observation_number": 5,
+    "observation_text": "Equipment calibration verification was incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-05",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Laboratory controls",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Laboratory Controls",
+      "Equipment"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Laboratory controls",
+      "themes": [
+        "Laboratory Controls",
+        "Equipment"
+      ],
+      "theme": "Laboratory Controls",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Equipment calibration verification was incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2023-06",
+    "inspection_id": "DEMO-INS-1-2023",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2023-04-15",
+    "observation_number": 6,
+    "observation_text": "Process validation did not establish reproducible manufacturing controls.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-06",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Production and validation",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Manufacturing Controls",
+      "Validation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Production and validation",
+      "themes": [
+        "Manufacturing Controls",
+        "Validation"
+      ],
+      "theme": "Manufacturing Controls",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Process validation did not establish reproducible manufacturing controls."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2023-07",
+    "inspection_id": "DEMO-INS-1-2023",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2023-04-15",
+    "observation_number": 7,
+    "observation_text": "Training records were incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-07",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Personnel and training",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Training"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Personnel and training",
+      "themes": [
+        "Training"
+      ],
+      "theme": "Training",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Training records were incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2023-08",
+    "inspection_id": "DEMO-INS-1-2023",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2023-04-15",
+    "observation_number": 8,
+    "observation_text": "An isolated administrative documentation error had no product impact.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-08",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Low",
+    "expected_themes": [
+      "Documentation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Documentation"
+      ],
+      "theme": "Documentation",
+      "severity": "Low",
+      "evidence_quotes": [
+        "An isolated administrative documentation error had no product impact."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit isolated administrative issue with stated absence of product impact."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2023-09",
+    "inspection_id": "DEMO-INS-1-2023",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2023-04-15",
+    "observation_number": 9,
+    "observation_text": "No evidence of audit trail failures was observed.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-09",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Unclassified",
+    "expected_severity": "Insufficient evidence",
+    "expected_themes": [],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Unclassified",
+      "themes": [],
+      "theme": "Unclassified",
+      "severity": "Insufficient evidence",
+      "evidence_quotes": [],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "No supported deficiency, ambiguous or negated text, or too little context."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2023-10",
+    "inspection_id": "DEMO-INS-1-2023",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2023-04-15",
+    "observation_number": 10,
+    "observation_text": "The computer access control was disabled.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-10",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "High",
+    "expected_themes": [
+      "Computer Systems"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Computer Systems"
+      ],
+      "theme": "Computer Systems",
+      "severity": "High",
+      "evidence_quotes": [
+        "The computer access control was disabled."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2023-11",
+    "inspection_id": "DEMO-INS-1-2023",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2023-04-15",
+    "observation_number": 11,
+    "observation_text": "The quality unit failed to review repeated deviation reports.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-11",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Quality management",
+    "expected_severity": "High",
+    "expected_themes": [
+      "Quality Systems",
+      "Deviation Management"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Quality management",
+      "themes": [
+        "Quality Systems",
+        "Deviation Management"
+      ],
+      "theme": "Quality Systems",
+      "severity": "High",
+      "evidence_quotes": [
+        "The quality unit failed to review repeated deviation reports."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2023-12",
+    "inspection_id": "DEMO-INS-1-2023",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2023-04-15",
+    "observation_number": 12,
+    "observation_text": "Equipment maintenance was incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-12",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Facilities and equipment",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Equipment"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Facilities and equipment",
+      "themes": [
+        "Equipment"
+      ],
+      "theme": "Equipment",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Equipment maintenance was incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2024-01",
+    "inspection_id": "DEMO-INS-1-2024",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2024-04-15",
+    "observation_number": 1,
+    "observation_text": "Audit trail controls failed; original records were deleted.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-01",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Critical",
+    "expected_themes": [
+      "Data Integrity"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Data Integrity"
+      ],
+      "theme": "Data Integrity",
+      "severity": "Critical",
+      "evidence_quotes": [
+        "Audit trail controls failed; original records were deleted."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit falsification, deleted original records, or contamination affecting released product."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2024-02",
+    "inspection_id": "DEMO-INS-1-2024",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2024-04-15",
+    "observation_number": 2,
+    "observation_text": "The laboratory failed to investigate repeated OOS results.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-02",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Laboratory controls",
+    "expected_severity": "High",
+    "expected_themes": [
+      "OOS Investigation",
+      "Laboratory Controls"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Laboratory controls",
+      "themes": [
+        "OOS Investigation",
+        "Laboratory Controls"
+      ],
+      "theme": "OOS Investigation",
+      "severity": "High",
+      "evidence_quotes": [
+        "The laboratory failed to investigate repeated OOS results."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2024-03",
+    "inspection_id": "DEMO-INS-1-2024",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2024-04-15",
+    "observation_number": 3,
+    "observation_text": "CAPA effectiveness was not verified.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-03",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Quality management",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "CAPA"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Quality management",
+      "themes": [
+        "CAPA"
+      ],
+      "theme": "CAPA",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "CAPA effectiveness was not verified."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2024-04",
+    "inspection_id": "DEMO-INS-1-2024",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2024-04-15",
+    "observation_number": 4,
+    "observation_text": "Documentation was incomplete for the batch records.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-04",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Documentation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Documentation"
+      ],
+      "theme": "Documentation",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Documentation was incomplete for the batch records."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2024-05",
+    "inspection_id": "DEMO-INS-1-2024",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2024-04-15",
+    "observation_number": 5,
+    "observation_text": "Equipment calibration verification was incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-05",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Laboratory controls",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Laboratory Controls",
+      "Equipment"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Laboratory controls",
+      "themes": [
+        "Laboratory Controls",
+        "Equipment"
+      ],
+      "theme": "Laboratory Controls",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Equipment calibration verification was incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2024-06",
+    "inspection_id": "DEMO-INS-1-2024",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2024-04-15",
+    "observation_number": 6,
+    "observation_text": "Process validation did not establish reproducible manufacturing controls.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-06",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Production and validation",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Manufacturing Controls",
+      "Validation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Production and validation",
+      "themes": [
+        "Manufacturing Controls",
+        "Validation"
+      ],
+      "theme": "Manufacturing Controls",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Process validation did not establish reproducible manufacturing controls."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2024-07",
+    "inspection_id": "DEMO-INS-1-2024",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2024-04-15",
+    "observation_number": 7,
+    "observation_text": "Training records were incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-07",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Personnel and training",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Training"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Personnel and training",
+      "themes": [
+        "Training"
+      ],
+      "theme": "Training",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Training records were incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2024-08",
+    "inspection_id": "DEMO-INS-1-2024",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2024-04-15",
+    "observation_number": 8,
+    "observation_text": "An isolated administrative documentation error had no product impact.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-08",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Low",
+    "expected_themes": [
+      "Documentation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Documentation"
+      ],
+      "theme": "Documentation",
+      "severity": "Low",
+      "evidence_quotes": [
+        "An isolated administrative documentation error had no product impact."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit isolated administrative issue with stated absence of product impact."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2024-09",
+    "inspection_id": "DEMO-INS-1-2024",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2024-04-15",
+    "observation_number": 9,
+    "observation_text": "No evidence of audit trail failures was observed.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-09",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Unclassified",
+    "expected_severity": "Insufficient evidence",
+    "expected_themes": [],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Unclassified",
+      "themes": [],
+      "theme": "Unclassified",
+      "severity": "Insufficient evidence",
+      "evidence_quotes": [],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "No supported deficiency, ambiguous or negated text, or too little context."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2024-10",
+    "inspection_id": "DEMO-INS-1-2024",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2024-04-15",
+    "observation_number": 10,
+    "observation_text": "The computer access control was disabled.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-10",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "High",
+    "expected_themes": [
+      "Computer Systems"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Computer Systems"
+      ],
+      "theme": "Computer Systems",
+      "severity": "High",
+      "evidence_quotes": [
+        "The computer access control was disabled."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2024-11",
+    "inspection_id": "DEMO-INS-1-2024",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2024-04-15",
+    "observation_number": 11,
+    "observation_text": "The quality unit failed to review repeated deviation reports.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-11",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Quality management",
+    "expected_severity": "High",
+    "expected_themes": [
+      "Quality Systems",
+      "Deviation Management"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Quality management",
+      "themes": [
+        "Quality Systems",
+        "Deviation Management"
+      ],
+      "theme": "Quality Systems",
+      "severity": "High",
+      "evidence_quotes": [
+        "The quality unit failed to review repeated deviation reports."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2024-12",
+    "inspection_id": "DEMO-INS-1-2024",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2024-04-15",
+    "observation_number": 12,
+    "observation_text": "Equipment maintenance was incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-12",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Facilities and equipment",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Equipment"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Facilities and equipment",
+      "themes": [
+        "Equipment"
+      ],
+      "theme": "Equipment",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Equipment maintenance was incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2025-01",
+    "inspection_id": "DEMO-INS-1-2025",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2025-04-15",
+    "observation_number": 1,
+    "observation_text": "Audit trail controls failed; original records were deleted.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-01",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Critical",
+    "expected_themes": [
+      "Data Integrity"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Data Integrity"
+      ],
+      "theme": "Data Integrity",
+      "severity": "Critical",
+      "evidence_quotes": [
+        "Audit trail controls failed; original records were deleted."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit falsification, deleted original records, or contamination affecting released product."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2025-02",
+    "inspection_id": "DEMO-INS-1-2025",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2025-04-15",
+    "observation_number": 2,
+    "observation_text": "The laboratory failed to investigate repeated OOS results.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-02",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Laboratory controls",
+    "expected_severity": "High",
+    "expected_themes": [
+      "OOS Investigation",
+      "Laboratory Controls"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Laboratory controls",
+      "themes": [
+        "OOS Investigation",
+        "Laboratory Controls"
+      ],
+      "theme": "OOS Investigation",
+      "severity": "High",
+      "evidence_quotes": [
+        "The laboratory failed to investigate repeated OOS results."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2025-03",
+    "inspection_id": "DEMO-INS-1-2025",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2025-04-15",
+    "observation_number": 3,
+    "observation_text": "CAPA effectiveness was not verified.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-03",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Quality management",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "CAPA"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Quality management",
+      "themes": [
+        "CAPA"
+      ],
+      "theme": "CAPA",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "CAPA effectiveness was not verified."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2025-04",
+    "inspection_id": "DEMO-INS-1-2025",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2025-04-15",
+    "observation_number": 4,
+    "observation_text": "Documentation was incomplete for the batch records.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-04",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Documentation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Documentation"
+      ],
+      "theme": "Documentation",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Documentation was incomplete for the batch records."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2025-05",
+    "inspection_id": "DEMO-INS-1-2025",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2025-04-15",
+    "observation_number": 5,
+    "observation_text": "Equipment calibration verification was incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-05",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Laboratory controls",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Laboratory Controls",
+      "Equipment"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Laboratory controls",
+      "themes": [
+        "Laboratory Controls",
+        "Equipment"
+      ],
+      "theme": "Laboratory Controls",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Equipment calibration verification was incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2025-06",
+    "inspection_id": "DEMO-INS-1-2025",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2025-04-15",
+    "observation_number": 6,
+    "observation_text": "Process validation did not establish reproducible manufacturing controls.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-06",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Production and validation",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Manufacturing Controls",
+      "Validation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Production and validation",
+      "themes": [
+        "Manufacturing Controls",
+        "Validation"
+      ],
+      "theme": "Manufacturing Controls",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Process validation did not establish reproducible manufacturing controls."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2025-07",
+    "inspection_id": "DEMO-INS-1-2025",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2025-04-15",
+    "observation_number": 7,
+    "observation_text": "Training records were incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-07",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Personnel and training",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Training"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Personnel and training",
+      "themes": [
+        "Training"
+      ],
+      "theme": "Training",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Training records were incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2025-08",
+    "inspection_id": "DEMO-INS-1-2025",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2025-04-15",
+    "observation_number": 8,
+    "observation_text": "An isolated administrative documentation error had no product impact.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-08",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "Low",
+    "expected_themes": [
+      "Documentation"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Documentation"
+      ],
+      "theme": "Documentation",
+      "severity": "Low",
+      "evidence_quotes": [
+        "An isolated administrative documentation error had no product impact."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit isolated administrative issue with stated absence of product impact."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2025-09",
+    "inspection_id": "DEMO-INS-1-2025",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2025-04-15",
+    "observation_number": 9,
+    "observation_text": "No evidence of audit trail failures was observed.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-09",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Unclassified",
+    "expected_severity": "Insufficient evidence",
+    "expected_themes": [],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Unclassified",
+      "themes": [],
+      "theme": "Unclassified",
+      "severity": "Insufficient evidence",
+      "evidence_quotes": [],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "No supported deficiency, ambiguous or negated text, or too little context."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2025-10",
+    "inspection_id": "DEMO-INS-1-2025",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2025-04-15",
+    "observation_number": 10,
+    "observation_text": "The computer access control was disabled.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-10",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Records and data integrity",
+    "expected_severity": "High",
+    "expected_themes": [
+      "Computer Systems"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Records and data integrity",
+      "themes": [
+        "Computer Systems"
+      ],
+      "theme": "Computer Systems",
+      "severity": "High",
+      "evidence_quotes": [
+        "The computer access control was disabled."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2025-11",
+    "inspection_id": "DEMO-INS-1-2025",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2025-04-15",
+    "observation_number": 11,
+    "observation_text": "The quality unit failed to review repeated deviation reports.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-11",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Quality management",
+    "expected_severity": "High",
+    "expected_themes": [
+      "Quality Systems",
+      "Deviation Management"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Quality management",
+      "themes": [
+        "Quality Systems",
+        "Deviation Management"
+      ],
+      "theme": "Quality Systems",
+      "severity": "High",
+      "evidence_quotes": [
+        "The quality unit failed to review repeated deviation reports."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Explicit failed, repeated, disabled or missing investigation/control."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  },
+  {
+    "observation_id": "DEMO-1-2025-12",
+    "inspection_id": "DEMO-INS-1-2025",
+    "company_name": "Cedar Demonstration",
+    "site_name": "Fictional site 2",
+    "inspection_date": "2025-04-15",
+    "observation_number": 12,
+    "observation_text": "Equipment maintenance was incomplete.",
+    "synthetic": true,
+    "template_id": "FORMAT-483-12",
+    "format_source_url": "https://www.fda.gov/about-fda/montana-compounding-pharmacy-pc-missoula-mt-483-issued-09202016",
+    "source_locator": "Form header fields and numbered observations, pages 1-3; wording and labels independently authored",
+    "expected_category": "Facilities and equipment",
+    "expected_severity": "Medium",
+    "expected_themes": [
+      "Equipment"
+    ],
+    "label_authority": "developer fixture; not expert ground truth",
+    "prediction": {
+      "category": "Facilities and equipment",
+      "themes": [
+        "Equipment"
+      ],
+      "theme": "Equipment",
+      "severity": "Medium",
+      "evidence_quotes": [
+        "Equipment maintenance was incomplete."
+      ],
+      "confidence": null,
+      "source": "rules",
+      "model": null,
+      "rubric_version": "2.0",
+      "review_status": "pending",
+      "reason": "Identified incomplete or inadequate control without an explicit higher-severity signal."
+    },
+    "review": null,
+    "error": null,
+    "version": 1
+  }
+]

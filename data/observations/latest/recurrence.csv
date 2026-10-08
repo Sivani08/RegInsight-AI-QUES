@@ -1,0 +1,25 @@
+company_name,site_name,themes,observations,inspections,repeats
+Aster Demonstration,Fictional site 1,CAPA,3,3,2
+Aster Demonstration,Fictional site 1,Computer Systems,3,3,2
+Aster Demonstration,Fictional site 1,Data Integrity,3,3,2
+Aster Demonstration,Fictional site 1,Deviation Management,3,3,2
+Aster Demonstration,Fictional site 1,Documentation,6,3,2
+Aster Demonstration,Fictional site 1,Equipment,6,3,2
+Aster Demonstration,Fictional site 1,Laboratory Controls,6,3,2
+Aster Demonstration,Fictional site 1,Manufacturing Controls,3,3,2
+Aster Demonstration,Fictional site 1,OOS Investigation,3,3,2
+Aster Demonstration,Fictional site 1,Quality Systems,3,3,2
+Aster Demonstration,Fictional site 1,Training,3,3,2
+Aster Demonstration,Fictional site 1,Validation,3,3,2
+Cedar Demonstration,Fictional site 2,CAPA,3,3,2
+Cedar Demonstration,Fictional site 2,Computer Systems,3,3,2
+Cedar Demonstration,Fictional site 2,Data Integrity,3,3,2
+Cedar Demonstration,Fictional site 2,Deviation Management,3,3,2
+Cedar Demonstration,Fictional site 2,Documentation,6,3,2
+Cedar Demonstration,Fictional site 2,Equipment,6,3,2
+Cedar Demonstration,Fictional site 2,Laboratory Controls,6,3,2
+Cedar Demonstration,Fictional site 2,Manufacturing Controls,3,3,2
+Cedar Demonstration,Fictional site 2,OOS Investigation,3,3,2
+Cedar Demonstration,Fictional site 2,Quality Systems,3,3,2
+Cedar Demonstration,Fictional site 2,Training,3,3,2
+Cedar Demonstration,Fictional site 2,Validation,3,3,2

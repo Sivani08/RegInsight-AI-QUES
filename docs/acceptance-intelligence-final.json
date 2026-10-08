@@ -1,0 +1,48 @@
+[
+  {
+    "url": "/api/health",
+    "params": {},
+    "seconds": 0.047,
+    "status": 200
+  },
+  {
+    "url": "/api/observations/report",
+    "params": {},
+    "seconds": 0.047,
+    "status": 200
+  },
+  {
+    "url": "/api/observations/tags",
+    "params": {
+      "dataset": "real",
+      "limit": 25
+    },
+    "seconds": 30.797,
+    "status": 200
+  },
+  {
+    "url": "/api/observations/tags",
+    "params": {
+      "dataset": "real",
+      "limit": 25,
+      "offset": 25
+    },
+    "seconds": 25.078,
+    "status": 200
+  },
+  {
+    "url": "/api/observations/themes",
+    "params": {
+      "dataset": "real",
+      "company": "Fareva Unterach GmbH"
+    },
+    "seconds": 0.656,
+    "status": 200
+  },
+  {
+    "url": "/",
+    "params": {},
+    "seconds": 0.079,
+    "status": 200
+  }
+]

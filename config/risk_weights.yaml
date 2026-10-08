@@ -1,0 +1,17 @@
+version: '1.0'
+weights:
+  citation_history: 25
+  classification_history: 25
+  recurring_deficiencies: 20
+  recency: 10
+  severity: 10
+  negative_trend: 10
+parameters:
+  vai_factor: 0.4
+  recency_days: 730
+  recurrence_target: 3
+  observation_cap: 5
+bands:
+  MODERATE: 30
+  HIGH: 60
+  CRITICAL: 80

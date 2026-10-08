@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "FastAPI - Uvicorn",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "backend.api.main:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8018"
+      ],
+      "jinja": true,
+      "console": "integratedTerminal"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "embedding_model": "nomic-embed-text:latest",
+  "embedding_dimensions": null,
+  "generation_model": "reginsight-chat:qwen3-1.7b",
+  "judge_model": "reginsight-chat:qwen3-1.7b",
+  "retrieval_top_k": 5,
+  "retrieval_candidate_limit": 20,
+  "strong_hit_threshold": 0.65,
+  "weak_hit_threshold": 0.55,
+  "judge_pass_score": 80,
+  "judge_revision_score": 60,
+  "judge_min_groundedness": 7,
+  "judge_min_safety": 7,
+  "mandatory_hitl_risk_levels": [
+    "HIGH",
+    "CRITICAL"
+  ],
+  "maximum_agent_iterations": 3,
+  "chunk_tokens": 220,
+  "chunk_overlap": 30,
+  "max_index_chunks": 25000,
+  "max_document_characters": 200000,
+  "llm_timeout_seconds": 120
+}

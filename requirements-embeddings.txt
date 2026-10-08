@@ -1,0 +1,3 @@
+# Optional only. The main application and lexical grouping do not require PyTorch.
+# Install these in a separate environment when CPU semantic embeddings are desired.
+sentence-transformers>=3,<6

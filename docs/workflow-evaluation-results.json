@@ -1,0 +1,418 @@
+{
+  "scope": "Small development smoke set; not a held-out domain benchmark. Sources are curated project references.",
+  "method": "Actual local vector search; document-level precision/recall; no LLM calls",
+  "routing_accuracy": 1.0,
+  "agents": [
+    {
+      "agent": "DataAnalyticsAgent",
+      "test_queries": 3,
+      "routing_accuracy": 1.0,
+      "retrieval_precision": 0.6666666666666666,
+      "retrieval_recall": 1.0,
+      "judge_score": null
+    },
+    {
+      "agent": "EvidenceAgent",
+      "test_queries": 4,
+      "routing_accuracy": 1.0,
+      "retrieval_precision": 0.8333333333333334,
+      "retrieval_recall": 1.0,
+      "judge_score": null
+    },
+    {
+      "agent": "InspectionAssessmentAgent",
+      "test_queries": 4,
+      "routing_accuracy": 1.0,
+      "retrieval_precision": 0.75,
+      "retrieval_recall": 1.0,
+      "judge_score": null
+    },
+    {
+      "agent": "UnsupportedDomainAgent",
+      "test_queries": 1,
+      "routing_accuracy": 1.0,
+      "retrieval_precision": null,
+      "retrieval_recall": null,
+      "judge_score": null
+    }
+  ],
+  "cases": [
+    {
+      "id": "definition",
+      "query": "What does OAI mean?",
+      "expected_agent": "EvidenceAgent",
+      "actual_agent": "EvidenceAgent",
+      "routing_correct": true,
+      "risk_correct": true,
+      "retrieval_status": "WEAK_HIT",
+      "retrieved_documents": [
+        "K2"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "top_scores": [
+        [
+          "K2",
+          0.18650096164806276
+        ],
+        [
+          "K6",
+          0.0
+        ],
+        [
+          "K3",
+          0.0
+        ]
+      ],
+      "mandatory_review_policy": false,
+      "judge_score": null,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "classification",
+      "query": "Explain OAI NAI VAI inspection classifications",
+      "expected_agent": "InspectionAssessmentAgent",
+      "actual_agent": "InspectionAssessmentAgent",
+      "routing_correct": true,
+      "risk_correct": true,
+      "retrieval_status": "WEAK_HIT",
+      "retrieved_documents": [
+        "K1",
+        "K2"
+      ],
+      "precision": 0.5,
+      "recall": 1.0,
+      "top_scores": [
+        [
+          "K2",
+          0.1554174680400523
+        ],
+        [
+          "K1",
+          0.15278308098060753
+        ],
+        [
+          "K3",
+          0.058696727088374916
+        ]
+      ],
+      "mandatory_review_policy": false,
+      "judge_score": null,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "review",
+      "query": "Recommend a compliance response for OAI inspection classifications",
+      "expected_agent": "InspectionAssessmentAgent",
+      "actual_agent": "InspectionAssessmentAgent",
+      "routing_correct": true,
+      "risk_correct": true,
+      "retrieval_status": "WEAK_HIT",
+      "retrieved_documents": [
+        "K2"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "top_scores": [
+        [
+          "K2",
+          0.14058038927888333
+        ],
+        [
+          "K8",
+          0.07902950531173963
+        ],
+        [
+          "K1",
+          0.055278997262374854
+        ]
+      ],
+      "mandatory_review_policy": true,
+      "judge_score": null,
+      "expected_behavior": "mandatory_review"
+    },
+    {
+      "id": "training",
+      "query": "Is the chatbot model fine tuned or trained on our dataset?",
+      "expected_agent": "EvidenceAgent",
+      "actual_agent": "EvidenceAgent",
+      "routing_correct": true,
+      "risk_correct": true,
+      "retrieval_status": "WEAK_HIT",
+      "retrieved_documents": [
+        "K1",
+        "K8"
+      ],
+      "precision": 0.5,
+      "recall": 1.0,
+      "top_scores": [
+        [
+          "K1",
+          0.20339713323946296
+        ],
+        [
+          "K8",
+          0.12116095268155122
+        ],
+        [
+          "K7",
+          0.07161148781722713
+        ]
+      ],
+      "mandatory_review_policy": false,
+      "judge_score": null,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "recurrence",
+      "query": "Explain recurring themes distinct inspections repeated observation rows",
+      "expected_agent": "InspectionAssessmentAgent",
+      "actual_agent": "InspectionAssessmentAgent",
+      "routing_correct": true,
+      "risk_correct": true,
+      "retrieval_status": "STRONG_HIT",
+      "retrieved_documents": [
+        "K4"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "top_scores": [
+        [
+          "K4",
+          0.40679426894473714
+        ],
+        [
+          "K3",
+          0.09767725810110087
+        ],
+        [
+          "K2",
+          0.07758909001678074
+        ]
+      ],
+      "mandatory_review_policy": false,
+      "judge_score": null,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "severity",
+      "query": "Explain observation themes severity classification confidence",
+      "expected_agent": "InspectionAssessmentAgent",
+      "actual_agent": "InspectionAssessmentAgent",
+      "routing_correct": true,
+      "risk_correct": true,
+      "retrieval_status": "WEAK_HIT",
+      "retrieved_documents": [
+        "K3",
+        "K4"
+      ],
+      "precision": 0.5,
+      "recall": 1.0,
+      "top_scores": [
+        [
+          "K3",
+          0.2054385448093122
+        ],
+        [
+          "K4",
+          0.12222646627042819
+        ],
+        [
+          "K6",
+          0.08247861049244289
+        ]
+      ],
+      "mandatory_review_policy": false,
+      "judge_score": null,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "counts",
+      "query": "How many inspections were recorded in 2025?",
+      "expected_agent": "DataAnalyticsAgent",
+      "actual_agent": "DataAnalyticsAgent",
+      "routing_correct": true,
+      "risk_correct": true,
+      "retrieval_status": "MISS",
+      "retrieved_documents": [],
+      "precision": null,
+      "recall": null,
+      "top_scores": [
+        [
+          "K4",
+          0.08291849892341731
+        ],
+        [
+          "K2",
+          0.05623215571155333
+        ],
+        [
+          "K1",
+          0.027639499754404714
+        ]
+      ],
+      "mandatory_review_policy": false,
+      "judge_score": null,
+      "expected_behavior": "sql"
+    },
+    {
+      "id": "risk",
+      "query": "Compare risk scores and missing factors in inspections",
+      "expected_agent": "DataAnalyticsAgent",
+      "actual_agent": "DataAnalyticsAgent",
+      "routing_correct": true,
+      "risk_correct": true,
+      "retrieval_status": "WEAK_HIT",
+      "retrieved_documents": [
+        "K5"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "top_scores": [
+        [
+          "K5",
+          0.1546720562224365
+        ],
+        [
+          "K4",
+          0.08291849892341731
+        ],
+        [
+          "K1",
+          0.05527899950880943
+        ]
+      ],
+      "mandatory_review_policy": false,
+      "judge_score": null,
+      "expected_behavior": "sql"
+    },
+    {
+      "id": "data",
+      "query": "Compare real and synthetic dataset inspection records",
+      "expected_agent": "DataAnalyticsAgent",
+      "actual_agent": "DataAnalyticsAgent",
+      "routing_correct": true,
+      "risk_correct": true,
+      "retrieval_status": "WEAK_HIT",
+      "retrieved_documents": [
+        "K1",
+        "K6",
+        "K7"
+      ],
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "top_scores": [
+        [
+          "K1",
+          0.19347649603439843
+        ],
+        [
+          "K7",
+          0.15569978748444388
+        ],
+        [
+          "K6",
+          0.14920941599802356
+        ]
+      ],
+      "mandatory_review_policy": false,
+      "judge_score": null,
+      "expected_behavior": "sql"
+    },
+    {
+      "id": "provenance",
+      "query": "Explain cleaning evidence provenance source row rejected duplicates",
+      "expected_agent": "EvidenceAgent",
+      "actual_agent": "EvidenceAgent",
+      "routing_correct": true,
+      "risk_correct": true,
+      "retrieval_status": "WEAK_HIT",
+      "retrieved_documents": [
+        "K7"
+      ],
+      "precision": 1.0,
+      "recall": 1.0,
+      "top_scores": [
+        [
+          "K7",
+          0.14322297356803504
+        ],
+        [
+          "K1",
+          0.07627392573970583
+        ],
+        [
+          "K2",
+          0.05172606001118716
+        ]
+      ],
+      "mandatory_review_policy": false,
+      "judge_score": null,
+      "expected_behavior": "retrieve"
+    },
+    {
+      "id": "unrelated",
+      "query": "Explain quasar gravitational lensing astronomy",
+      "expected_agent": "EvidenceAgent",
+      "actual_agent": "EvidenceAgent",
+      "routing_correct": true,
+      "risk_correct": true,
+      "retrieval_status": "MISS",
+      "retrieved_documents": [],
+      "precision": null,
+      "recall": null,
+      "top_scores": [
+        [
+          "K7",
+          0.03253000261935475
+        ],
+        [
+          "K6",
+          0.0
+        ],
+        [
+          "K3",
+          0.0
+        ]
+      ],
+      "mandatory_review_policy": false,
+      "judge_score": null,
+      "expected_behavior": "miss"
+    },
+    {
+      "id": "unsupported",
+      "query": "Recommend patient treatment dosage",
+      "expected_agent": "UnsupportedDomainAgent",
+      "actual_agent": "UnsupportedDomainAgent",
+      "routing_correct": true,
+      "risk_correct": true,
+      "retrieval_status": "MISS",
+      "retrieved_documents": [],
+      "precision": null,
+      "recall": null,
+      "top_scores": [
+        [
+          "K1",
+          0.03464794657574781
+        ],
+        [
+          "K2",
+          0.0
+        ],
+        [
+          "K6",
+          -0.031173984549309492
+        ]
+      ],
+      "mandatory_review_policy": true,
+      "judge_score": null,
+      "expected_behavior": "abstain"
+    }
+  ],
+  "unmeasured": [
+    "semantic faithfulness",
+    "human acceptance rate",
+    "production hallucination rate",
+    "held-out judge calibration"
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "question": "What stands out in this dashboard?",
+    "answer": {
+      "type": "answer",
+      "answer": "The selected scope contains 274,886 inspections. The OAI rate is 4.09%: 11,239 OAI inspections out of 274,886 inspections with known classifications. There are 1,226 sites in the HIGH analytical risk band. This is a prioritization measure, not an FDA determination.",
+      "citations": [
+        "D1"
+      ],
+      "first_token_ms": 6109,
+      "generation_ms": 15119,
+      "output_tokens": 92,
+      "mode": "local_llm",
+      "model": "reginsight-chat:qwen3-1.7b",
+      "checks": [
+        "source IDs exist",
+        "numeric tokens occur in cited evidence"
+      ],
+      "retrieval_ms": 170,
+      "total_ms": 15291
+    },
+    "sources": [
+      {
+        "id": "D1",
+        "title": "Calculated dashboard result",
+        "text": "{\"headline\": \"The selected portfolio contains 274886 inspections.\", \"requested_metrics\": {\"total_inspections\": 274886, \"oai_rate\": 0.040886, \"high_risk_sites\": 1226, \"oai_rate_percent\": \"4.09%\", \"oai_inspections\": 11239, \"known_classification_inspections\": 274886}, \"allowed_answers\": [\"The selected scope contains 274,886 inspections. The OAI rate is 4.09%: 11,239 OAI inspections out of 274,886 inspections with known classifications. There are 1,226 sites in the HIGH analytical risk band. This is a prioritization measure, not an FDA determination.\", \"The selected scope contains 274,886 inspections.\", \"The OAI rate is 4.09%: 11,239 OAI inspections out of 274,886 inspections with known classifications.\", \"There are 1,226 sites in the HIGH analytical risk band. This is a prioritization measure, not an FDA determination.\"], \"scope\": {}, \"as_of\": \"2026-09-10\", \"patterns\": {}, \"records\": [], \"limitations\": [\"Risk is a prioritization heuristic, not an FDA determination.\", \"Reported associations do not establish causes.\"]}",
+        "locator": "3a4e2850bc484a72814249af5b959476",
+        "kind": "live calculated data",
+        "scope": {
+          "focus": "overall_dashboard",
+          "filters": {},
+          "dataset_id": "e79e13f6e929428f3d05",
+          "run_id": null,
+          "as_of": "2026-09-10",
+          "grain": "inspection",
+          "source_label": "USER-SUPPLIED INSPECTION AND CITATION EXPORTS"
+        }
+      }
+    ],
+    "wall_seconds": 15.32
+  },
+  {
+    "question": "What is the OAI rate?",
+    "answer": {
+      "type": "answer",
+      "answer": "The OAI rate is 4.09%: 11,239 OAI inspections out of 274,886 inspections with known classifications.",
+      "citations": [
+        "D1"
+      ],
+      "first_token_ms": 4048,
+      "generation_ms": 8100,
+      "output_tokens": 50,
+      "mode": "local_llm",
+      "model": "reginsight-chat:qwen3-1.7b",
+      "checks": [
+        "source IDs exist",
+        "numeric tokens occur in cited evidence"
+      ],
+      "retrieval_ms": 129,
+      "total_ms": 8232
+    },
+    "sources": [
+      {
+        "id": "D1",
+        "title": "Calculated dashboard result",
+        "text": "{\"headline\": \"The selected portfolio contains 274886 inspections.\", \"requested_metrics\": {\"oai_rate\": 0.040886, \"oai_rate_percent\": \"4.09%\", \"oai_inspections\": 11239, \"known_classification_inspections\": 274886}, \"allowed_answers\": [\"The OAI rate is 4.09%: 11,239 OAI inspections out of 274,886 inspections with known classifications.\"], \"scope\": {}, \"as_of\": \"2026-09-10\", \"patterns\": {}, \"records\": [], \"limitations\": [\"Risk is a prioritization heuristic, not an FDA determination.\", \"Reported associations do not establish causes.\"]}",
+        "locator": "bc06a40b78934bf8b15424761918e74f",
+        "kind": "live calculated data",
+        "scope": {
+          "focus": "overall_dashboard",
+          "filters": {},
+          "dataset_id": "e79e13f6e929428f3d05",
+          "run_id": null,
+          "as_of": "2026-09-10",
+          "grain": "inspection",
+          "source_label": "USER-SUPPLIED INSPECTION AND CITATION EXPORTS"
+        }
+      }
+    ],
+    "wall_seconds": 8.24
+  }
+]

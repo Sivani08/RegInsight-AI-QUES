@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "id": "3b2b470736ee520e",
+      "title": "6a74613d9b8f033bd6003e69_Clin-QC Whitepaper.pdf",
+      "sha256": "3b2b470736ee520e7bef870096f9b8fa6588bd927bef033dcf920a3ae31912cd",
+      "path": "data\\knowledge\\sources\\6a74613d9b8f033bd6003e69_Clin-QC Whitepaper.pdf",
+      "authority": "supplied_reference_not_regulatory_authority",
+      "review_status": "reference_only"
+    },
+    {
+      "id": "3361df685f1dcefa",
+      "title": "ClinQC-Regulatory Solution.pptx",
+      "sha256": "3361df685f1dcefa0feaaefad9c0bc750a4090312ee2299924d733d3a3b1216d",
+      "path": "data\\knowledge\\sources\\ClinQC-Regulatory Solution.pptx",
+      "authority": "supplied_reference_not_regulatory_authority",
+      "review_status": "reference_only"
+    }
+  ],
+  "indexed_units": 62,
+  "policy": "References are searchable evidence, not automatically approved regulations. Dataset facts remain in source databases."
+}

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "tagged": 72,
+  "run_id": "c8349195-a1d4-4641-95c8-1d74734bd7b3",
+  "provider": "rules",
+  "pandas_reconciliation": "passed",
+  "evidence_export": "passed",
+  "frontend_assets": "served",
+  "browser_interaction": "not verified: browser automation initialization failed",
+  "live_claude": "pending: credentials absent",
+  "expert_evaluation": "pending: no expert labels"
+}

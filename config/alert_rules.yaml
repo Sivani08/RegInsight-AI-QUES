@@ -1,0 +1,5 @@
+repeated_oai_count: 2
+citation_rate_increase: 0.20
+minimum_yearly_known_flags: 3
+data_integrity_count: 2
+new_observation_days: 365

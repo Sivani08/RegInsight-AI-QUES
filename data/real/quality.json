@@ -1,0 +1,120 @@
+{
+  "total_records": 341046,
+  "valid_records": 274886,
+  "rejected_records": 0,
+  "duplicate_records": 0,
+  "merged_project_rows": 66160,
+  "missing_values": {
+    "inspection_id": 0,
+    "fei_number": 0,
+    "company_name": 0,
+    "site_name": 0,
+    "inspection_date": 0,
+    "country": 0,
+    "product_type": 0,
+    "inspection_type": 274886,
+    "classification": 0,
+    "citation_flag": 274886,
+    "observation_count": 274886,
+    "project_area": 0,
+    "observation_text": 198724,
+    "fiscal_year": 0
+  },
+  "missing_value_population": "canonical distinct inspections",
+  "invalid_dates": 0,
+  "unknown_classifications": 0,
+  "data_completeness_pct": 73.41,
+  "as_of": "2026-09-10",
+  "engine": "Python audited relational adapter (Spark parity job provided separately)",
+  "data_label": "USER-SUPPLIED INSPECTION AND CITATION EXPORTS",
+  "source_file": "e4832250-43dc-4c0c-982b-b31f87205869.xlsx",
+  "dataset_id": "e79e13f6e929428f3d05",
+  "source_files": [
+    {
+      "file": "e4832250-43dc-4c0c-982b-b31f87205869.xlsx",
+      "kind": "inspections",
+      "rows": 341046,
+      "sha256": "df545516fa0227de0c047d90b527d75c0749f4b7f0e787ce5ad15c793e8803f9"
+    },
+    {
+      "file": "e00adefd-b9ce-414f-ae04-21c950fb5f27.xlsx",
+      "kind": "citations",
+      "rows": 280130,
+      "sha256": "22d4a8adf25537561970ccf06ab14e4248042945bb7f8af11313a0711ca09b76"
+    },
+    {
+      "file": "Inspection_Observations_FY23_0.xlsx",
+      "kind": "annual_frequency",
+      "year": 2023,
+      "rows": 1546,
+      "sheet_counts": {
+        "Biologics": 39,
+        "Bioresearch Monitoring": 78,
+        "Devices": 179,
+        "Drugs": 328,
+        "Foods": 688,
+        "Human Tissue": 78,
+        "Parts 1240 & 1250": 23,
+        "Rad Health": 20,
+        "Vet Med": 113
+      },
+      "sha256": "4be5cf0c6d62218efaaea158a59155ac74690726e4649e6a43ed6fe92e382150"
+    },
+    {
+      "file": "inspection_observations_fy24.xlsx",
+      "kind": "annual_frequency",
+      "year": 2024,
+      "rows": 1544,
+      "sheet_counts": {
+        "Biologics": 48,
+        "Bioresearch Monitoring": 81,
+        "Devices": 174,
+        "Drugs": 287,
+        "Foods": 722,
+        "Human Tissue": 84,
+        "Parts 1240 & 1250": 22,
+        "Rad Health": 17,
+        "Vet Med": 109
+      },
+      "sha256": "9f7daee81b7a4865127884cc8f16c410b8f151c905a2944529610c298073fe5d"
+    },
+    {
+      "file": "inspection_observations_fiscal_year_2025_0.xlsx",
+      "kind": "annual_frequency",
+      "year": 2025,
+      "rows": 1606,
+      "sheet_counts": {
+        "Biologics": 62,
+        "Bioresearch Monitoring": 91,
+        "Devices": 185,
+        "Drugs": 316,
+        "Foods": 687,
+        "Human Tissue": 99,
+        "Parts 1240 & 1250": 34,
+        "Radiological Health": 16,
+        "Veterinary Medicine": 116
+      },
+      "sha256": "8d3a824502ad3ce9189826115b4bcb19e0a26cc0b422a64fdf1f5c52f06fe86f"
+    }
+  ],
+  "missing_columns": [
+    "inspection_type",
+    "observation_count",
+    "citation_flag"
+  ],
+  "rejected": [],
+  "duplicates": [],
+  "posted_citation_inspections": 76162,
+  "classification_counts": {
+    "NAI": 169180,
+    "VAI": 94467,
+    "OAI": 11239
+  },
+  "notes": [
+    "Source rows = distinct inspections + merged project rows. Repeated project rows are preserved, not discarded.",
+    "Classification is the worst recorded project outcome; all project-specific classifications remain in evidence.",
+    "Posted Citations describes publication. True citation rate and total observation counts are unavailable, so affected risk components are excluded.",
+    "Annual FY2023\u2013FY2025 frequencies are separate benchmarks and never joined into company observations.",
+    "Source row numbers, workbook names, and SHA-256 hashes are retained. File provenance was not independently authenticated."
+  ]
+}

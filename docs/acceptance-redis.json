@@ -1,0 +1,25 @@
+{
+  "cache_status": {
+    "enabled": false,
+    "status": "disabled",
+    "ttl_seconds": 300,
+    "counters": {
+      "hits": 0,
+      "misses": 0,
+      "errors": 0,
+      "writes": 0,
+      "invalid": 0,
+      "oversize": 0
+    },
+    "scope": "this application worker",
+    "fallback": "database"
+  },
+  "health": {
+    "status": "ok",
+    "database": "sqlite",
+    "warning": null,
+    "dataset_loaded": true
+  },
+  "tests_passed": 69,
+  "redis_validation": "fakeredis emulator plus real-client unavailable-server fallback; no real Redis deployment"
+}

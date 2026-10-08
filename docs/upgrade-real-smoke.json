@@ -1,0 +1,54 @@
+{
+  "/api/dashboard": {
+    "seconds": 2.934,
+    "status": 200
+  },
+  "/api/agent/dashboard-query: What stands out in this graph?": {
+    "seconds": 4.626,
+    "status": 200
+  },
+  "focus:overall_dashboard": {
+    "status": 200,
+    "evidence_rows": 3
+  },
+  "focus:inspection_activity": {
+    "status": 200,
+    "evidence_rows": 3
+  },
+  "focus:classification_distribution": {
+    "status": 200,
+    "evidence_rows": 3
+  },
+  "focus:citation_oai_trend": {
+    "status": 200,
+    "evidence_rows": 3
+  },
+  "focus:risk_distribution": {
+    "status": 200,
+    "evidence_rows": 3
+  },
+  "focus:sites_to_investigate": {
+    "status": 200,
+    "evidence_rows": 3
+  },
+  "focus:recurring_risk_signals": {
+    "status": 200,
+    "evidence_rows": 3
+  },
+  "focus:observation_intelligence": {
+    "status": 200,
+    "evidence_rows": 3
+  },
+  "focus:data_quality": {
+    "status": 200,
+    "evidence_rows": 3
+  },
+  "/api/agent/dashboard-query: Which sites have the highest risk?": {
+    "seconds": 6.771,
+    "status": 200
+  },
+  "/api/agent/dashboard-query: Why is the first one high?": {
+    "seconds": 0.049,
+    "status": 200
+  }
+}

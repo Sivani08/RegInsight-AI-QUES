@@ -1,0 +1,2 @@
+# Install separately; never add evaluation dependencies to the web server.
+deepeval==4.2.6

@@ -1,0 +1,275 @@
+{
+  "run": {
+    "id": "c8349195-a1d4-4641-95c8-1d74734bd7b3",
+    "created_at": "2026-09-15T03:56:57.684643+00:00",
+    "dataset_label": "SYNTHETIC OBSERVATION DEMONSTRATION",
+    "provider": "rules",
+    "model": null,
+    "rubric_version": "2.0",
+    "source_sha256": "4ddb5603da60674e5f6fe122ca9dc0d022e31be8bb21c5931ba543c9c5869260",
+    "status": "completed",
+    "total": 72,
+    "completed": 72,
+    "failed": 0,
+    "distinct_text_requests": 12
+  },
+  "summaries": {
+    "engine": "pandas",
+    "categories": [
+      {
+        "category": "Facilities and equipment",
+        "observations": 6
+      },
+      {
+        "category": "Laboratory controls",
+        "observations": 12
+      },
+      {
+        "category": "Personnel and training",
+        "observations": 6
+      },
+      {
+        "category": "Production and validation",
+        "observations": 6
+      },
+      {
+        "category": "Quality management",
+        "observations": 12
+      },
+      {
+        "category": "Records and data integrity",
+        "observations": 24
+      },
+      {
+        "category": "Unclassified",
+        "observations": 6
+      }
+    ],
+    "severities": [
+      {
+        "severity": "Critical",
+        "observations": 6
+      },
+      {
+        "severity": "High",
+        "observations": 18
+      },
+      {
+        "severity": "Insufficient evidence",
+        "observations": 6
+      },
+      {
+        "severity": "Low",
+        "observations": 6
+      },
+      {
+        "severity": "Medium",
+        "observations": 36
+      }
+    ],
+    "recurrence": [
+      {
+        "company_name": "Aster Demonstration",
+        "site_name": "Fictional site 1",
+        "themes": "CAPA",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Aster Demonstration",
+        "site_name": "Fictional site 1",
+        "themes": "Computer Systems",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Aster Demonstration",
+        "site_name": "Fictional site 1",
+        "themes": "Data Integrity",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Aster Demonstration",
+        "site_name": "Fictional site 1",
+        "themes": "Deviation Management",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Aster Demonstration",
+        "site_name": "Fictional site 1",
+        "themes": "Documentation",
+        "observations": 6,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Aster Demonstration",
+        "site_name": "Fictional site 1",
+        "themes": "Equipment",
+        "observations": 6,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Aster Demonstration",
+        "site_name": "Fictional site 1",
+        "themes": "Laboratory Controls",
+        "observations": 6,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Aster Demonstration",
+        "site_name": "Fictional site 1",
+        "themes": "Manufacturing Controls",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Aster Demonstration",
+        "site_name": "Fictional site 1",
+        "themes": "OOS Investigation",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Aster Demonstration",
+        "site_name": "Fictional site 1",
+        "themes": "Quality Systems",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Aster Demonstration",
+        "site_name": "Fictional site 1",
+        "themes": "Training",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Aster Demonstration",
+        "site_name": "Fictional site 1",
+        "themes": "Validation",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Cedar Demonstration",
+        "site_name": "Fictional site 2",
+        "themes": "CAPA",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Cedar Demonstration",
+        "site_name": "Fictional site 2",
+        "themes": "Computer Systems",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Cedar Demonstration",
+        "site_name": "Fictional site 2",
+        "themes": "Data Integrity",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Cedar Demonstration",
+        "site_name": "Fictional site 2",
+        "themes": "Deviation Management",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Cedar Demonstration",
+        "site_name": "Fictional site 2",
+        "themes": "Documentation",
+        "observations": 6,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Cedar Demonstration",
+        "site_name": "Fictional site 2",
+        "themes": "Equipment",
+        "observations": 6,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Cedar Demonstration",
+        "site_name": "Fictional site 2",
+        "themes": "Laboratory Controls",
+        "observations": 6,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Cedar Demonstration",
+        "site_name": "Fictional site 2",
+        "themes": "Manufacturing Controls",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Cedar Demonstration",
+        "site_name": "Fictional site 2",
+        "themes": "OOS Investigation",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Cedar Demonstration",
+        "site_name": "Fictional site 2",
+        "themes": "Quality Systems",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Cedar Demonstration",
+        "site_name": "Fictional site 2",
+        "themes": "Training",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      },
+      {
+        "company_name": "Cedar Demonstration",
+        "site_name": "Fictional site 2",
+        "themes": "Validation",
+        "observations": 3,
+        "inspections": 3,
+        "repeats": 2
+      }
+    ],
+    "reviewed": 0,
+    "evaluation": {
+      "status": "awaiting expert review",
+      "reviewed_count": 0,
+      "category_accuracy": null,
+      "severity_accuracy": null,
+      "theme_precision": null,
+      "theme_recall": null
+    },
+    "note": "Primary categories are exclusive; themes overlap. Recurrence counts distinct inspections within company/site. Reviewed tags override predictions only in these summaries."
+  }
+}

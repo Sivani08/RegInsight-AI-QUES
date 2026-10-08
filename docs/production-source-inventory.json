@@ -1,0 +1,2178 @@
+[
+  {
+    "file": "backend/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/agents/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/agents/chatbot.py",
+    "functions": [
+      "local_origin",
+      "model_name",
+      "tokens",
+      "compact_dashboard_evidence",
+      "__init__",
+      "status",
+      "retrieve",
+      "validate",
+      "generate",
+      "stream"
+    ],
+    "imports": [
+      "import asyncio",
+      "import json",
+      "import os",
+      "import re",
+      "import time",
+      "from pathlib import Path",
+      "from urllib.parse import urlsplit",
+      "import httpx",
+      "from pydantic import BaseModel, ConfigDict, Field",
+      "from backend.semantic.models import QueryRequest",
+      "from backend.services.dashboard_insights import DashboardInsights"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/agents/investigator.py",
+    "functions": [
+      "display_rate",
+      "__init__",
+      "query"
+    ],
+    "imports": [
+      "import re",
+      "import uuid",
+      "from datetime import datetime, timezone",
+      "from backend.tools.registry import Tools",
+      "from backend.analytics.taxonomy import THEMES",
+      "from backend.agents.observation_investigator import investigate"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/agents/observation_investigator.py",
+    "functions": [
+      "investigate"
+    ],
+    "imports": [
+      "import re, uuid",
+      "from datetime import datetime, timezone",
+      "from backend.tools.observation_tools import ObservationTools",
+      "from backend.analytics.intelligence_taxonomy import THEME_NAMES",
+      "from backend.services import observation_intelligence as s"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/agents/specialists.py",
+    "functions": [
+      "__init__",
+      "run"
+    ],
+    "imports": [
+      "import re",
+      "from backend.workflows.schemas import AgentInput, AgentResult, GeneratedDraft",
+      "from backend.workflows.policy import ROOT",
+      "import json"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/analytics/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/analytics/alerts.py",
+    "functions": [
+      "site_alerts",
+      "add"
+    ],
+    "imports": [
+      "from datetime import date",
+      "from pathlib import Path",
+      "import yaml",
+      "from backend.analytics.metrics import metrics, find_recurring_risks",
+      "from backend.analytics.taxonomy import rule_analysis",
+      "from backend.risk.engine import calculate_risk"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/analytics/dashboard_queries.py",
+    "functions": [
+      "where",
+      "aggregate",
+      "site_scope",
+      "ranked_sites",
+      "risk_distribution",
+      "dashboard",
+      "_dashboard",
+      "value",
+      "count_if"
+    ],
+    "imports": [
+      "import hashlib",
+      "import json",
+      "import threading",
+      "from datetime import date, timedelta",
+      "from itertools import groupby",
+      "from sqlalchemy import select, func, case, cast, Integer, Table, Column, String, Float, JSON, delete",
+      "from backend.database.store import inspections as t, metadata",
+      "from backend.analytics.metrics import ratio",
+      "from backend.risk.engine import calculate_risk",
+      "from backend.database.retrieval_mart import table_for",
+      "from backend.services.mart import entities_table",
+      "from backend.database.retrieval_mart import table_for",
+      "from backend.cache.redis_cache import get_cache",
+      "from backend.cache.retrieval import inspection_identity",
+      "from backend.analytics.graph_insights import graph_insights"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/analytics/graph_insights.py",
+    "functions": [
+      "graph_insights"
+    ],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/analytics/intelligence_taxonomy.py",
+    "functions": [
+      "normalize",
+      "is_instruction",
+      "supported_theme",
+      "severity_supported",
+      "rules"
+    ],
+    "imports": [
+      "import re",
+      "from backend.analytics.taxonomy import THEMES as RISK_THEMES"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/analytics/metrics.py",
+    "functions": [
+      "ratio",
+      "metrics",
+      "find_recurring_risks",
+      "analyze_trend"
+    ],
+    "imports": [
+      "from collections import Counter, defaultdict",
+      "from datetime import date",
+      "from backend.analytics.taxonomy import themes",
+      "from backend.risk.engine import calculate_risk"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/analytics/observation_groups.py",
+    "functions": [
+      "__init__",
+      "vector",
+      "prepare",
+      "signatures",
+      "assign"
+    ],
+    "imports": [
+      "import os, re, math, hashlib, json",
+      "from collections import Counter, defaultdict, deque",
+      "from pathlib import Path",
+      "from backend.analytics.intelligence_taxonomy import VERSION",
+      "import numpy as np",
+      "from sentence_transformers import SentenceTransformer",
+      "import numpy as np"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "59: connection.execute('INSERT OR REPLACE INTO embeddings VALUES (?,?,?,?)',(row['hash'],self.embedding_model,self.embedding_version,json.dumps(v.tolist() if self.model is not None else v)))"
+    ]
+  },
+  {
+    "file": "backend/analytics/observation_rubric.py",
+    "functions": [
+      "tag_rules"
+    ],
+    "imports": [
+      "import re",
+      "from backend.analytics.taxonomy import THEMES"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/analytics/taxonomy.py",
+    "functions": [
+      "themes",
+      "rule_analysis"
+    ],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/api/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/api/agent.py",
+    "functions": [
+      "query",
+      "tools"
+    ],
+    "imports": [
+      "from fastapi import APIRouter, Request",
+      "from pydantic import BaseModel, Field",
+      "from backend.agents.investigator import InspectionAgent",
+      "from backend.tools.observation_tools import ObservationTools"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/api/ai.py",
+    "functions": [
+      "observation"
+    ],
+    "imports": [
+      "from fastapi import APIRouter",
+      "from pydantic import BaseModel, Field",
+      "from backend.genai.providers import analyze_observation"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/api/alerts.py",
+    "functions": [
+      "alerts"
+    ],
+    "imports": [
+      "from collections import defaultdict",
+      "from fastapi import APIRouter, Request",
+      "from backend.analytics.alerts import site_alerts"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/api/benchmarks.py",
+    "functions": [
+      "read",
+      "program_name",
+      "benchmarks"
+    ],
+    "imports": [
+      "import json",
+      "from collections import defaultdict",
+      "from functools import lru_cache",
+      "from pathlib import Path",
+      "from fastapi import APIRouter, Request, Query",
+      "from backend.analytics.taxonomy import themes",
+      "from backend.database.store import ROOT"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/api/chatbot.py",
+    "functions": [
+      "status",
+      "chat",
+      "events"
+    ],
+    "imports": [
+      "import json",
+      "from fastapi import APIRouter, Request",
+      "from fastapi.responses import StreamingResponse",
+      "from backend.semantic.models import QueryRequest"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/api/dashboard_assistant.py",
+    "functions": [
+      "semantic_catalog",
+      "dashboard_query"
+    ],
+    "imports": [
+      "from fastapi import APIRouter, Request, HTTPException",
+      "from pydantic import ValidationError",
+      "from backend.semantic.catalog import catalog",
+      "from backend.semantic.models import QueryRequest, QueryResponse",
+      "from backend.services.dashboard_insights import DashboardInsights"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/api/main.py",
+    "functions": [
+      "create_app",
+      "lifespan",
+      "retrieval_timing",
+      "invalid_output",
+      "invalid",
+      "db_error",
+      "service",
+      "health",
+      "cache_status",
+      "dashboard",
+      "inspections",
+      "companies",
+      "sites",
+      "profile",
+      "risk",
+      "trends",
+      "recurrence",
+      "quality",
+      "evidence",
+      "frontend"
+    ],
+    "imports": [
+      "from contextlib import asynccontextmanager",
+      "from pathlib import Path",
+      "from fastapi import FastAPI, Query, Request, HTTPException",
+      "from fastapi.responses import JSONResponse, FileResponse",
+      "from fastapi.staticfiles import StaticFiles",
+      "from sqlalchemy.exc import SQLAlchemyError",
+      "from backend.database.store import Store, ROOT",
+      "from backend.services.intelligence import Intelligence",
+      "from backend.genai.redaction import install_redaction",
+      "from backend.api.security import install_security",
+      "import time",
+      "from pydantic import ValidationError",
+      "from backend.api.ai import router as ai_router",
+      "from backend.api.agent import router as agent_router",
+      "from backend.api.dashboard_assistant import router as dashboard_router",
+      "from backend.api.chatbot import router as chatbot_router",
+      "from backend.api.alerts import router as alerts_router",
+      "from backend.api.benchmarks import router as benchmark_router",
+      "from backend.api.observation_workspace import router as observations_router",
+      "from backend.api.observation_intelligence import router as intelligence_router",
+      "from backend.api.qc import router as qc_router",
+      "from backend.api.workspace import router as website_router",
+      "from backend.api.workflows import router as workflows_router",
+      "from backend.database.retrieval_mart import attach",
+      "from backend.agents.chatbot import RegInsightChatAgent",
+      "from backend.workflows.factory import create_workflows",
+      "from backend.cache.redis_cache import get_cache",
+      "from backend.cache.redis_cache import get_cache"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/api/observation_intelligence.py",
+    "functions": [
+      "single_request_gate",
+      "classify",
+      "batch",
+      "job",
+      "tags",
+      "metrics",
+      "similar",
+      "groups",
+      "quarantine",
+      "report",
+      "inventory",
+      "execute"
+    ],
+    "imports": [
+      "import json, uuid, os",
+      "from typing import Literal",
+      "from functools import lru_cache",
+      "from fastapi import APIRouter, Query, BackgroundTasks, HTTPException",
+      "from pydantic import Field",
+      "from backend.genai.contracts import StrictModel, ObservationTag, TagsPage, MetricsPage, GroupsPage",
+      "from backend.genai.classifier import Classifier",
+      "from backend.services import observation_intelligence as s",
+      "from data_engineering.intelligence_sources import db",
+      "from backend.genai.request_gate import RequestGate",
+      "from backend.services.intelligence_lock import run_lock",
+      "from data_engineering.intelligence_sources import ROOT",
+      "from data_engineering.intelligence_sources import ROOT"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "45: c.execute('BEGIN IMMEDIATE')"
+    ]
+  },
+  {
+    "file": "backend/api/observation_workspace.py",
+    "functions": [
+      "workspace",
+      "demo",
+      "export",
+      "history",
+      "review"
+    ],
+    "imports": [
+      "from fastapi import APIRouter, Query, HTTPException",
+      "from pydantic import BaseModel, Field",
+      "from backend.services import observations as s",
+      "from backend.analytics.observation_rubric import CATEGORIES, SEVERITIES, RUBRIC",
+      "from backend.analytics.taxonomy import THEMES",
+      "import json"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "20: with s.connect() as c:return [json.loads(r[0]) for r in c.execute('SELECT payload FROM reviews WHERE run_id=? AND observation_id=? ORDER BY rowid',(run_id,observation_id))]"
+    ]
+  },
+  {
+    "file": "backend/api/qc.py",
+    "functions": [
+      "datasets",
+      "import_json",
+      "import_csv",
+      "connection_catalog",
+      "sync",
+      "signals",
+      "audit",
+      "review",
+      "export",
+      "knowledge",
+      "source"
+    ],
+    "imports": [
+      "import io, csv, json",
+      "from fastapi import APIRouter, Query, HTTPException",
+      "from fastapi.responses import FileResponse, Response",
+      "from pydantic import BaseModel, ConfigDict, Field",
+      "from typing import Literal",
+      "from backend.services import qc_data as d, qc_signals as s, knowledge as k, qc_connections as connections"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/api/security.py",
+    "functions": [
+      "install_security",
+      "valid",
+      "authenticated",
+      "token",
+      "protect",
+      "status",
+      "login",
+      "logout"
+    ],
+    "imports": [
+      "import hashlib",
+      "import hmac",
+      "import os",
+      "import secrets",
+      "import time",
+      "from collections import OrderedDict, deque",
+      "from urllib.parse import urlsplit",
+      "from fastapi import Request, HTTPException",
+      "from fastapi.responses import JSONResponse",
+      "from pydantic import BaseModel, Field, ConfigDict",
+      "from starlette.middleware.trustedhost import TrustedHostMiddleware"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/api/workflows.py",
+    "functions": [
+      "service",
+      "get",
+      "create",
+      "pending",
+      "configuration",
+      "read",
+      "trace",
+      "retrieval",
+      "evaluation",
+      "resume",
+      "review"
+    ],
+    "imports": [
+      "from fastapi import APIRouter, Request, HTTPException, BackgroundTasks",
+      "from pydantic import Field",
+      "from backend.workflows.schemas import WorkflowRequest, ReviewDecision, Strict",
+      "from backend.workflows.repository import Conflict"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "27: 'vector_store':'SQLite BLOB vectors + exact SQL cosine UDF; no ANN',"
+    ]
+  },
+  {
+    "file": "backend/api/workspace.py",
+    "functions": [
+      "review_table",
+      "cohort",
+      "summary",
+      "observations",
+      "history",
+      "review",
+      "nonblank"
+    ],
+    "imports": [
+      "import json",
+      "from datetime import datetime, timezone",
+      "from typing import Literal",
+      "from fastapi import APIRouter, HTTPException, Query",
+      "from pydantic import BaseModel, Field, field_validator",
+      "from backend.services import observation_intelligence as intelligence",
+      "from data_engineering.intelligence_sources import db, DB",
+      "from backend.cache.retrieval import workspace_cache",
+      "from backend.services.website_index import ensure",
+      "from backend.analytics.intelligence_taxonomy import THEME_NAMES",
+      "from backend.services.retrieval_search import text_predicate, candidate_predicate"
+    ],
+    "tables": [
+      "retrieval_summaries",
+      "website_reviews"
+    ],
+    "sqlite_lines": [
+      "60: c.execute('PRAGMA temp_store=MEMORY')",
+      "83: c.execute('INSERT OR REPLACE INTO retrieval_summaries VALUES (?,?,?)',(rid,dataset or '',json.dumps(result)))",
+      "100: c.execute('PRAGMA temp_store=MEMORY')",
+      "155: c.execute('BEGIN IMMEDIATE')"
+    ]
+  },
+  {
+    "file": "backend/cache/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/cache/redis_cache.py",
+    "functions": [
+      "get_cache",
+      "__init__",
+      "key",
+      "available",
+      "bump",
+      "failure",
+      "get",
+      "put",
+      "remember",
+      "status",
+      "close"
+    ],
+    "imports": [
+      "import hashlib, json, logging, os, time",
+      "from functools import lru_cache",
+      "from threading import Lock, Event",
+      "from collections import OrderedDict",
+      "from copy import deepcopy",
+      "import redis",
+      "from redis.backoff import NoBackoff",
+      "from redis.retry import Retry"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/cache/retrieval.py",
+    "functions": [
+      "inspection_identity",
+      "workspace_cache",
+      "wrapped"
+    ],
+    "imports": [
+      "from functools import wraps",
+      "from inspect import signature",
+      "from pathlib import Path",
+      "from backend.cache.redis_cache import get_cache",
+      "from backend.api import workspace",
+      "from fastapi.params import Param"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "24: revision=c.execute('SELECT coalesce(max(rowid),0) FROM website_reviews WHERE run_id=?',(rid,)).fetchone()[0]"
+    ]
+  },
+  {
+    "file": "backend/cache/snapshots.py",
+    "functions": [
+      "snapshot_cache",
+      "decorate",
+      "wrapped"
+    ],
+    "imports": [
+      "from functools import wraps",
+      "from inspect import signature",
+      "from pathlib import Path",
+      "from backend.cache.redis_cache import get_cache",
+      "from backend.services.observation_intelligence import latest, db",
+      "import json"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/database/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/database/load.py",
+    "functions": [
+      "load"
+    ],
+    "imports": [
+      "import argparse",
+      "import json",
+      "from pathlib import Path",
+      "import pandas as pd",
+      "from backend.database.store import Store"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/database/retrieval_mart.py",
+    "functions": [
+      "table_for",
+      "attach",
+      "prepare"
+    ],
+    "imports": [
+      "from sqlalchemy import Table, Column, String, Integer, JSON, select, delete, func, Index",
+      "from backend.database.store import metadata, inspections",
+      "from backend.services.mart import entities_table",
+      "from backend.analytics.dashboard_queries import scoped"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "65: if store.dialect=='sqlite':",
+      "66: with store.engine.begin() as c:c.exec_driver_sql('PRAGMA optimize')"
+    ]
+  },
+  {
+    "file": "backend/database/store.py",
+    "functions": [
+      "__init__",
+      "info",
+      "replace",
+      "search",
+      "save_evidence",
+      "update_evidence_trace",
+      "get_evidence",
+      "connect"
+    ],
+    "imports": [
+      "import hashlib",
+      "import json",
+      "import logging",
+      "import os",
+      "from pathlib import Path",
+      "from sqlalchemy import create_engine, MetaData, Table, Column, String, Integer, JSON, select, delete, text, func, update, or_",
+      "from sqlalchemy.pool import StaticPool",
+      "from backend.database.retrieval_mart import table_for"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "21: default=f'sqlite:///{(ROOT/\"data/inspections.db\").as_posix()}'",
+      "24: fallback=allow_fallback if allow_fallback is not None else os.getenv('ALLOW_SQLITE_FALLBACK','true').lower()=='true'",
+      "26: options={'connect_args':{'check_same_thread':False}} if target.startswith('sqlite') else {'connect_args':{'connect_timeout':5}}",
+      "27: if target=='sqlite:///:memory:': options['poolclass']=StaticPool",
+      "34: if not fallback or url.startswith('sqlite'): raise RuntimeError('Database connection failed. Check DATABASE_URL and database availability.') from None",
+      "35: self.warning='Configured PostgreSQL unavailable; using the local SQLite dataset. Check database configuration.'"
+    ]
+  },
+  {
+    "file": "backend/genai/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/genai/classification_prompt.py",
+    "functions": [
+      "observation_data"
+    ],
+    "imports": [
+      "import json",
+      "from backend.genai.contracts import Classification",
+      "from backend.analytics.intelligence_taxonomy import VERSION"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/genai/classifier.py",
+    "functions": [
+      "cache_key",
+      "__init__",
+      "classify"
+    ],
+    "imports": [
+      "import logging, os, hashlib, json",
+      "from pydantic import ValidationError",
+      "from backend.analytics.intelligence_taxonomy import VERSION, normalize, rules",
+      "from backend.genai.contracts import Classification, ObservationTag",
+      "from backend.genai.providers import MockProvider, OpenAIProvider, ClaudeProvider, LocalProvider, OllamaProvider, GeminiProvider",
+      "from backend.genai.request_gate import RequestGate, RequestLimit",
+      "from backend.genai.classification_prompt import PROMPT_VERSION",
+      "from backend.genai.redaction import install_redaction",
+      "from backend.genai.classification_prompt import PROMPT_VERSION"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/genai/contracts.py",
+    "functions": [
+      "consistent",
+      "verify_evidence",
+      "provenance"
+    ],
+    "imports": [
+      "from datetime import datetime, timezone",
+      "from typing import Literal, Annotated",
+      "from pydantic import BaseModel, ConfigDict, Field, ValidationInfo, model_validator",
+      "from backend.analytics.intelligence_taxonomy import THEME_NAMES, VERSION",
+      "from backend.analytics.intelligence_taxonomy import supported_theme, severity_supported, is_instruction",
+      "import re"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/genai/providers.py",
+    "functions": [
+      "analyze_observation",
+      "analyze",
+      "analyze",
+      "__init__",
+      "request",
+      "prompt",
+      "data",
+      "schema",
+      "settings",
+      "analyze",
+      "__init__",
+      "analyze",
+      "__init__",
+      "analyze",
+      "analyze",
+      "analyze"
+    ],
+    "imports": [
+      "import json",
+      "import os",
+      "from abc import ABC, abstractmethod",
+      "from typing import Literal",
+      "import httpx",
+      "from pydantic import BaseModel, ConfigDict, Field",
+      "from backend.analytics.taxonomy import THEMES, rule_analysis",
+      "from backend.genai.redaction import install_redaction",
+      "from backend.genai.request_gate import RequestGate",
+      "from backend.genai.classification_prompt import SYSTEM as INTELLIGENCE_SYSTEM",
+      "from backend.genai.classification_prompt import observation_data",
+      "from backend.genai.contracts import Classification",
+      "from urllib.parse import urlparse",
+      "from urllib.parse import urlparse",
+      "from backend.genai.classifier import Classifier",
+      "from backend.services.observation_intelligence import classify_cached",
+      "from data_engineering.intelligence_sources import db",
+      "from urllib.parse import quote"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "129: connection.execute('BEGIN IMMEDIATE')"
+    ]
+  },
+  {
+    "file": "backend/genai/redaction.py",
+    "functions": [
+      "redact",
+      "install_redaction",
+      "factory"
+    ],
+    "imports": [
+      "import logging",
+      "import os",
+      "import re",
+      "import threading",
+      "import traceback"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/genai/request_gate.py",
+    "functions": [
+      "__init__",
+      "acquire",
+      "_acquire",
+      "request",
+      "open_circuit",
+      "_request"
+    ],
+    "imports": [
+      "import os, time, json, math, threading",
+      "from email.utils import parsedate_to_datetime",
+      "from datetime import datetime, timezone",
+      "import httpx"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/libraries/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/libraries/structured_llm.py",
+    "functions": [
+      "__init__",
+      "last_call",
+      "generate"
+    ],
+    "imports": [
+      "import json, re, threading, time",
+      "from contextvars import ContextVar",
+      "from collections import deque",
+      "import httpx",
+      "from backend.agents.chatbot import local_origin"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/rag/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/rag/chunking.py",
+    "functions": [
+      "chunk_document"
+    ],
+    "imports": [
+      "import hashlib, re",
+      "from .embeddings import EmbeddingService",
+      "from backend.workflows.schemas import Chunk"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/rag/embeddings.py",
+    "functions": [
+      "__init__",
+      "embed",
+      "embed_documents",
+      "embed_query"
+    ],
+    "imports": [
+      "import hashlib, math, re"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/rag/repository.py",
+    "functions": [
+      "pack",
+      "cosine",
+      "__init__",
+      "connect",
+      "upsert_document",
+      "search",
+      "count"
+    ],
+    "imports": [
+      "import json, math, sqlite3, struct",
+      "from contextlib import contextmanager",
+      "from pathlib import Path",
+      "from backend.workflows.schemas import Chunk, RetrievedChunk",
+      "import hashlib"
+    ],
+    "tables": [
+      "embedding_cache",
+      "vector_chunks"
+    ],
+    "sqlite_lines": [
+      "1: \"\"\"SQLite exact vector store: BLOB vectors, JSON metadata and SQL cosine search.",
+      "6: import json, math, sqlite3, struct",
+      "27: c.executescript('''PRAGMA journal_mode=WAL;",
+      "36: c=sqlite3.connect(self.path,timeout=15);c.row_factory=sqlite3.Row",
+      "48: c.execute('BEGIN IMMEDIATE')"
+    ]
+  },
+  {
+    "file": "backend/rag/service.py",
+    "functions": [
+      "__init__",
+      "ingest",
+      "search",
+      "seed_references"
+    ],
+    "imports": [
+      "from .chunking import chunk_document",
+      "from backend.workflows.schemas import RetrievalTrace",
+      "import json"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/risk/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/risk/engine.py",
+    "functions": [
+      "load_config",
+      "calculate_risk"
+    ],
+    "imports": [
+      "from datetime import date",
+      "from pathlib import Path",
+      "from math import isfinite",
+      "import yaml",
+      "from backend.analytics.metrics import metrics, find_recurring_risks"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/semantic/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/semantic/catalog.py",
+    "functions": [
+      "catalog"
+    ],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/semantic/models.py",
+    "functions": [
+      "range_valid",
+      "focus_known",
+      "nonblank",
+      "supported"
+    ],
+    "imports": [
+      "import os",
+      "from datetime import date",
+      "from typing import Literal, Any",
+      "from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator",
+      "from .catalog import METRICS, DIMENSIONS, FOCUSES, INTENTS"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/semantic/planner.py",
+    "functions": [
+      "plan"
+    ],
+    "imports": [
+      "import re",
+      "from .models import QueryPlan, Filters",
+      "from .resolver import resolve"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/semantic/resolver.py",
+    "functions": [
+      "resolve"
+    ],
+    "imports": [
+      "import re",
+      "from .catalog import METRICS, COMPOSITE_ALIASES"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/services/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/services/dashboard_insights.py",
+    "functions": [
+      "canonical",
+      "observation_insights",
+      "validate_numeric",
+      "__init__",
+      "get_inspection_activity",
+      "get_classification_distribution",
+      "get_citation_oai_trend",
+      "get_risk_distribution",
+      "get_ranked_sites",
+      "get_overall_insights",
+      "get_recurring_risk_signals",
+      "get_observation_dashboard_insights",
+      "execute",
+      "_execute",
+      "query",
+      "compose"
+    ],
+    "imports": [
+      "import copy",
+      "import json",
+      "import logging",
+      "import time",
+      "import uuid",
+      "from datetime import datetime, timezone",
+      "from sqlalchemy import select, func",
+      "from backend.database.store import inspections",
+      "from backend.analytics import dashboard_queries as queries",
+      "from backend.semantic.catalog import METRICS, VERSION",
+      "from backend.semantic.models import QueryRequest, QueryResponse, Layers, Insight, Context",
+      "from backend.semantic.planner import plan",
+      "from backend.api import workspace",
+      "from data_engineering.intelligence_sources import db",
+      "from backend.services import observation_intelligence as intelligence",
+      "from backend.cache.redis_cache import get_cache",
+      "from backend.cache.retrieval import inspection_identity",
+      "from backend.analytics.graph_insights import graph_insights"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "39: review=c.execute('SELECT count(*)'+joined+\" AND NOT EXISTS (SELECT 1 FROM website_reviews w WHERE w.run_id=o.run_id AND w.observation_id=o.id AND w.revision=(SELECT max(w2.revision) FROM website_reviews w2 WHERE w2.run_id=o.run_id AND w2.observation_id=o.id) AND json_extract(w.payload,'$.action') IN ('Approve','Modify'))\",args).fetchone()[0]",
+      "43: detail_scope+=\" AND NOT EXISTS (SELECT 1 FROM website_reviews w WHERE w.run_id=o.run_id AND w.observation_id=o.id AND w.revision=(SELECT max(w2.revision) FROM website_reviews w2 WHERE w2.run_id=o.run_id AND w2.observation_id=o.id) AND json_extract(w.payload,'$.action') IN ('Approve','Modify'))\""
+    ]
+  },
+  {
+    "file": "backend/services/intelligence.py",
+    "functions": [
+      "__init__",
+      "info",
+      "risk",
+      "trend",
+      "recurrence",
+      "company_names",
+      "entities",
+      "profile",
+      "dashboard"
+    ],
+    "imports": [
+      "from collections import defaultdict",
+      "from backend.services.mart import read_entities, names",
+      "from backend.analytics.metrics import analyze_trend, find_recurring_risks",
+      "from backend.risk.engine import calculate_risk, load_config",
+      "from backend.analytics.dashboard_queries import dashboard"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/services/intelligence_lock.py",
+    "functions": [
+      "run_lock"
+    ],
+    "imports": [
+      "from contextlib import contextmanager",
+      "from pathlib import Path",
+      "import os",
+      "import msvcrt",
+      "import fcntl"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/services/knowledge.py",
+    "functions": [
+      "sources",
+      "search"
+    ],
+    "imports": [
+      "import json, re, sqlite3",
+      "from data_engineering.intelligence_sources import ROOT"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "2: import json,re,sqlite3",
+      "7: c=sqlite3.connect(DB)",
+      "14: c=sqlite3.connect(DB);c.row_factory=sqlite3.Row"
+    ]
+  },
+  {
+    "file": "backend/services/mart.py",
+    "functions": [
+      "read_entities",
+      "names",
+      "build"
+    ],
+    "imports": [
+      "import json",
+      "from collections import defaultdict, Counter",
+      "from pathlib import Path",
+      "from sqlalchemy import Table, Column, String, Float, JSON, select, delete, update",
+      "from backend.database.store import metadata, datasets, inspections, Store",
+      "from backend.risk.engine import calculate_risk, load_config",
+      "from backend.analytics.metrics import metrics, analyze_trend, find_recurring_risks",
+      "import argparse"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "63: build(Store('sqlite:///'+Path(a.database).resolve().as_posix(),allow_fallback=False))"
+    ]
+  },
+  {
+    "file": "backend/services/observation_intelligence.py",
+    "functions": [
+      "latest",
+      "validated_cache",
+      "classify_cached",
+      "_run",
+      "scope",
+      "tags",
+      "metrics",
+      "similar",
+      "report",
+      "groups",
+      "run"
+    ],
+    "imports": [
+      "import json, os, time, uuid, hashlib",
+      "from pathlib import Path",
+      "from datetime import datetime, timezone",
+      "from data_engineering.intelligence_sources import DB, db",
+      "from backend.genai.classifier import Classifier",
+      "from backend.genai.contracts import ObservationTag, ObservationRecord, TagsPage, ThemeMetric, MetricsPage",
+      "from backend.genai.classification_prompt import PROMPT_VERSION, NOTICE",
+      "from backend.analytics.intelligence_taxonomy import VERSION",
+      "from backend.analytics.observation_groups import Grouper",
+      "from backend.cache.snapshots import snapshot_cache",
+      "from backend.cache.redis_cache import get_cache",
+      "from backend.genai.classifier import cache_key",
+      "from backend.analytics.intelligence_taxonomy import normalize",
+      "from backend.genai.classifier import cache_key",
+      "from backend.analytics.intelligence_taxonomy import rules",
+      "from backend.genai.contracts import GroupsPage, SemanticGroup",
+      "from backend.services.intelligence_lock import run_lock"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "16: row=c.execute(\"SELECT id,payload FROM runs WHERE json_extract(payload,'$.status')='completed' ORDER BY rowid DESC LIMIT 1\").fetchone()",
+      "37: connection.execute('INSERT OR REPLACE INTO cache VALUES (?,?,?)',(key,hashlib.sha256(text.encode()).hexdigest(),tag.model_dump_json()))",
+      "94: c.execute('INSERT OR REPLACE INTO cache VALUES (?,?,?)',(key,h,tag.model_dump_json()))",
+      "103: stats=c.execute(\"SELECT count(*) total,count(DISTINCT o.hash) unique_texts,count(DISTINCT o.inspection_id) inspections,sum(json_extract(t.payload,'$.ai_generated')) ai,sum(NOT json_extract(t.payload,'$.ai_generated')) rules,sum(json_extract(t.payload,'$.fallback')) fallbacks,sum(json_extract(t.payload,'$.theme')='Unclassified') unclassified,avg(json_extract(t.payload,'$.confidence')) confidence,sum(json_extract(t.payload,'$.severity')='High') high_severity,sum(json_extract(t.payload,'$.severity')='Critical') critical_severity,count(DISTINCT a.group_id) semantic_groups FROM observations o CROSS JOIN members m ON m.observation_id=o.id JOIN assignments a ON a.run_id=m.run_id AND a.hash=o.hash JOIN cache t ON t.key=a.cache_key WHERE m.run_id=?\",(runid,)).fetchone()",
+      "118: if value:where.append(\"json_extract(t.payload,'$.\"+key+\"')=?\");args.append(value)",
+      "121: where.append(\"coalesce(json_extract(t.payload,'$.reviewed'),0)=?\");args.append(0 if review_required else 1)",
+      "153: c.execute('PRAGMA temp_store=MEMORY')",
+      "154: c.execute(\"CREATE TEMP TABLE cohort AS SELECT o.inspection_id,o.site,o.year,o.company,o.product,o.inspection_type,o.frequency,json_extract(t.payload,'$.theme') theme,json_extract(t.payload,'$.severity') severity,json_extract(t.payload,'$.ai_generated') ai_generated\"+joined,args)"
+    ]
+  },
+  {
+    "file": "backend/services/observations.py",
+    "functions": [
+      "connect",
+      "claude_tag",
+      "validate",
+      "run_batch",
+      "get_run",
+      "rows",
+      "summaries",
+      "review",
+      "export",
+      "classify",
+      "counts"
+    ],
+    "imports": [
+      "import hashlib, json, os, sqlite3, uuid",
+      "from datetime import datetime, timezone",
+      "from pathlib import Path",
+      "import pandas as pd",
+      "from backend.analytics.observation_rubric import CATEGORIES, SEVERITIES, VERSION, RUBRIC, tag_rules",
+      "from backend.analytics.taxonomy import THEMES",
+      "from backend.genai.providers import ClaudeProvider",
+      "from data_engineering.observation_demo import records",
+      "from pydantic import BaseModel, ConfigDict, Field",
+      "from typing import Literal",
+      "from backend.genai.request_gate import RequestGate"
+    ],
+    "tables": [
+      "reviews",
+      "runs",
+      "tags"
+    ],
+    "sqlite_lines": [
+      "2: import hashlib,json,os,sqlite3,uuid",
+      "24: c=sqlite3.connect(path);c.row_factory=sqlite3.Row",
+      "83: row=c.execute('SELECT payload FROM runs WHERE id=?',(run_id,)).fetchone() if run_id else c.execute('SELECT payload FROM runs ORDER BY rowid DESC LIMIT 1').fetchone()",
+      "110: c.execute('BEGIN IMMEDIATE')"
+    ]
+  },
+  {
+    "file": "backend/services/qc_connections.py",
+    "functions": [
+      "configs",
+      "catalog",
+      "sync"
+    ],
+    "imports": [
+      "import json, os, re",
+      "from urllib.parse import urlsplit",
+      "import httpx",
+      "from backend.services import qc_data as data"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/services/qc_data.py",
+    "functions": [
+      "connection",
+      "now",
+      "digest",
+      "ingest",
+      "datasets",
+      "rows",
+      "csv_import",
+      "review",
+      "audit",
+      "month_valid",
+      "counts"
+    ],
+    "imports": [
+      "import json, sqlite3, hashlib, uuid, csv, io",
+      "from contextlib import contextmanager",
+      "from datetime import date, datetime, timezone",
+      "from typing import Literal",
+      "from pydantic import BaseModel, ConfigDict, Field, model_validator, field_validator",
+      "from data_engineering.intelligence_sources import ROOT"
+    ],
+    "tables": [
+      "audit",
+      "datasets",
+      "records"
+    ],
+    "sqlite_lines": [
+      "2: import json,sqlite3,hashlib,uuid,csv,io",
+      "41: c=sqlite3.connect(path);c.row_factory=sqlite3.Row",
+      "73: with connection() as c:return [json.loads(r[0]) for r in c.execute('SELECT payload FROM datasets ORDER BY rowid DESC')]",
+      "96: with connection() as c:return [{'id':r['id'],'created_at':r['created_at'],**json.loads(r['payload'])} for r in c.execute(\"SELECT * FROM audit WHERE json_extract(payload,'$.dataset_id')=? ORDER BY rowid DESC LIMIT 200\",(dataset_id,))]"
+    ]
+  },
+  {
+    "file": "backend/services/qc_signals.py",
+    "functions": [
+      "month_number",
+      "month_label",
+      "predict",
+      "forecast",
+      "analyze"
+    ],
+    "imports": [
+      "import json, math",
+      "from datetime import date",
+      "from collections import defaultdict",
+      "from backend.services import qc_data as data",
+      "from backend.cache.redis_cache import get_cache"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/services/retrieval_search.py",
+    "functions": [
+      "prepare_text_search",
+      "text_predicate",
+      "prepare_metadata_search",
+      "candidate_predicate"
+    ],
+    "imports": [
+      "import sqlite3"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "2: import sqlite3",
+      "6: c.execute(\"CREATE VIRTUAL TABLE IF NOT EXISTS website_text_search USING fts5(text,content='texts',content_rowid='rowid',tokenize='trigram')\")",
+      "7: except sqlite3.OperationalError as exc:",
+      "10: exists=c.execute(\"SELECT 1 FROM sqlite_master WHERE type='trigger' AND name='retrieval_text_insert'\").fetchone()",
+      "15: INSERT INTO website_text_search(rowid,text) VALUES (new.rowid,new.text);",
+      "18: INSERT INTO website_text_search(website_text_search,rowid,text) VALUES ('delete',old.rowid,old.text);",
+      "21: INSERT INTO website_text_search(website_text_search,rowid,text) VALUES ('delete',old.rowid,old.text);",
+      "22: INSERT INTO website_text_search(rowid,text) VALUES (new.rowid,new.text);",
+      "28: # SQLite lower() folds ASCII; preserve existing Unicode/short-query semantics.",
+      "29: if len(search)>=3 and search.isascii() and c.execute(\"SELECT 1 FROM sqlite_master WHERE name='retrieval_text_insert'\").fetchone():",
+      "31: return '''SELECT t.hash FROM website_text_search f JOIN texts t ON t.rowid=f.rowid",
+      "36: if not c.execute(\"SELECT 1 FROM sqlite_master WHERE name='website_index'\").fetchone():return",
+      "39: c.execute(\"CREATE VIRTUAL TABLE IF NOT EXISTS website_meta_search USING fts5(company,site,inspection_id,content='website_index',content_rowid='rowid',tokenize='trigram')\")",
+      "40: except sqlite3.OperationalError as exc:",
+      "43: if not c.execute(\"SELECT 1 FROM sqlite_master WHERE name='retrieval_meta_insert'\").fetchone():",
+      "47: INSERT INTO website_meta_search(rowid,company,site,inspection_id) VALUES(new.rowid,new.company,new.site,new.inspection_id);",
+      "50: INSERT INTO website_meta_search(website_meta_search,rowid,company,site,inspection_id) VALUES('delete',old.rowid,old.company,old.site,old.inspection_id);",
+      "53: INSERT INTO website_meta_search(website_meta_search,rowid,company,site,inspection_id) VALUES('delete',old.rowid,old.company,old.site,old.inspection_id);",
+      "54: INSERT INTO website_meta_search(rowid,company,site,inspection_id) VALUES(new.rowid,new.company,new.site,new.inspection_id);",
+      "60: if c.execute(\"SELECT count(*) FROM sqlite_master WHERE name IN ('retrieval_meta_insert','retrieval_text_insert')\").fetchone()[0]!=2:return '',[]",
+      "62: return ''' AND o.rowid IN (SELECT rowid FROM website_meta_search WHERE website_meta_search MATCH ?",
+      "63: UNION SELECT rowid FROM website_index WHERE run_id=? AND hash IN ('''+text_sql+'))', ['\"'+search.replace('\"','\"\"')+'\"',run_id]+text_args"
+    ]
+  },
+  {
+    "file": "backend/services/website_index.py",
+    "functions": [
+      "ensure"
+    ],
+    "imports": [
+      "import threading",
+      "import json",
+      "from data_engineering.intelligence_sources import db"
+    ],
+    "tables": [
+      "website_index",
+      "website_index_runs"
+    ],
+    "sqlite_lines": [
+      "21: c.execute('PRAGMA temp_store=MEMORY')",
+      "33: c.execute('PRAGMA busy_timeout=180000')",
+      "34: c.execute('BEGIN IMMEDIATE')",
+      "38: c.execute('''INSERT OR IGNORE INTO website_index",
+      "40: a.group_id,json_extract(t.payload,'$.theme'),json_extract(t.payload,'$.severity'),",
+      "41: CASE json_extract(t.payload,'$.severity') WHEN 'Critical' THEN 4"
+    ]
+  },
+  {
+    "file": "backend/tools/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/tools/observation_tools.py",
+    "functions": [
+      "__init__"
+    ],
+    "imports": [
+      "from pydantic import Field",
+      "from backend.genai.contracts import StrictModel",
+      "from backend.tools.registry import Tools",
+      "from backend.services import observation_intelligence as s"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/tools/registry.py",
+    "functions": [
+      "__init__",
+      "call",
+      "search_inspections",
+      "calculate_risk",
+      "analyze_trend",
+      "find_recurring_risks",
+      "get_evidence"
+    ],
+    "imports": [
+      "from pydantic import BaseModel, ConfigDict, Field",
+      "from backend.genai.providers import analyze_observation"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/workflows/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/workflows/evaluation.py",
+    "functions": [
+      "__init__",
+      "evaluate"
+    ],
+    "imports": [
+      "from .schemas import JudgeOutput, EvaluationResult",
+      "from .policy import ROOT"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/workflows/factory.py",
+    "functions": [
+      "create_workflows"
+    ],
+    "imports": [
+      "import os",
+      "from pathlib import Path",
+      "from .policy import load_policy, ROOT",
+      "from .repository import WorkflowRepository",
+      "from .service import WorkflowService",
+      "from backend.rag.embeddings import EmbeddingService",
+      "from backend.rag.repository import VectorRepository",
+      "from backend.rag.service import RetrievalService",
+      "from backend.libraries.structured_llm import StructuredLLM",
+      "from backend.services.dashboard_insights import DashboardInsights"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/workflows/policy.py",
+    "functions": [
+      "load_policy",
+      "coherent"
+    ],
+    "imports": [
+      "import json, os",
+      "from pathlib import Path",
+      "from pydantic import Field, model_validator",
+      "from .schemas import Strict"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/workflows/repository.py",
+    "functions": [
+      "__init__",
+      "connect",
+      "create",
+      "get",
+      "save",
+      "pending",
+      "events"
+    ],
+    "imports": [
+      "import json, sqlite3",
+      "from contextlib import contextmanager",
+      "from pathlib import Path",
+      "from .schemas import WorkflowState, now"
+    ],
+    "tables": [
+      "workflow_events",
+      "workflows"
+    ],
+    "sqlite_lines": [
+      "1: import json,sqlite3",
+      "12: c.executescript('''PRAGMA journal_mode=WAL;",
+      "19: c=sqlite3.connect(self.path,timeout=15)",
+      "37: c.execute('BEGIN IMMEDIATE')",
+      "46: with self.connect() as c:rows=c.execute(\"SELECT payload FROM workflows WHERE status='AWAITING_HUMAN_REVIEW' ORDER BY rowid DESC LIMIT 100\").fetchall()"
+    ]
+  },
+  {
+    "file": "backend/workflows/routing.py",
+    "functions": [
+      "route"
+    ],
+    "imports": [
+      "import re",
+      "from .schemas import QueryAnalysis, RoutingDecision"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/workflows/schemas.py",
+    "functions": [
+      "now",
+      "nonblank",
+      "allowed",
+      "nonblank"
+    ],
+    "imports": [
+      "from datetime import datetime, timezone",
+      "from typing import Literal",
+      "from pydantic import BaseModel, ConfigDict, Field, field_validator",
+      "from backend.semantic.models import Filters"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "backend/workflows/service.py",
+    "functions": [
+      "__init__",
+      "create",
+      "checkpoint",
+      "selected_observation",
+      "run",
+      "finalize",
+      "review"
+    ],
+    "imports": [
+      "import time, uuid, logging",
+      "from .schemas import WorkflowState, Artifact, AgentInput, now",
+      "from .policy import Policy",
+      "from .routing import route",
+      "from .evaluation import EvaluationService",
+      "from .repository import Conflict",
+      "from backend.agents.specialists import AGENTS",
+      "from backend.services.observation_intelligence import tags",
+      "from backend.rag.service import RetrievalService",
+      "from backend.semantic.models import QueryRequest",
+      "from backend.agents.chatbot import compact_dashboard_evidence",
+      "import json"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "24: # Log operational identifiers only. Sensitive evidence stays in access-controlled SQLite."
+    ]
+  },
+  {
+    "file": "data_engineering/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "data_engineering/build_knowledge.py",
+    "functions": [
+      "build"
+    ],
+    "imports": [
+      "import hashlib, json, sqlite3, zipfile, re",
+      "from pathlib import Path",
+      "import xml.etree.ElementTree as ET",
+      "from pypdf import PdfReader"
+    ],
+    "tables": [
+      "sources"
+    ],
+    "sqlite_lines": [
+      "2: import hashlib,json,sqlite3,zipfile,re",
+      "21: with sqlite3.connect(folder/'knowledge.db') as c:"
+    ]
+  },
+  {
+    "file": "data_engineering/dataset_inventory.py",
+    "functions": [
+      "source_paths",
+      "sha",
+      "inventory"
+    ],
+    "imports": [
+      "import hashlib, json, sqlite3",
+      "from collections import Counter",
+      "from pathlib import Path",
+      "import pyarrow.parquet as pq",
+      "from openpyxl import load_workbook"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "2: import hashlib,json,sqlite3"
+    ]
+  },
+  {
+    "file": "data_engineering/fda_source_adapter.py",
+    "functions": [
+      "canonicalize",
+      "import_reviewed"
+    ],
+    "imports": [
+      "import argparse, hashlib, json, sqlite3",
+      "from collections import Counter, defaultdict",
+      "from datetime import date",
+      "from itertools import groupby",
+      "from pathlib import Path",
+      "import pyarrow as pa",
+      "import pyarrow.parquet as pq",
+      "from sqlalchemy import delete",
+      "from backend.database.store import Store, inspections, datasets",
+      "from data_engineering.pipeline import CANONICAL"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "2: Consumes the audited SQLite staging file produced by source_review.py.",
+      "4: import argparse,hashlib,json,sqlite3",
+      "53: src=sqlite3.connect(staging);src.row_factory=sqlite3.Row",
+      "54: store=Store('sqlite:///'+(out/'inspections.db').as_posix(),allow_fallback=False)"
+    ]
+  },
+  {
+    "file": "data_engineering/intelligence_sources.py",
+    "functions": [
+      "db",
+      "digest",
+      "parquet_rows",
+      "add",
+      "from_inspections",
+      "generic",
+      "generic_rows",
+      "ingest",
+      "__exit__",
+      "pick"
+    ],
+    "imports": [
+      "import csv, json, hashlib, sqlite3, os",
+      "from pathlib import Path",
+      "from datetime import datetime",
+      "import pyarrow.parquet as pq",
+      "from backend.analytics.intelligence_taxonomy import normalize",
+      "from data_engineering.observation_demo import records as demo_records",
+      "from data_engineering.dataset_inventory import sha, source_paths",
+      "from openpyxl import load_workbook"
+    ],
+    "tables": [
+      "assignments",
+      "cache",
+      "conflicts",
+      "corpus",
+      "embeddings",
+      "identities",
+      "members",
+      "observations",
+      "origins",
+      "quarantine",
+      "runs",
+      "texts"
+    ],
+    "sqlite_lines": [
+      "2: import csv,json,hashlib,sqlite3,os",
+      "11: class ClosingConnection(sqlite3.Connection):",
+      "17: c=sqlite3.connect(path,timeout=30,factory=ClosingConnection);c.row_factory=sqlite3.Row",
+      "18: if c.execute('PRAGMA user_version').fetchone()[0]>=2:return c",
+      "19: c.executescript('''PRAGMA journal_mode=WAL;",
+      "37: PRAGMA user_version=2;",
+      "67: c.execute('INSERT OR IGNORE INTO identities VALUES (?,?)',(iid,identity_json))",
+      "73: c.execute('INSERT OR IGNORE INTO texts VALUES (?,?)',(h,text))",
+      "76: cur=c.execute('INSERT OR IGNORE INTO observations VALUES (?,?,?,?,?,?,?,?,?,?,?,?)',(oid,h,row['dataset'],row['grain'],iid,meta.get('company'),meta.get('site'),year,meta.get('product'),meta.get('inspection_type'),row.get('frequency'),json.dumps(original,default=str)))",
+      "78: c.execute('INSERT OR IGNORE INTO origins VALUES (?,?)',(oid,origin))"
+    ]
+  },
+  {
+    "file": "data_engineering/observation_demo.py",
+    "functions": [
+      "records"
+    ],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "data_engineering/pipeline.py",
+    "functions": [
+      "read_source",
+      "transform",
+      "export_frame",
+      "run"
+    ],
+    "imports": [
+      "import argparse",
+      "import json",
+      "import os",
+      "import sys",
+      "from datetime import date",
+      "from pathlib import Path",
+      "import pandas as pd",
+      "import pyarrow as pa",
+      "import pyarrow.parquet as pq",
+      "import yaml",
+      "from pyspark.sql import functions as F, Window",
+      "from pyspark.sql.types import IntegerType, LongType, DateType",
+      "from pyspark.sql import SparkSession"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "data_engineering/qc_demo.py",
+    "functions": [
+      "generate"
+    ],
+    "imports": [
+      "import csv, json",
+      "from pathlib import Path",
+      "from backend.services.qc_data import ImportRequest, QCRecord, ingest, ROOT",
+      "from backend.services.qc_signals import month_label, month_number"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "data_engineering/sample.py",
+    "functions": [
+      "generate"
+    ],
+    "imports": [
+      "import csv",
+      "import random",
+      "from pathlib import Path"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "data_engineering/source_review.py",
+    "functions": [
+      "val",
+      "query"
+    ],
+    "imports": [
+      "import sqlite3, json, hashlib, time",
+      "from pathlib import Path",
+      "from openpyxl import load_workbook",
+      "import argparse"
+    ],
+    "tables": [
+      "annual_source",
+      "citation_source",
+      "inspection_source"
+    ],
+    "sqlite_lines": [
+      "1: import sqlite3,json,hashlib,time",
+      "14: db=sqlite3.connect(out)"
+    ]
+  },
+  {
+    "file": "data_engineering/spark_jobs/__init__.py",
+    "functions": [],
+    "imports": [],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "data_engineering/spark_jobs/validate_real.py",
+    "functions": [
+      "run"
+    ],
+    "imports": [
+      "import argparse, json, os, sys",
+      "from pathlib import Path",
+      "from pyspark.sql import SparkSession, functions as F, Window",
+      "from data_engineering.pipeline import export_frame"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "data_engineering/tag_observations.py",
+    "functions": [],
+    "imports": [
+      "import argparse, json, os, gzip",
+      "from pathlib import Path",
+      "from backend.analytics.intelligence_taxonomy import VERSION",
+      "from data_engineering.intelligence_sources import DB, ROOT, db, ingest",
+      "from backend.services.observation_intelligence import run, report",
+      "from backend.services.observations import run_batch, export",
+      "from data_engineering.dataset_inventory import inventory"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/benchmark_retrieval.py",
+    "functions": [],
+    "imports": [
+      "import json, time, urllib.request, statistics, sys",
+      "from pathlib import Path"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/bootstrap.py",
+    "functions": [
+      "main"
+    ],
+    "imports": [
+      "import argparse",
+      "import os",
+      "import sys",
+      "from pathlib import Path",
+      "from backend.database.store import Store",
+      "from backend.database.load import load",
+      "from data_engineering.sample import generate",
+      "from data_engineering.pipeline import run",
+      "import uvicorn"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/browser_check.py",
+    "functions": [],
+    "imports": [
+      "from pathlib import Path",
+      "from playwright.sync_api import sync_playwright",
+      "import json"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/build_code_walkthrough.py",
+    "functions": [
+      "expr",
+      "py_target",
+      "note",
+      "link",
+      "local_link"
+    ],
+    "imports": [
+      "import ast, hashlib, html, json, re",
+      "from collections import defaultdict",
+      "from datetime import date",
+      "from pathlib import Path",
+      "from markdown_it import MarkdownIt"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/build_requirement_audit.py",
+    "functions": [
+      "expr",
+      "source_link",
+      "local_module",
+      "js_module",
+      "resolve",
+      "link",
+      "anchor",
+      "symbol_link",
+      "ref",
+      "__init__",
+      "symbol",
+      "visit_Call",
+      "record",
+      "visit_Return",
+      "visit_If",
+      "visit_Raise",
+      "visit_Import",
+      "visit_ImportFrom"
+    ],
+    "imports": [
+      "import ast, hashlib, html, json, re",
+      "from collections import defaultdict",
+      "from pathlib import Path",
+      "from markdown_it import MarkdownIt"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/check_audit_docs.py",
+    "functions": [
+      "__init__",
+      "handle_starttag"
+    ],
+    "imports": [
+      "from pathlib import Path",
+      "from html.parser import HTMLParser",
+      "from urllib.parse import unquote",
+      "from playwright.sync_api import sync_playwright",
+      "import json"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/check_branding.py",
+    "functions": [],
+    "imports": [
+      "from pathlib import Path",
+      "from playwright.sync_api import sync_playwright",
+      "import json"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/check_chat_browser.py",
+    "functions": [],
+    "imports": [
+      "from pathlib import Path",
+      "from playwright.sync_api import sync_playwright",
+      "import json"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/check_chat_data.py",
+    "functions": [],
+    "imports": [
+      "import json, time",
+      "from pathlib import Path",
+      "import httpx"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/check_chat_model.py",
+    "functions": [
+      "main"
+    ],
+    "imports": [
+      "import asyncio, json, sys",
+      "from pathlib import Path",
+      "from backend.agents.chatbot import RegInsightChatAgent",
+      "from backend.semantic.models import QueryRequest"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/collect_evaluation.py",
+    "functions": [
+      "run"
+    ],
+    "imports": [
+      "import json, sqlite3, time, urllib.request, argparse",
+      "from pathlib import Path"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "5: import json,sqlite3,time,urllib.request,argparse",
+      "13: with sqlite3.connect((ROOT/'data/inspections.db').as_uri()+'?mode=ro',uri=True) as c:"
+    ]
+  },
+  {
+    "file": "scripts/evaluate_workflows.py",
+    "functions": [
+      "run"
+    ],
+    "imports": [
+      "import sys, json, tempfile",
+      "from pathlib import Path",
+      "from backend.workflows.policy import load_policy",
+      "from backend.workflows.schemas import WorkflowRequest",
+      "from backend.workflows.routing import route",
+      "from backend.rag.embeddings import EmbeddingService",
+      "from backend.rag.repository import VectorRepository",
+      "from backend.rag.service import RetrievalService"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/final_smoke.py",
+    "functions": [
+      "req"
+    ],
+    "imports": [
+      "import json, time, urllib.request",
+      "from pathlib import Path"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/font_check.py",
+    "functions": [],
+    "imports": [
+      "from playwright.sync_api import sync_playwright"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/index_workflow_sources.py",
+    "functions": [
+      "documents",
+      "main"
+    ],
+    "imports": [
+      "import argparse, json, sys, hashlib, zipfile, re",
+      "from pathlib import Path",
+      "import xml.etree.ElementTree as ET",
+      "from backend.workflows.policy import load_policy",
+      "from backend.rag.embeddings import EmbeddingService",
+      "from backend.rag.repository import VectorRepository",
+      "from backend.rag.service import RetrievalService",
+      "from pypdf import PdfReader"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/inspect_sources.py",
+    "functions": [],
+    "imports": [
+      "import json",
+      "from sqlalchemy import select",
+      "from backend.database.store import Store, inspections"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/package_chatbot.py",
+    "functions": [],
+    "imports": [
+      "from pathlib import Path",
+      "import argparse, hashlib, json, sqlite3, uuid, zipfile, os"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "1: \"\"\"Package current source/build and consistent SQLite backups; verify every ZIP entry.\"\"\"",
+      "3: import argparse,hashlib,json,sqlite3,uuid,zipfile,os",
+      "27: with sqlite3.connect(p.as_uri()+'?mode=ro',uri=True) as src:",
+      "28: mode=src.execute('PRAGMA journal_mode').fetchone()[0]",
+      "36: with sqlite3.connect(selected) as dst:src.backup(dst)",
+      "42: with sqlite3.connect(p.as_uri()+'?mode=ro',uri=True) as source:",
+      "44: source.execute('SELECT count(*) FROM sqlite_master').fetchone()",
+      "45: assert source.execute('PRAGMA journal_mode').fetchone()[0]=='delete'",
+      "48: print('Archived under SQLite read lock: '+name,flush=True)",
+      "65: 'zip_integrity':'passed','sqlite_consistency':'read-locked rollback database; backed-up WAL database','model_weights_included':False}"
+    ]
+  },
+  {
+    "file": "scripts/prepare_retrieval.py",
+    "functions": [
+      "run"
+    ],
+    "imports": [
+      "import sys",
+      "from pathlib import Path",
+      "from backend.database.store import Store",
+      "from backend.database.retrieval_mart import prepare",
+      "from data_engineering.intelligence_sources import db, DB",
+      "from backend.api.workspace import summary",
+      "from backend.services.retrieval_search import prepare_text_search, prepare_metadata_search"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "11: if c.execute(\"SELECT 1 FROM sqlite_master WHERE name='website_index'\").fetchone():",
+      "17: PRAGMA optimize;"
+    ]
+  },
+  {
+    "file": "scripts/prepare_workspace.py",
+    "functions": [
+      "prepare"
+    ],
+    "imports": [
+      "import gzip, json, sys",
+      "from pathlib import Path",
+      "from sqlalchemy import select",
+      "from backend.database.store import Store, inspections, datasets, ROOT",
+      "from data_engineering.intelligence_sources import parquet_rows, db, DB",
+      "from backend.services.website_index import ensure",
+      "from backend.services.mart import build"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "31: c.execute('INSERT OR IGNORE INTO texts VALUES (?,?)',(h,r['normalized_observation']))",
+      "32: c.execute('INSERT OR IGNORE INTO observations VALUES (?,?,?,?,?,?,?,?,?,?,?,?)',(oid,h,r['dataset'],'inspection',r['inspection_id'],r['company'],r['site'],r.get('fiscal_year'),r.get('product'),r.get('inspection_type'),None,json.dumps(r['source'])))",
+      "33: c.execute('INSERT OR IGNORE INTO origins VALUES (?,?)',(oid,json.dumps(r['source'])))",
+      "34: c.execute('INSERT OR IGNORE INTO cache VALUES (?,?,?)',(key,h,json.dumps(r['tag'])))",
+      "35: c.execute('INSERT OR IGNORE INTO assignments VALUES (?,?,?,?,?,?)',(rid,h,key,r['group_id'],r['similarity_score'],r['grouping_method']))",
+      "36: c.execute('INSERT OR IGNORE INTO members VALUES (?,?)',(rid,oid));n+=1"
+    ]
+  },
+  {
+    "file": "scripts/setup_chatbot.py",
+    "functions": [
+      "main"
+    ],
+    "imports": [
+      "import sys",
+      "from pathlib import Path",
+      "from backend.agents.chatbot import SYSTEM, MODEL",
+      "import httpx"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/smoke_real.py",
+    "functions": [
+      "req"
+    ],
+    "imports": [
+      "import json, time, urllib.request"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/verify_live.py",
+    "functions": [
+      "verify"
+    ],
+    "imports": [
+      "import argparse",
+      "import json",
+      "import re",
+      "import httpx",
+      "from pathlib import Path"
+    ],
+    "tables": [],
+    "sqlite_lines": [
+      "36: 'frontend_assets':'served successfully','browser_click_test':'not executed','database':'SQLite','recurrence_scope':company,"
+    ]
+  },
+  {
+    "file": "scripts/verify_observations.py",
+    "functions": [],
+    "imports": [
+      "import httpx, json, re",
+      "from pathlib import Path"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  },
+  {
+    "file": "scripts/verify_ui_regression.py",
+    "functions": [
+      "main",
+      "shot"
+    ],
+    "imports": [
+      "import argparse, json",
+      "from pathlib import Path",
+      "from PIL import Image, ImageChops",
+      "from playwright.sync_api import sync_playwright"
+    ],
+    "tables": [],
+    "sqlite_lines": []
+  }
+]

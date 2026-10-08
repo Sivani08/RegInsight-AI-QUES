@@ -1,0 +1,561 @@
+{
+  "id": "ff26d8d0-6885-4fd7-ab58-8d15b90187f4",
+  "status": "completed",
+  "dataset": "real",
+  "provider": "rules",
+  "model": "deterministic",
+  "taxonomy_version": "2.2",
+  "prompt_version": "2.0",
+  "created_at": "2026-09-21T10:35:31.897562+00:00",
+  "cache_hits": 0,
+  "unique_processed": 19666,
+  "api_requests": 0,
+  "classification_failures": 0,
+  "remote_enabled": false,
+  "redis_classification_hits": 0,
+  "representative_classifications": 19666,
+  "group_member_rules": 0,
+  "embedding_model": "local-taxonomy-lexical",
+  "embedding_version": "3:2.2",
+  "quality": {
+    "source_observation_rows": 569816,
+    "duplicate_observation_rows": 32,
+    "empty_text_rows": 685840,
+    "conflicting_records": 280123,
+    "unsupported_inputs": [],
+    "source_fingerprints": {
+      "C:\\Users\\nitis\\OneDrive\\Desktop\\regulatory-inspection-assistant\\data\\real\\canonical_inspections.parquet": "281caac3d21bc87b603a90f1edeaefc5248e24dd2c3206dd885472d67d978b4c",
+      "C:\\Users\\nitis\\OneDrive\\Desktop\\regulatory-inspection-assistant\\data\\processed\\inspections.parquet": "afac185ef35a5d0a6586c3333f4f233c7e06ad0962231c412913ff7cba733cf6",
+      "C:\\Users\\nitis\\OneDrive\\Desktop\\regulatory-inspection-assistant\\data\\real\\annual_benchmarks.parquet": "0e0aa2e54d3a40df0fdb398ae38147443a54902ab0e94ebf2d9f78f305f52e44",
+      "C:\\Users\\nitis\\OneDrive\\Desktop\\e00adefd-b9ce-414f-ae04-21c950fb5f27.xlsx": "22d4a8adf25537561970ccf06ab14e4248042945bb7f8af11313a0711ca09b76",
+      "C:\\Users\\nitis\\OneDrive\\Desktop\\e4832250-43dc-4c0c-982b-b31f87205869.xlsx": "df545516fa0227de0c047d90b527d75c0749f4b7f0e787ce5ad15c793e8803f9",
+      "C:\\Users\\nitis\\OneDrive\\Desktop\\inspection_observations_fiscal_year_2025_0.xlsx": "8d3a824502ad3ce9189826115b4bcb19e0a26cc0b422a64fdf1f5c52f06fe86f",
+      "C:\\Users\\nitis\\OneDrive\\Desktop\\Inspection_Observations_FY23_0.xlsx": "4be5cf0c6d62218efaaea158a59155ac74690726e4649e6a43ed6fe92e382150",
+      "C:\\Users\\nitis\\OneDrive\\Desktop\\inspection_observations_fy24.xlsx": "9f7daee81b7a4865127884cc8f16c410b8f151c905a2944529610c298073fe5d"
+    },
+    "total_records": 1255656,
+    "invalid_records": 685840,
+    "valid_records": 569816,
+    "total_inspections": 76269,
+    "total_observations": 569784,
+    "unique_observation_texts": 22027,
+    "duplicates": 32,
+    "datasets": [
+      {
+        "dataset": "additional",
+        "grain": "annual_template",
+        "rows": 4694
+      },
+      {
+        "dataset": "additional",
+        "grain": "inspection",
+        "rows": 280107
+      },
+      {
+        "dataset": "annual",
+        "grain": "annual_template",
+        "rows": 4696
+      },
+      {
+        "dataset": "demo",
+        "grain": "inspection",
+        "rows": 72
+      },
+      {
+        "dataset": "real",
+        "grain": "inspection",
+        "rows": 280114
+      },
+      {
+        "dataset": "synthetic",
+        "grain": "inspection",
+        "rows": 101
+      }
+    ],
+    "snapshot_id": "8dd1a9032bcd19c0ddf3"
+  },
+  "api_failures": 0,
+  "embedding_cache_hits": 0,
+  "total": 280114,
+  "unique_texts": 19666,
+  "inspections": 76162,
+  "ai": 0,
+  "rules": 280114,
+  "fallbacks": 0,
+  "unclassified": 149170,
+  "confidence": 0.3103600676867276,
+  "high_severity": 4458,
+  "critical_severity": 0,
+  "semantic_groups": 5778,
+  "runtime_seconds": 644.984,
+  "grouping_method": "lexical_cosine",
+  "similarity_threshold": 0.78,
+  "similarity_comparisons": 1818419,
+  "duplicate_text_occurrences": 260448,
+  "ai_severity_index": null,
+  "ai_processed": 0,
+  "ai_fallback": 0,
+  "api_calls": 0,
+  "themes": {
+    "run_id": "ff26d8d0-6885-4fd7-ab58-8d15b90187f4",
+    "grain": "inspection",
+    "groups": [
+      {
+        "theme": "Unclassified",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 149170,
+        "inspection_count": 62738,
+        "unique_sites": 40436,
+        "recurrence_score": 0.999984,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 0,
+          "High": 0,
+          "Critical": 0,
+          "Unclassified": 149170
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Cleaning and Sanitation",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 22054,
+        "inspection_count": 15058,
+        "unique_sites": 11135,
+        "recurrence_score": 0.999934,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 21837,
+          "High": 217,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Equipment",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 21305,
+        "inspection_count": 15865,
+        "unique_sites": 11748,
+        "recurrence_score": 0.999937,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 20577,
+          "High": 728,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Manufacturing Controls",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 11677,
+        "inspection_count": 9665,
+        "unique_sites": 6914,
+        "recurrence_score": 0.999897,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 10908,
+          "High": 769,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "CAPA",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 11402,
+        "inspection_count": 10192,
+        "unique_sites": 7551,
+        "recurrence_score": 0.999902,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 11013,
+          "High": 389,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Packaging and Labeling",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 9372,
+        "inspection_count": 7867,
+        "unique_sites": 6742,
+        "recurrence_score": 0.999873,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 9302,
+          "High": 70,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Complaints",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 8440,
+        "inspection_count": 7546,
+        "unique_sites": 5876,
+        "recurrence_score": 0.999867,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 8046,
+          "High": 394,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Investigations",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 7345,
+        "inspection_count": 5168,
+        "unique_sites": 4541,
+        "recurrence_score": 0.999807,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 7249,
+          "High": 96,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Laboratory Controls",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 6975,
+        "inspection_count": 5166,
+        "unique_sites": 3883,
+        "recurrence_score": 0.999806,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 6951,
+          "High": 24,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Equipment and Facilities",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 6485,
+        "inspection_count": 5505,
+        "unique_sites": 4677,
+        "recurrence_score": 0.999818,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 6482,
+          "High": 3,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Validation",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 5042,
+        "inspection_count": 4383,
+        "unique_sites": 3441,
+        "recurrence_score": 0.999772,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 4958,
+          "High": 84,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Training",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 4890,
+        "inspection_count": 4715,
+        "unique_sites": 4060,
+        "recurrence_score": 0.999788,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 4476,
+          "High": 414,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Production and Process Controls",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 3534,
+        "inspection_count": 3275,
+        "unique_sites": 2675,
+        "recurrence_score": 0.999695,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 3410,
+          "High": 124,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Documentation",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 3339,
+        "inspection_count": 2967,
+        "unique_sites": 2593,
+        "recurrence_score": 0.999663,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 3089,
+          "High": 250,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Sterility Assurance",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 2501,
+        "inspection_count": 1968,
+        "unique_sites": 1544,
+        "recurrence_score": 0.999492,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 1721,
+          "High": 780,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Materials Management",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 2304,
+        "inspection_count": 2172,
+        "unique_sites": 1834,
+        "recurrence_score": 0.99954,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 2304,
+          "High": 0,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Quality Systems",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 1735,
+        "inspection_count": 1461,
+        "unique_sites": 1300,
+        "recurrence_score": 0.999316,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 1706,
+          "High": 29,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Deviation Management",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 1298,
+        "inspection_count": 1237,
+        "unique_sites": 1003,
+        "recurrence_score": 0.999192,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 1292,
+          "High": 6,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Computer Systems",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 755,
+        "inspection_count": 724,
+        "unique_sites": 624,
+        "recurrence_score": 0.998619,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 755,
+          "High": 0,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Data Integrity",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 350,
+        "inspection_count": 348,
+        "unique_sites": 322,
+        "recurrence_score": 0.997126,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 269,
+          "High": 81,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "Environmental Monitoring",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 134,
+        "inspection_count": 132,
+        "unique_sites": 93,
+        "recurrence_score": 0.992424,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 134,
+          "High": 0,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      },
+      {
+        "theme": "OOS Investigation",
+        "year": null,
+        "company": null,
+        "site": null,
+        "product": null,
+        "inspection_type": null,
+        "observation_count": 7,
+        "inspection_count": 7,
+        "unique_sites": 7,
+        "recurrence_score": 0.857143,
+        "severity_distribution": {
+          "Low": 0,
+          "Medium": 7,
+          "High": 0,
+          "Critical": 0,
+          "Unclassified": 0
+        },
+        "frequency_sum": null
+      }
+    ],
+    "total_groups": 22,
+    "returned_limit": 200,
+    "ai_severity_index": null,
+    "ai_severity_observations": 0,
+    "notice": "AI-derived observation severity index; excluded from deterministic risk scores."
+  },
+  "annual_themes": {
+    "run_id": "ff26d8d0-6885-4fd7-ab58-8d15b90187f4",
+    "grain": "annual_template",
+    "groups": [],
+    "total_groups": 0,
+    "returned_limit": 200,
+    "ai_severity_index": null,
+    "ai_severity_observations": 0,
+    "notice": "AI-derived observation severity index; excluded from deterministic risk scores."
+  },
+  "notice": "AI-generated severity classification for analytical prioritization. Not an FDA regulatory determination. Human review required."
+}

@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "desktop": "passed",
+      "font": {
+        "size": "17px",
+        "weight": "650",
+        "line": "29.75px"
+      },
+      "timing": "Evidence 0.0 s\nAnswer 8.2 s",
+      "answer": "OAI stands for Official Action Indicated. It is a classification used in regulatory inspections to indicate that an action is required by the regulatory body. The OAI rate calculates the proportion of OAI inspections relative to inspections with known classifications, not the percentage of observed rows."
+    },
+    {
+      "switching_and_cancellation": "passed"
+    },
+    {
+      "mobile": "passed",
+      "timing": "Evidence 0.0 s\nAnswer 5.8 s"
+    }
+  ],
+  "errors": []
+}

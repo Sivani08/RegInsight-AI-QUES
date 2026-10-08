@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "url": "/api/cache/status",
+      "seconds": 0.0,
+      "status": 200
+    },
+    {
+      "url": "/api/qc/knowledge",
+      "seconds": 0.015,
+      "status": 200
+    },
+    {
+      "url": "/api/qc/datasets",
+      "seconds": 0.0,
+      "status": 200
+    },
+    {
+      "url": "/api/qc/signals",
+      "seconds": 0.016,
+      "status": 200
+    },
+    {
+      "url": "/api/qc/signals",
+      "seconds": 0.016,
+      "status": 200
+    },
+    {
+      "url": "/api/observations/tags",
+      "seconds": 33.297,
+      "status": 200
+    },
+    {
+      "url": "/api/observations/tags",
+      "seconds": 0.031,
+      "status": 200
+    },
+    {
+      "url": "/api/cache/status",
+      "seconds": 0.0,
+      "status": 200
+    }
+  ],
+  "redis": {
+    "enabled": true,
+    "status": "connected",
+    "ttl_seconds": 300,
+    "counters": {
+      "hits": 2,
+      "misses": 3,
+      "errors": 0,
+      "writes": 3,
+      "invalid": 0,
+      "oversize": 0
+    },
+    "scope": "this application worker",
+    "fallback": "database"
+  },
+  "knowledge_units": 62,
+  "qc_records": 324,
+  "signals_oncology": 0,
+  "note": "Real Redis server and live HTTP; no external clinical vendor connection used."
+}

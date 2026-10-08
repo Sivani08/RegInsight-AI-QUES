@@ -1,0 +1,59 @@
+[
+  {
+    "question": "What does OAI mean?",
+    "type": "answer",
+    "answer": "OAI stands for Official Action Indicated. It is a classification used in regulatory inspections, indicating that the FDA recommends taking regulatory or administrative action. It is not a requirement but a suggestion. OAI inspections are categorized separately from other classifications in RegInsight.",
+    "citations": [
+      "K2"
+    ],
+    "first_token_ms": 1184,
+    "generation_ms": 5884,
+    "output_tokens": 65,
+    "mode": "local_llm",
+    "model": "reginsight-chat:qwen3-1.7b",
+    "checks": [
+      "source IDs exist",
+      "numeric tokens occur in cited evidence"
+    ],
+    "retrieval_ms": 3,
+    "total_ms": 5890
+  },
+  {
+    "question": "How does RegInsight detect recurring risks?",
+    "type": "answer",
+    "answer": "RegInsight detects recurring risks by analyzing repeated observation rows across different inspections. It identifies similar wording using lexical similarity and groups them into recurring themes. These themes are considered investigation leads, not proof of violations. The system ensures that repeated rows are not counted as separate inspections.",
+    "citations": [
+      "K4"
+    ],
+    "first_token_ms": 4450,
+    "generation_ms": 10303,
+    "output_tokens": 69,
+    "mode": "local_llm",
+    "model": "reginsight-chat:qwen3-1.7b",
+    "checks": [
+      "source IDs exist",
+      "numeric tokens occur in cited evidence"
+    ],
+    "retrieval_ms": 1,
+    "total_ms": 10305
+  },
+  {
+    "question": "Is this model trained on our data?",
+    "type": "answer",
+    "answer": "The model used by RegInsight AI for inspection analysis is not trained on user data. It uses a locally hosted Qwen model with RegInsight instructions and retrieved project evidence. The model's base weights have not been fine-tuned on the inspection dataset. The chatbot does not change records or make regulatory decisions.",
+    "citations": [
+      "K1"
+    ],
+    "first_token_ms": 2748,
+    "generation_ms": 8953,
+    "output_tokens": 77,
+    "mode": "local_llm",
+    "model": "reginsight-chat:qwen3-1.7b",
+    "checks": [
+      "source IDs exist",
+      "numeric tokens occur in cited evidence"
+    ],
+    "retrieval_ms": 2,
+    "total_ms": 8956
+  }
+]

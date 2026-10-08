@@ -1,0 +1,11 @@
+{
+  "version": "qc-demo-1.0",
+  "authority": "Project analytical thresholds requiring domain review, not regulatory limits",
+  "metrics": {
+    "etmf_missing": {"label": "Missing required eTMF artifacts", "threshold": 0.10, "action": "Review missing artifacts against the study-specific filing plan.", "reference": "PPT slide 22; whitepaper page 9"},
+    "aged_queries": {"label": "Queries older than 30 days", "threshold": 0.20, "action": "Review query age and assign follow-up owners.", "reference": "PPT slide 23; whitepaper pages 6 and 9"},
+    "deviations": {"label": "Visits with recorded deviations", "threshold": 0.10, "action": "Investigate contributing causes across sites before proposing CAPA.", "reference": "PPT slide 24; whitepaper pages 6 and 10"}
+  },
+  "forecast_min_months": 6,
+  "forecast_horizon_months": 3
+}

@@ -1,0 +1,15 @@
+# Canonical name: source column. Unmapped optional fields remain null.
+inspection_id: Inspection ID
+fei_number: FEI
+company_name: Company
+site_name: Site
+inspection_date: Inspection Date
+country: Country
+product_type: Product
+inspection_type: Inspection Type
+classification: Classification
+citation_flag: Citation
+observation_count: Observations
+project_area: Project Area
+observation_text: Observation Text
+fiscal_year: Fiscal Year
