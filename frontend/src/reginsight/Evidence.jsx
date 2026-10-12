@@ -14,7 +14,6 @@ export function Source({record, compact = false}) {
       <div><dt>Category</dt><dd>{tag.category}</dd></div>
       <div><dt>Theme</dt><dd>{tag.theme}</dd></div>
       <div><dt>Severity</dt><dd>{tag.severity} · analytical</dd></div>
-      <div><dt>Risk</dt><dd>Not scored at observation level</dd></div>
       <div><dt>Recurrence</dt><dd>{record.related_inspections == null ? 'Open related evidence' : record.related_inspections > 1 ? `Related text across ${record.related_inspections.toLocaleString()} inspections` : 'One linked inspection'}</dd></div>
       {!compact && <><div><dt>Assessment</dt><dd>{tag.ai_generated ? 'AI-assisted classification' : 'Deterministic classification'}</dd></div><div><dt>Confidence</dt><dd>{Math.round(tag.confidence*100)}% · uncalibrated</dd></div><div><dt>Provider / model</dt><dd>{tag.provider} / {tag.model}</dd></div><div><dt>Assessed</dt><dd>{dateTime(tag.timestamp)}</dd></div></>}
     </dl>
